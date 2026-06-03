@@ -167,6 +167,10 @@
         <span class="emoji">💰</span>
         <div><div>Preguntas sobre precios</div><div class="btn-desc">Alguien pregunta cuánto cuestan los cursos</div></div>
       </button>
+      <button class="btn-situation" onclick="go('s-confirmacion')">
+        <span class="emoji">✅</span>
+        <div><div>Confirmación de inscripción</div><div class="btn-desc">Mensajes que se envían después de confirmar el pago</div></div>
+      </button>
       <button class="btn-situation" onclick="go('s-clasegratis-curso')">
         <span class="emoji">🎁</span>
         <div><div>Preguntan por clase gratis</div><div class="btn-desc">"¿Hay clase de prueba gratuita?" — no hay, pero sí clase suelta</div></div>
@@ -624,6 +628,76 @@ Cuando quieras retomar, aquí te esperamos 🧡 ¿Hay algo en que podamos mejora
 ¿Tienes alguna consulta adicional? 😊</div>
       <button class="copy-btn" onclick="copyMsg('msg-precios-bailarinas',this)">📋 Copiar mensaje</button>
     </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     CONFIRMACIÓN DE INSCRIPCIÓN
+══════════════════════════════ -->
+<div class="screen" id="s-confirmacion">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">✅ Confirmación de inscripción</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">Envía estos dos mensajes en orden, después de confirmar el pago.</div>
+
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-num">1</span>
+        <span class="step-title-text">Solicitar datos del alumno</span>
+      </div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-conf-datos">✨ ¡Gracias por inscribirte en Acroflex! Para completar tu registro, por favor envíanos la siguiente información:
+
+🔹 Nombre completo del alumno(a):
+🔹 Edad:
+🔹 Fecha de nacimiento:
+🔹 DNI del alumno(a) (o DNI del apoderado si es menor de edad):
+🔹 Nombre completo del apoderado (en caso sea menor de edad)
+🔹 Correo electrónico (de preferencia Gmail):
+
+Con estos datos podremos dejar todo listo para tu ingreso 💙🧡</div>
+        <button class="copy-btn" onclick="copyMsg('msg-conf-datos',this)">📋 Copiar mensaje</button>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-num">2</span>
+        <span class="step-title-text">Confirmación con detalles del curso</span>
+      </div>
+      <div class="step-internal">✏️ Completa los datos entre [ ] antes de enviar.</div>
+      <div style="text-align:center;font-size:11px;color:#f97316;font-weight:700;letter-spacing:1px;margin:14px 0 10px">↓ ENVIAR DESPUÉS DE RECIBIR LOS DATOS ↓</div>
+      <div class="msg-box">
+        <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
+        <div class="msg-text" id="msg-conf-bienvenida">🎉 ¡Inscripción Confirmada, <span class="template-fill">[NOMBRE]</span>!
+
+Ya estás oficialmente inscrito/a en <span class="template-fill">[CURSO]</span> – <span class="template-fill">[MES]</span> 💙
+
+<span class="template-fill">[PAQUETE DE X CLASES]</span>
+INICIA: <span class="template-fill">[FECHA / HORARIO DE INICIO]</span>
+
+📍 Lugar:
+Av. Húsares de Junín 374, Jesús María
+(Gimnasio AB GYM – Piso 6)
+
+🔶 Importante:
+• Llega con anticipación. Solo hay 10 minutos de tolerancia para el ingreso.
+• El calentamiento es obligatorio para evitar lesiones 🧘
+• Todas las clases se realizan en el piso 6.
+• Los baños están en el piso 1 y piso 2. Toma tus precauciones.
+• Si vienes en scooter o bicicleta, tráelo con seguro y déjalo en el primer piso.
+
+🥤 Disponemos de bebidas: Agua Cielo, agua con gas saborizada, chocolatada Bonlé, Sporade, Hey Fit Soda, Free Tea, yogur Vakimu, pudín Vakimu.
+
+🧘 También contamos con implementos a la venta: Cubos de yoga, bandas elásticas y muñequeras.
+
+💪✨ ¡Nos vemos pronto para entrenar con toda la energía!</div>
+        <button class="copy-btn" onclick="copyMsgRaw('msg-conf-bienvenida',this)">📋 Copiar mensaje</button>
+      </div>
+    </div>
+
   </div>
 </div>
 
