@@ -639,8 +639,9 @@ Cuando quieras retomar, aquí te esperamos 🧡 ¿Hay algo en que podamos mejora
     <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
     <div class="section-title">✅ Confirmación de inscripción</div>
     <div class="divider"></div>
-    <div class="section-subtitle">Envía estos dos mensajes en orden, después de confirmar el pago.</div>
+    <div class="section-subtitle">Envía estos mensajes en orden, después de confirmar el pago.</div>
 
+    <!-- PASO 1: DATOS -->
     <div class="step-card">
       <div class="step-header">
         <span class="step-num">1</span>
@@ -662,14 +663,69 @@ Con estos datos podremos dejar todo listo para tu ingreso 💙🧡</div>
       </div>
     </div>
 
+    <!-- PASO 2: REGLAMENTO -->
     <div class="step-card">
       <div class="step-header">
         <span class="step-num">2</span>
-        <span class="step-title-text">Confirmación con detalles del curso</span>
+        <span class="step-title-text">Enviar Reglamento</span>
       </div>
-      <div class="step-internal">✏️ Completa los datos entre [ ] antes de enviar.</div>
-      <div style="text-align:center;font-size:11px;color:#f97316;font-weight:700;letter-spacing:1px;margin:14px 0 10px">↓ ENVIAR DESPUÉS DE RECIBIR LOS DATOS ↓</div>
-      <div class="msg-box">
+      <div class="step-internal">⚠️ Es obligatorio que lo llenen antes de su primera clase.</div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-conf-reglamento">📋 Para completar tu registro, es obligatorio que leas y llenes nuestro Reglamento Institucional:
+
+👉 https://forms.gle/FyXzbU8mCEWHcp5X8
+
+Es un paso indispensable para poder ingresar al gimnasio 💙</div>
+        <button class="copy-btn" onclick="copyMsg('msg-conf-reglamento',this)">📋 Copiar mensaje</button>
+      </div>
+    </div>
+
+    <!-- PASO 3: DECLARACIÓN -->
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-num">3</span>
+        <span class="step-title-text">Enviar Declaración Jurada</span>
+      </div>
+      <div class="section-subtitle" style="margin-top:10px;margin-bottom:12px">¿Es adulto o es un menor de edad?</div>
+      <button class="obj-btn" id="obtn-dec-adulto" onclick="toggleDecl('adulto')">
+        <span>🧑</span> Es adulto (desde 18 años)
+      </button>
+      <div class="obj-msg-box" id="obox-dec-adulto">
+        <div class="msg-box">
+          <div class="msg-label">💬 Mensaje a enviar</div>
+          <div class="msg-text" id="msg-dec-adulto">📝 También necesitamos que llenes tu Declaración Jurada de aptitud física:
+
+👉 https://forms.gle/zj9qvShreBGvXKxk8
+
+¡Ya casi todo listo para tu ingreso! 💙🧡</div>
+          <button class="copy-btn" onclick="copyMsg('msg-dec-adulto',this)">📋 Copiar mensaje</button>
+        </div>
+      </div>
+      <button class="obj-btn" id="obtn-dec-padre" onclick="toggleDecl('padre')">
+        <span>👨‍👩‍👧</span> Es menor de edad (papá o mamá llena el formulario)
+      </button>
+      <div class="obj-msg-box" id="obox-dec-padre">
+        <div class="msg-box">
+          <div class="msg-label">💬 Mensaje a enviar</div>
+          <div class="msg-text" id="msg-dec-padre">📝 También necesitamos que como apoderado llenes la Declaración Jurada de aptitud física de tu hijo/a:
+
+👉 https://forms.gle/Emej1fXXFLLA2qeeA
+
+¡Ya casi todo listo para el ingreso! 💙🧡</div>
+          <button class="copy-btn" onclick="copyMsg('msg-dec-padre',this)">📋 Copiar mensaje</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 4: BIENVENIDA FINAL -->
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-num">4</span>
+        <span class="step-title-text">Mensaje de bienvenida final</span>
+      </div>
+      <div class="step-internal">✏️ Completa los datos entre [ ] antes de enviar. Envíalo una vez que ya llenaron el reglamento y la declaración.</div>
+      <div class="msg-box" style="margin-top:10px">
         <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
         <div class="msg-text" id="msg-conf-bienvenida">🎉 ¡Inscripción Confirmada, <span class="template-fill">[NOMBRE]</span>!
 
@@ -695,60 +751,6 @@ Av. Húsares de Junín 374, Jesús María
 
 💪✨ ¡Nos vemos pronto para entrenar con toda la energía!</div>
         <button class="copy-btn" onclick="copyMsgRaw('msg-conf-bienvenida',this)">📋 Copiar mensaje</button>
-      </div>
-    </div>
-
-    <div class="step-card">
-      <div class="step-header">
-        <span class="step-num">3</span>
-        <span class="step-title-text">Enviar Reglamento</span>
-      </div>
-      <div class="step-internal">⚠️ Es obligatorio que lo llenen antes de su primera clase.</div>
-      <div class="msg-box" style="margin-top:10px">
-        <div class="msg-label">💬 Mensaje a enviar</div>
-        <div class="msg-text" id="msg-conf-reglamento">📋 Para completar tu registro, es obligatorio que leas y llenes nuestro Reglamento Institucional:
-
-👉 https://forms.gle/FyXzbU8mCEWHcp5X8
-
-Es un paso indispensable para poder ingresar al gimnasio 💙</div>
-        <button class="copy-btn" onclick="copyMsg('msg-conf-reglamento',this)">📋 Copiar mensaje</button>
-      </div>
-    </div>
-
-    <div class="step-card">
-      <div class="step-header">
-        <span class="step-num">4</span>
-        <span class="step-title-text">Enviar Declaración Jurada</span>
-      </div>
-      <div class="section-subtitle" style="margin-top:10px;margin-bottom:12px">¿Es adulto o es un menor de edad?</div>
-      <button class="obj-btn" id="obtn-dec-adulto" onclick="toggleDecl('adulto')">
-        <span>🧑</span> Es adulto (desde 18 años)
-      </button>
-      <div class="obj-msg-box" id="obox-dec-adulto">
-        <div class="msg-box">
-          <div class="msg-label">💬 Mensaje a enviar</div>
-          <div class="msg-text" id="msg-dec-adulto">📝 También necesitamos que llenes tu Declaración Jurada de aptitud física:
-
-👉 https://forms.gle/zj9qvShreBGvXKxk8
-
-¡Ya casi todo listo para tu ingreso! 💙🧡</div>
-          <button class="copy-btn" onclick="copyMsg('msg-dec-adulto',this)">📋 Copiar mensaje</button>
-        </div>
-      </div>
-
-      <button class="obj-btn" id="obtn-dec-padre" onclick="toggleDecl('padre')">
-        <span>👨‍👩‍👧</span> Es menor de edad (papá o mamá llena el formulario)
-      </button>
-      <div class="obj-msg-box" id="obox-dec-padre">
-        <div class="msg-box">
-          <div class="msg-label">💬 Mensaje a enviar</div>
-          <div class="msg-text" id="msg-dec-padre">📝 También necesitamos que como apoderado llenes la Declaración Jurada de aptitud física de tu hijo/a:
-
-👉 https://forms.gle/Emej1fXXFLLA2qeeA
-
-¡Ya casi todo listo para el ingreso! 💙🧡</div>
-          <button class="copy-btn" onclick="copyMsg('msg-dec-padre',this)">📋 Copiar mensaje</button>
-        </div>
       </div>
     </div>
 
