@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual de Ventas — Acroflex</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #0a0e1a; color: #fff; min-height: 100vh; }
+  .screen { display: none; }
+  .screen.active { display: block; }
+
+  .header {
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a2f6e 50%, #0d1b3e 100%);
+    border-bottom: 3px solid #f97316;
+    padding: 14px 20px;
+    text-align: center;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .header-logo img { height: 66px; width: auto; display: block; margin: 0 auto; }
+  .header-sub { font-size: 11px; color: #93afd4; letter-spacing: 2px; margin-top: 5px; text-transform: uppercase; }
+
+  .content { max-width: 600px; margin: 0 auto; padding: 24px 16px 40px; }
+
+  .back-btn {
+    background: none; border: none; color: #93afd4; font-size: 14px;
+    cursor: pointer; padding: 0 0 16px 0; display: flex; align-items: center; gap: 6px; transition: color .2s;
+  }
+  .back-btn:hover { color: #fff; }
+
+  .section-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; line-height: 1.3; }
+  .section-subtitle { font-size: 13px; color: #93afd4; margin-bottom: 22px; line-height: 1.5; }
+  .divider { width: 40px; height: 3px; background: #f97316; border-radius: 2px; margin: 10px 0 20px; }
+
+  .btn-grid { display: flex; flex-direction: column; gap: 10px; }
+  .btn-situation {
+    background: linear-gradient(135deg, #0f1f4a 0%, #1a3070 100%);
+    border: 1.5px solid #1e3a8a; border-radius: 12px; padding: 16px 18px;
+    cursor: pointer; text-align: left; transition: all .2s;
+    display: flex; align-items: center; gap: 14px; color: #fff; font-size: 15px; font-weight: 600;
+  }
+  .btn-situation:hover { border-color: #f97316; background: linear-gradient(135deg,#1a2f6e,#243d8a); transform: translateX(4px); }
+  .btn-situation .emoji { font-size: 22px; min-width: 30px; text-align: center; }
+  .btn-situation .btn-desc { font-size: 12px; color: #93afd4; font-weight: 400; margin-top: 2px; }
+
+  .btn-choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
+  .btn-choice-grid.cols3 { grid-template-columns: 1fr 1fr 1fr; }
+  .btn-choice {
+    background: linear-gradient(135deg, #0f1f4a 0%, #1a3070 100%);
+    border: 1.5px solid #1e3a8a; border-radius: 10px; padding: 14px 12px;
+    cursor: pointer; text-align: center; transition: all .2s; color: #fff; font-size: 13px; font-weight: 600; line-height: 1.4;
+  }
+  .btn-choice:hover { border-color: #f97316; background: linear-gradient(135deg,#1a2f6e,#243d8a); }
+  .btn-choice .ch-emoji { font-size: 20px; display: block; margin-bottom: 5px; }
+  .btn-choice.orange { background: linear-gradient(135deg,#7c2d00,#c2410c); border-color: #f97316; }
+  .btn-choice.orange:hover { background: linear-gradient(135deg,#9a3800,#ea580c); }
+
+  .msg-box { background: #0f1f4a; border: 1.5px solid #1e3a8a; border-radius: 14px; padding: 18px; margin-top: 4px; }
+  .msg-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #f97316; font-weight: 700; margin-bottom: 12px; }
+  .msg-text { font-size: 14px; line-height: 1.75; color: #e2e8f0; white-space: pre-wrap; }
+  .template-fill { color: #fbbf24; font-weight: 700; background: rgba(251,191,36,.12); padding: 1px 4px; border-radius: 3px; }
+
+  .copy-btn {
+    background: linear-gradient(135deg,#c2410c,#f97316); border: none; border-radius: 8px;
+    color: #fff; font-size: 13px; font-weight: 700; padding: 10px 18px;
+    cursor: pointer; margin-top: 14px; width: 100%; transition: opacity .2s; letter-spacing: .5px;
+  }
+  .copy-btn:hover { opacity: .88; }
+  .copy-btn.copied { background: linear-gradient(135deg,#15803d,#16a34a); }
+
+  /* STEP CARDS */
+  .step-card { background: #0f1f4a; border: 1.5px solid #1e3a8a; border-radius: 14px; padding: 18px; margin-bottom: 14px; }
+  .step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 2px; }
+  .step-num {
+    background: #f97316; color: #fff; font-weight: 900; font-size: 12px;
+    width: 26px; height: 26px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .step-title-text { font-size: 15px; font-weight: 700; }
+  .step-internal { font-size: 12px; color: #fcd34d; background: #1a1a0a; border: 1px solid #854d0e; border-radius: 8px; padding: 9px 12px; margin: 10px 0 0; line-height: 1.6; }
+  .img-send-box { margin-top: 12px; background: #060f27; border: 1.5px dashed #f97316; border-radius: 12px; padding: 14px; text-align: center; }
+  .img-send-box img { width: 100%; max-width: 320px; border-radius: 8px; display: block; margin: 0 auto 10px; }
+  .img-send-label { font-size: 11px; color: #f97316; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .img-send-note { font-size: 12px; color: #93afd4; margin-top: 8px; }
+  .step-note-card { background: #0f1f4a; border: 1.5px solid #1e3a8a; border-radius: 14px; padding: 18px; margin-bottom: 14px; }
+
+  /* OBJECTION BUTTONS */
+  .obj-btn {
+    background: linear-gradient(135deg,#0f1f4a,#1a3070); border: 1.5px solid #1e3a8a;
+    border-radius: 10px; padding: 12px 14px; cursor: pointer; text-align: left;
+    color: #e2e8f0; font-size: 13px; font-weight: 600; width: 100%; margin-bottom: 8px;
+    display: flex; align-items: center; gap: 10px; transition: all .2s;
+  }
+  .obj-btn:hover { border-color: #f97316; }
+  .obj-btn.active { border-color: #f97316; background: linear-gradient(135deg,#1a2f6e,#243d8a); }
+  .obj-msg-box { display: none; margin: -2px 0 10px; }
+
+  .info-card { background: #0f1f4a; border: 1.5px solid #1e3a8a; border-radius: 12px; padding: 16px 18px; margin-bottom: 10px; }
+  .info-card-title { font-size: 13px; font-weight: 700; color: #f97316; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .5px; }
+  .info-card p { font-size: 13px; color: #cbd5e1; line-height: 1.6; margin-bottom: 4px; }
+  .info-card p:last-child { margin-bottom: 0; }
+  .info-card .highlight { color: #fff; font-weight: 600; }
+
+  .price-table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+  .price-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #93afd4; font-weight: 600; text-align: left; padding: 6px 8px; border-bottom: 1px solid #1e3a8a; }
+  .price-table td { font-size: 13px; color: #e2e8f0; padding: 8px; border-bottom: 1px solid #111d3a; vertical-align: top; }
+  .price-table tr:last-child td { border-bottom: none; }
+  .price-tag { color: #f97316; font-weight: 700; }
+
+  .note-box { background: #1a1a0a; border: 1px solid #854d0e; border-radius: 10px; padding: 12px 14px; margin-top: 12px; font-size: 12px; color: #fcd34d; line-height: 1.6; }
+
+  .home-hero { background: linear-gradient(135deg,#0d1b3e,#1a2f6e); border: 1.5px solid #1e3a8a; border-radius: 16px; padding: 24px 20px; margin-bottom: 24px; text-align: center; }
+  .home-hero-emoji { font-size: 40px; margin-bottom: 10px; }
+  .home-hero h1 { font-size: 20px; font-weight: 900; margin-bottom: 6px; }
+  .home-hero p { font-size: 13px; color: #93afd4; line-height: 1.6; }
+  .section-label { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #f97316; font-weight: 700; margin-bottom: 12px; }
+
+  .flow-title { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
+  .flow-badge { display: inline-block; background: #1e3a8a; color: #93afd4; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-bottom: 16px; }
+
+  .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px); background: #16a34a; color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; transition: transform .3s ease; z-index: 999; }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo"><img src="logo-acroflex.png" alt="Acroflex"></div>
+  <div class="header-sub">Manual de Ventas · Equipo</div>
+</div>
+
+<div class="toast" id="toast">✅ Mensaje copiado</div>
+
+<!-- ══════════════════════════════
+     INICIO
+══════════════════════════════ -->
+<div class="screen active" id="s-home">
+  <div class="content">
+    <div class="home-hero">
+      <div class="home-hero-emoji">💪</div>
+      <h1>¡Hola, equipo Acroflex! 😊</h1>
+      <p>Aquí encuentras exactamente qué responder según cada situación. Elige el caso y el asesor te guía paso a paso.</p>
+    </div>
+    <div class="section-label">¿Qué situación tienes?</div>
+    <div class="btn-grid">
+      <button class="btn-situation" onclick="go('s-informes-quien')">
+        <span class="emoji">👋</span>
+        <div><div>Pedido de informes</div><div class="btn-desc">Alguien escribe por primera vez preguntando por clases</div></div>
+      </button>
+      <button class="btn-situation" onclick="go('s-recuperaciones-quien')">
+        <span class="emoji">🔄</span>
+        <div><div>Recuperaciones</div><div class="btn-desc">Un alumno quiere recuperar una clase que faltó</div></div>
+      </button>
+      <button class="btn-situation" onclick="go('s-renovaciones-fecha')">
+        <span class="emoji">🔁</span>
+        <div><div>Renovaciones</div><div class="btn-desc">Un alumno quiere renovar su paquete del mes</div></div>
+      </button>
+      <button class="btn-situation" onclick="go('s-horario-quien')">
+        <span class="emoji">🗓️</span>
+        <div><div>Cambio de horario</div><div class="btn-desc">Un alumno quiere cambiar el día o la hora de sus clases</div></div>
+      </button>
+      <button class="btn-situation" onclick="go('s-pausa-quien')">
+        <span class="emoji">⏸️</span>
+        <div><div>Pausa o baja</div><div class="btn-desc">Un alumno quiere pausar, congelar o retirarse</div></div>
+      </button>
+      <button class="btn-situation" onclick="go('s-precios-curso')">
+        <span class="emoji">💰</span>
+        <div><div>Preguntas sobre precios</div><div class="btn-desc">Alguien pregunta cuánto cuestan los cursos</div></div>
+      </button>
+      <button class="btn-situation" onclick="go('s-clasegratis-curso')">
+        <span class="emoji">🎁</span>
+        <div><div>Preguntan por clase gratis</div><div class="btn-desc">"¿Hay clase de prueba gratuita?" — no hay, pero sí clase suelta</div></div>
+      </button>
+      <button class="btn-situation" onclick="go('s-queja-quien')">
+        <span class="emoji">🙋</span>
+        <div><div>Quejas o reclamos</div><div class="btn-desc">Un alumno o padre tiene una queja o inconformidad</div></div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     INFORMES — ¿QUIÉN ESCRIBE?
+══════════════════════════════ -->
+<div class="screen" id="s-informes-quien">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">👋 Pedido de informes</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿Quién está escribiendo?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice" onclick="go('s-informes-curso-papa')"><span class="ch-emoji">👨‍👩‍👧</span>Papá o Mamá</button>
+      <button class="btn-choice" onclick="go('s-informes-curso-alumno')"><span class="ch-emoji">🧑</span>El alumno / La alumna</button>
+    </div>
+  </div>
+</div>
+
+<!-- INFORMES — CURSO (PAPÁ) -->
+<div class="screen" id="s-informes-curso-papa">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-informes-quien')">← Atrás</button>
+    <div class="section-title">👨‍👩‍👧 Escribe papá o mamá</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿Por cuál curso está preguntando?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice" onclick="startFlow('acroflex-adultos-papa','s-informes-curso-papa')"><span class="ch-emoji">🤸</span>Acroflex<br>Jóvenes/Adultos</button>
+      <button class="btn-choice" onclick="startFlow('acroflex-teens-papa','s-informes-curso-papa')"><span class="ch-emoji">🧒</span>Acroflex<br>Teens (7–13)</button>
+      <button class="btn-choice" onclick="startFlow('flexi-papa','s-informes-curso-papa')"><span class="ch-emoji">🧘</span>FlexiPower</button>
+      <button class="btn-choice" onclick="startFlow('kicks-papa','s-informes-curso-papa')"><span class="ch-emoji">🦵</span>PowerKicks</button>
+    </div>
+    <div style="margin-top:10px">
+      <button class="btn-choice" style="width:100%" onclick="startFlow('bailarinas-papa','s-informes-curso-papa')"><span class="ch-emoji">🩰</span>Acrobacias para Bailarinas</button>
+    </div>
+  </div>
+</div>
+
+<!-- INFORMES — CURSO (ALUMNO) -->
+<div class="screen" id="s-informes-curso-alumno">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-informes-quien')">← Atrás</button>
+    <div class="section-title">🧑 Escribe el alumno / la alumna</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿Por cuál curso está preguntando?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice" onclick="startFlow('acroflex-adultos-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🤸</span>Acroflex<br>Jóvenes/Adultos</button>
+      <button class="btn-choice" onclick="startFlow('flexi-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🧘</span>FlexiPower</button>
+      <button class="btn-choice" onclick="startFlow('kicks-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🦵</span>PowerKicks</button>
+      <button class="btn-choice" onclick="startFlow('bailarinas-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🩰</span>Acrobacias<br>Bailarinas</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PANTALLA DINÁMICA DE FLUJO
+══════════════════════════════ -->
+<div class="screen" id="s-flow">
+  <div class="content">
+    <button class="back-btn" id="flow-back-btn">← Atrás</button>
+    <div class="flow-title" id="flow-title"></div>
+    <div class="flow-badge" id="flow-badge"></div>
+    <div class="divider"></div>
+    <div id="flow-steps"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     RECUPERACIONES
+══════════════════════════════ -->
+<div class="screen" id="s-recuperaciones-quien">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">🔄 Recuperaciones</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿Quién está escribiendo?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice" onclick="go('s-rec-papa')"><span class="ch-emoji">👨‍👩‍👧</span>Papá o Mamá</button>
+      <button class="btn-choice" onclick="go('s-rec-alumno')"><span class="ch-emoji">🧑</span>El alumno / La alumna</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-rec-papa">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-recuperaciones-quien')">← Atrás</button>
+    <div class="section-title">🔄 Recuperación — Papá / Mamá</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-rec-papa">¡Hola! 😊 Claro, coordinamos la recuperación de la clase sin problema 💙
+
+Para agendarla, toma en cuenta lo siguiente:
+• El costo de recuperación es de S/15.
+• Debe avisarse con al menos 8 horas de anticipación.
+• Es dentro del mismo curso, en otro horario disponible.
+• Solo se puede recuperar dentro del mes de vigencia del paquete.
+
+¿Qué día le queda bien para recuperar? Le digo qué horarios hay disponibles 😊</div>
+      <button class="copy-btn" onclick="copyMsg('msg-rec-papa',this)">📋 Copiar mensaje</button>
+    </div>
+    <div class="note-box"><strong>📌 Excepción:</strong> Si es la última clase del paquete, se puede ampliar hasta 1 semana adicional para recuperarla.</div>
+  </div>
+</div>
+
+<div class="screen" id="s-rec-alumno">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-recuperaciones-quien')">← Atrás</button>
+    <div class="section-title">🔄 Recuperación — Alumno</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-rec-alumno">¡Hola! 😊 ¡Claro que sí, coordinamos tu recuperación! 💙
+
+Para agendarla, toma en cuenta lo siguiente:
+• El costo de recuperación es de S/15.
+• Avísanos con al menos 8 horas de anticipación.
+• Es en el mismo curso, en otro horario disponible.
+• Solo se puede recuperar dentro de tu mes de vigencia.
+
+¿Qué día te queda mejor? Te cuento los horarios disponibles 😊</div>
+      <button class="copy-btn" onclick="copyMsg('msg-rec-alumno',this)">📋 Copiar mensaje</button>
+    </div>
+    <div class="note-box"><strong>📌 Excepción:</strong> Si es la última clase del paquete, se puede ampliar hasta 1 semana adicional para recuperarla.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     RENOVACIONES
+══════════════════════════════ -->
+<div class="screen" id="s-renovaciones-fecha">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">🔁 Renovaciones</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿Estamos entre el 15 y 20 del mes?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice orange" onclick="go('s-ren-preventa')"><span class="ch-emoji">🎉</span>Sí, es preventa<br>(15–20 del mes)</button>
+      <button class="btn-choice" onclick="go('s-ren-regular')"><span class="ch-emoji">📅</span>No, precio<br>regular</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-ren-preventa">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-renovaciones-fecha')">← Atrás</button>
+    <div class="section-title">🎉 Renovación en preventa</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-ren-preventa">¡Hola! 😊 Qué bueno que escribes, ¡estamos en semana de preventa! 🧡
+
+Del 15 al 20 de cada mes tienes descuento especial para renovar:
+
+📦 Paquetes con descuento:
+• 8 clases Acroflex → S/315 (antes S/330) 🔥
+• 12 clases Acroflex → S/450 (antes S/470) 🔥
+• 8 clases FlexiPower → S/275 (antes S/290) 🔥
+• 12 clases FlexiPower → S/400 (antes S/420) 🔥
+
+¡Es la única fecha del mes con este precio! ¿Con cuál paquete renovamos? 💙</div>
+      <button class="copy-btn" onclick="copyMsg('msg-ren-preventa',this)">📋 Copiar mensaje</button>
+    </div>
+    <div class="note-box"><strong>💡 Recuerda:</strong> Si no renuevan en preventa, pueden hacerlo después pero a precio regular. No pierden su horario salvo que los cupos estén llenos.</div>
+  </div>
+</div>
+
+<div class="screen" id="s-ren-regular">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-renovaciones-fecha')">← Atrás</button>
+    <div class="section-title">📅 Renovación a precio regular</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-ren-regular">¡Hola! 😊 ¡Claro, con gusto coordinamos tu renovación! 💙
+
+Puedes renovar cuando quieras. Los precios regulares son:
+
+🤸 Acroflex (1h25min):
+• 4 clases → S/190  |  8 clases → S/330  |  12 clases → S/470
+• 4 intensivas 2hrs → S/260
+
+🧘 FlexiPower (55min / intensivas 1h30min):
+• 4 clases → S/170  |  8 clases → S/290  |  12 clases → S/420
+• 4 intensivas → S/250
+
+💡 Del 15 al 20 de cada mes hay preventa con descuento especial 😊
+
+¿Con qué paquete renovamos? 🧡</div>
+      <button class="copy-btn" onclick="copyMsg('msg-ren-regular',this)">📋 Copiar mensaje</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     CAMBIO DE HORARIO
+══════════════════════════════ -->
+<div class="screen" id="s-horario-quien">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">🗓️ Cambio de horario</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿Quién está escribiendo?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice" onclick="go('s-horario-papa')"><span class="ch-emoji">👨‍👩‍👧</span>Papá o Mamá</button>
+      <button class="btn-choice" onclick="go('s-horario-alumno')"><span class="ch-emoji">🧑</span>El alumno / La alumna</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-horario-papa">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-horario-quien')">← Atrás</button>
+    <div class="section-title">🗓️ Cambio de horario — Papá / Mamá</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-horario-papa">¡Hola! 😊 ¡Claro, con mucho gusto coordinamos el cambio de horario! 💙
+
+No hay problema, podemos acomodar a tu hijo/a en otro horario disponible del mismo curso.
+
+¿Qué días y horas les quedarían mejor? Con eso te digo qué opciones tenemos abiertas 😊🧡</div>
+      <button class="copy-btn" onclick="copyMsg('msg-horario-papa',this)">📋 Copiar mensaje</button>
+    </div>
+    <div class="note-box"><strong>📌 Recuerda:</strong> El cambio de horario no tiene costo adicional si es dentro del mismo curso.</div>
+  </div>
+</div>
+
+<div class="screen" id="s-horario-alumno">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-horario-quien')">← Atrás</button>
+    <div class="section-title">🗓️ Cambio de horario — Alumno</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-horario-alumno">¡Hola! 😊 ¡Claro, coordinamos el cambio sin problema! 💙
+
+Dime qué días y horarios te quedan mejor y te cuento qué tenemos disponible para acomodarte 😊🧡</div>
+      <button class="copy-btn" onclick="copyMsg('msg-horario-alumno',this)">📋 Copiar mensaje</button>
+    </div>
+    <div class="note-box"><strong>📌 Recuerda:</strong> El cambio de horario no tiene costo adicional si es dentro del mismo curso.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PAUSA O BAJA
+══════════════════════════════ -->
+<div class="screen" id="s-pausa-quien">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">⏸️ Pausa o baja</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿Quién está escribiendo?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice" onclick="go('s-pausa-papa')"><span class="ch-emoji">👨‍👩‍👧</span>Papá o Mamá</button>
+      <button class="btn-choice" onclick="go('s-pausa-alumno')"><span class="ch-emoji">🧑</span>El alumno / La alumna</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-pausa-papa">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-pausa-quien')">← Atrás</button>
+    <div class="section-title">⏸️ Pausa / Baja — Papá / Mamá</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-pausa-papa">¡Hola! 😊 Entendemos perfectamente, muchas gracias por avisarnos 💙
+
+Que sepan que en Acroflex no manejamos congelamiento de membresía ni devoluciones, ya que los pagos se realizan por adelantado.
+
+Si en algún momento quieren retomar, aquí estaremos con los brazos abiertos 🧡 ¿Hay algo en lo que podamos mejorar? Siempre es importante escucharlos 😊</div>
+      <button class="copy-btn" onclick="copyMsg('msg-pausa-papa',this)">📋 Copiar mensaje</button>
+    </div>
+    <div class="note-box"><strong>📌 Política:</strong> No hay devoluciones ni reembolsos una vez realizada la matrícula, incluso si no se asistió a clases. (Reglamento Acroflex, cláusula 1.)</div>
+  </div>
+</div>
+
+<div class="screen" id="s-pausa-alumno">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-pausa-quien')">← Atrás</button>
+    <div class="section-title">⏸️ Pausa / Baja — Alumno</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-pausa-alumno">¡Hola! 😊 Entendemos, muchas gracias por comunicarnos 💙
+
+Que sepas que en Acroflex no manejamos congelamiento de membresía ni devoluciones, ya que los pagos son por adelantado.
+
+Cuando quieras retomar, aquí te esperamos 🧡 ¿Hay algo en que podamos mejorar? Tu opinión es muy importante para nosotros 😊</div>
+      <button class="copy-btn" onclick="copyMsg('msg-pausa-alumno',this)">📋 Copiar mensaje</button>
+    </div>
+    <div class="note-box"><strong>📌 Política:</strong> No hay devoluciones ni reembolsos una vez realizada la matrícula. (Reglamento Acroflex, cláusula 1.)</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PRECIOS
+══════════════════════════════ -->
+<div class="screen" id="s-precios-curso">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">💰 Preguntas sobre precios</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿De qué curso quieren info?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice" onclick="go('s-precios-acroflex')"><span class="ch-emoji">🤸</span>Acroflex</button>
+      <button class="btn-choice" onclick="go('s-precios-flexi')"><span class="ch-emoji">🧘</span>FlexiPower</button>
+      <button class="btn-choice" onclick="go('s-precios-kicks')"><span class="ch-emoji">🦵</span>PowerKicks</button>
+      <button class="btn-choice" onclick="go('s-precios-bailarinas')"><span class="ch-emoji">🩰</span>Bailarinas</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-precios-acroflex">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-precios-curso')">← Atrás</button>
+    <div class="section-title">🤸 Precios — Acroflex</div>
+    <div class="divider"></div>
+    <div class="info-card">
+      <div class="info-card-title">📦 Paquetes (vigencia 1 mes)</div>
+      <table class="price-table">
+        <tr><th>Paquete</th><th>Precio</th><th>Preventa 15-20</th></tr>
+        <tr><td>4 clases (1h25min)</td><td class="price-tag">S/190</td><td>—</td></tr>
+        <tr><td>8 clases ⭐</td><td class="price-tag">S/330</td><td class="price-tag">S/315</td></tr>
+        <tr><td>12 clases 🚀</td><td class="price-tag">S/470</td><td class="price-tag">S/450</td></tr>
+        <tr><td>4 intensivas (2hrs)</td><td class="price-tag">S/260</td><td>—</td></tr>
+      </table>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">🎫 Clases sueltas</div>
+      <p>1h25min → <span class="highlight">S/55</span> &nbsp;|&nbsp; 2hrs → <span class="highlight">S/70</span></p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">🎓 Matrícula única</div>
+      <p><span class="highlight">S/50</span> — Se paga una sola vez en la vida.</p>
+    </div>
+    <div class="msg-box" style="margin-top:16px">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-precios-acroflex">¡Hola! 😊 Con gusto te paso los precios de Acroflex 💙🧡
+
+📦 Paquetes mensuales:
+• 4 clases → S/190
+• 8 clases → S/330 ⭐ (el más elegido)
+• 12 clases → S/470 🚀 (más avance)
+• 4 clases intensivas (2hrs) → S/260
+
+💡 Del 15 al 20 de cada mes hay preventa con descuento especial.
+🎓 Matrícula única: S/50 (se paga una sola vez en la vida).
+
+¿Tienes alguna pregunta o quieres conocer los horarios disponibles? 😊</div>
+      <button class="copy-btn" onclick="copyMsg('msg-precios-acroflex',this)">📋 Copiar mensaje</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-precios-flexi">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-precios-curso')">← Atrás</button>
+    <div class="section-title">🧘 Precios — FlexiPower</div>
+    <div class="divider"></div>
+    <div class="info-card">
+      <div class="info-card-title">📦 Paquetes (vigencia 1 mes)</div>
+      <table class="price-table">
+        <tr><th>Paquete</th><th>Precio</th><th>Preventa 15-20</th></tr>
+        <tr><td>4 clases (55min)</td><td class="price-tag">S/170</td><td>—</td></tr>
+        <tr><td>8 clases ⭐</td><td class="price-tag">S/290</td><td class="price-tag">S/275</td></tr>
+        <tr><td>12 clases 🚀</td><td class="price-tag">S/420</td><td class="price-tag">S/400</td></tr>
+        <tr><td>4 intensivas (1h30min)</td><td class="price-tag">S/250</td><td>—</td></tr>
+      </table>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">🎫 Clases sueltas</div>
+      <p>55min → <span class="highlight">S/50</span> &nbsp;|&nbsp; 1h30min → <span class="highlight">S/60</span></p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title">🧰 Implementos opcionales (2 bloques + liga)</div>
+      <p>Pack 4 → <span class="highlight">S/90</span> &nbsp;|&nbsp; Pack 8 → <span class="highlight">S/80</span> &nbsp;|&nbsp; Pack 12 → <span class="highlight">S/70</span></p>
+    </div>
+    <div class="msg-box" style="margin-top:16px">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-precios-flexi">¡Hola! 😊 Te paso los precios de FlexiPower 💙
+
+📦 Paquetes mensuales:
+• 4 clases (55min) → S/170
+• 8 clases → S/290 ⭐ (el más elegido)
+• 12 clases → S/420 🚀 (más avance)
+• 4 clases intensivas (1h30min) → S/250
+
+💡 Del 15 al 20 de cada mes hay preventa con descuento especial.
+🎓 Matrícula única: S/50 (una sola vez en la vida).
+
+¿Quieres saber los horarios disponibles? 😊</div>
+      <button class="copy-btn" onclick="copyMsg('msg-precios-flexi',this)">📋 Copiar mensaje</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-precios-kicks">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-precios-curso')">← Atrás</button>
+    <div class="section-title">🦵 Precios — PowerKicks</div>
+    <div class="divider"></div>
+    <div class="info-card">
+      <div class="info-card-title">💰 Precios</div>
+      <p>Pack 4 clases → <span class="highlight">S/200</span></p>
+      <p>Clase suelta → <span class="highlight">S/60</span></p>
+    </div>
+    <div class="msg-box" style="margin-top:16px">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-precios-kicks">¡Hola! 😊 Te paso los precios de PowerKicks 💙🧡
+
+💰 Opciones:
+• Pack 4 clases → S/200
+• Clase suelta → S/60
+
+🗓️ Horarios: Sábados 4:30 pm – 5:30 pm
+🎓 Matrícula única: S/50 (una sola vez en la vida).
+
+¿Alguna pregunta más? 😊</div>
+      <button class="copy-btn" onclick="copyMsg('msg-precios-kicks',this)">📋 Copiar mensaje</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-precios-bailarinas">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-precios-curso')">← Atrás</button>
+    <div class="section-title">🩰 Precios — Acrobacias para Bailarinas</div>
+    <div class="divider"></div>
+    <div class="info-card">
+      <div class="info-card-title">💰 Precios</div>
+      <p>Pack 4 clases → <span class="highlight">S/300</span></p>
+      <p>Clase suelta → <span class="highlight">S/80</span></p>
+    </div>
+    <div class="msg-box" style="margin-top:16px">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-precios-bailarinas">¡Hola! 😊 Te paso los precios de Acrobacias para Bailarinas 💙🩰
+
+💰 Opciones:
+• Pack 4 clases → S/300
+• Clase suelta → S/80
+
+🎓 Matrícula única: S/50 (una sola vez en la vida).
+
+¿Tienes alguna consulta adicional? 😊</div>
+      <button class="copy-btn" onclick="copyMsg('msg-precios-bailarinas',this)">📋 Copiar mensaje</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     CLASE GRATIS
+══════════════════════════════ -->
+<div class="screen" id="s-clasegratis-curso">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">🎁 Preguntan por clase gratis</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿Por cuál curso pregunta?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice" onclick="go('s-cg-acroflex')"><span class="ch-emoji">🤸</span>Acroflex</button>
+      <button class="btn-choice" onclick="go('s-cg-flexi')"><span class="ch-emoji">🧘</span>FlexiPower</button>
+      <button class="btn-choice" onclick="go('s-cg-kicks')"><span class="ch-emoji">🦵</span>PowerKicks</button>
+      <button class="btn-choice" onclick="go('s-cg-bailarinas')"><span class="ch-emoji">🩰</span>Bailarinas</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-cg-acroflex">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-clasegratis-curso')">← Atrás</button>
+    <div class="section-title">🤸 Clase gratis — Acroflex</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-cg-acroflex">¡Hola! 😊 Clases gratuitas no manejamos, pero sí tenemos clases sueltas para que puedas conocer el curso antes de inscribirte 💙
+
+🤸 Acroflex:
+• Clase suelta 1h25min → S/55
+• Clase suelta 2hrs (intensiva) → S/70
+
+Puedes venir, conocer el ambiente, entrenar con los coaches y decidir con más seguridad 💪
+
+¿Te gustaría que te enviemos los horarios disponibles? 😊🧡</div>
+      <button class="copy-btn" onclick="copyMsg('msg-cg-acroflex',this)">📋 Copiar mensaje</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-cg-flexi">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-clasegratis-curso')">← Atrás</button>
+    <div class="section-title">🧘 Clase gratis — FlexiPower</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-cg-flexi">¡Hola! 😊 Clases gratuitas no manejamos, pero sí tenemos clases sueltas para que puedas conocer el curso antes de inscribirte 💙
+
+🧘 FlexiPower:
+• Clase suelta 55min → S/50
+• Clase suelta 1h30min (intensiva) → S/60
+
+Puedes venir, sentir el ambiente y ver tu progreso desde la primera clase 💪
+
+¿Te gustaría que te enviemos los horarios disponibles? 😊🧡</div>
+      <button class="copy-btn" onclick="copyMsg('msg-cg-flexi',this)">📋 Copiar mensaje</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-cg-kicks">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-clasegratis-curso')">← Atrás</button>
+    <div class="section-title">🦵 Clase gratis — PowerKicks</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-cg-kicks">¡Hola! 😊 Clases gratuitas no manejamos, pero sí tenemos clase suelta para que puedas conocer PowerKicks antes de inscribirte 💙
+
+🦵 PowerKicks:
+• Clase suelta 1hr → S/60
+
+Puedes venir, entrenar con los coaches y decidir con más seguridad 💪
+
+¿Te gustaría que te enviemos los horarios disponibles? 😊🧡</div>
+      <button class="copy-btn" onclick="copyMsg('msg-cg-kicks',this)">📋 Copiar mensaje</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-cg-bailarinas">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-clasegratis-curso')">← Atrás</button>
+    <div class="section-title">🩰 Clase gratis — Acrobacias Bailarinas</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-cg-bailarinas">¡Hola! 😊 Clases gratuitas no manejamos, pero sí tenemos clase suelta para que puedas conocer el curso antes de inscribirte 💙
+
+🩰 Acrobacias para Bailarinas es un curso exclusivo dictado por Camila Garay. Trabajamos full flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina ⭐
+
+• Clase suelta → S/80
+
+Puedes venir, entrenar con Camila y decidir con más seguridad 💪
+
+¿Te gustaría que te enviemos los horarios disponibles? 😊🧡</div>
+      <button class="copy-btn" onclick="copyMsg('msg-cg-bailarinas',this)">📋 Copiar mensaje</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     QUEJAS / RECLAMOS
+══════════════════════════════ -->
+<div class="screen" id="s-queja-quien">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">🙋 Quejas o reclamos</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿Quién está escribiendo?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice" onclick="go('s-queja-papa')"><span class="ch-emoji">👨‍👩‍👧</span>Papá o Mamá</button>
+      <button class="btn-choice" onclick="go('s-queja-alumno')"><span class="ch-emoji">🧑</span>El alumno / La alumna</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-queja-papa">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-queja-quien')">← Atrás</button>
+    <div class="section-title">🙋 Queja / Reclamo — Papá / Mamá</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-queja-papa">¡Hola! 😊 Muchas gracias por tomarte el tiempo de escribirnos 💙
+
+Lo que comentas es muy importante para nosotros. Queremos que cada familia que confía en Acroflex tenga la mejor experiencia posible.
+
+¿Puedes contarme con más detalle qué ocurrió? Con eso podemos revisarlo y darte una respuesta adecuada 😊🧡</div>
+      <button class="copy-btn" onclick="copyMsg('msg-queja-papa',this)">📋 Copiar mensaje</button>
+    </div>
+    <div class="note-box"><strong>🚨 Importante:</strong> Nunca te exaltes. Escucha primero, luego resuelve. Si el caso es complejo, escala internamente antes de dar una respuesta definitiva.</div>
+  </div>
+</div>
+
+<div class="screen" id="s-queja-alumno">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-queja-quien')">← Atrás</button>
+    <div class="section-title">🙋 Queja / Reclamo — Alumno</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-queja-alumno">¡Hola! 😊 Muchas gracias por escribirnos 💙
+
+Tu opinión es muy valiosa para nosotros. Queremos que tu experiencia en Acroflex sea siempre la mejor posible.
+
+¿Puedes contarme un poco más sobre lo que pasó? Así podemos revisarlo y darte una respuesta lo antes posible 😊🧡</div>
+      <button class="copy-btn" onclick="copyMsg('msg-queja-alumno',this)">📋 Copiar mensaje</button>
+    </div>
+    <div class="note-box"><strong>🚨 Importante:</strong> Nunca te exaltes. Siempre escucha primero. Si el caso es complejo, consulta internamente antes de dar una respuesta definitiva.</div>
+  </div>
+</div>
+
+<script>
+// ─── NAVEGACIÓN ───────────────────────────────
+function go(screenId) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(screenId).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ─── COPIAR MENSAJE ───────────────────────────
+function copyMsg(id, btn) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✅ ¡Copiado!';
+    btn.classList.add('copied');
+    showToast();
+    setTimeout(() => { btn.textContent = '📋 Copiar mensaje'; btn.classList.remove('copied'); }, 2500);
+  });
+}
+function showToast() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+// ─── DATOS DE FLUJOS ──────────────────────────
+const FLOWS = {
+
+  // ══ ACROFLEX ADULTOS — ALUMNO ══
+  'acroflex-adultos-alumno': {
+    title: '🤸 Acroflex Jóvenes y Adultos',
+    badge: 'Alumno/a escribe directamente',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+
+Acroflex es un curso multinivel de acrobacias para jóvenes y adultos, desde los 14 años sin límite de edad 🤸
+
+Trabajamos con un programa mensual: cada mes exploramos diferentes acrobacias y elementos nuevos, siempre con progresión real. Puedes empezar completamente desde cero 💪
+
+En cada clase tienes entre 1 y 3 coaches corrigiéndote la técnica personalmente para que avances más seguro y rápido.` },
+
+      { num: 2, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video del curso Acroflex. Dale un momento para que lo vea antes de continuar.' },
+
+      { num: 3, title: '¿Quiere ver horarios y precios?', type: 'message',
+        msg: `¿Te gustaría que te enviemos nuestros horarios y mensualidades? 😊` },
+
+      { num: 4, title: 'Enviar horarios y mensualidades', type: 'images',
+        note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
+        images: [
+          { src: 'horarios-acroflex.png', label: 'Imagen 1 — Horarios Junio Acroflex' },
+          { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
+        ]},
+
+      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¡Todo esto te está esperando! 💙 Cuéntame, ¿qué días de la semana te quedarían mejor para entrenar? Así te ayudo a elegir el horario ideal 😊🧡` },
+
+      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '😅 "No tengo experiencia / estoy muy rígido"',
+            msg: `¡No te preocupes para nada! 😊 Acroflex es multinivel, lo que significa que empezamos exactamente donde tú estás 💙 No necesitas experiencia previa ni ser flexible — los coaches te guían desde el inicio con técnica y mucha seguridad 💪 ¡La mayoría de nuestros alumnos empezaron igual que tú!` },
+          { label: '🤔 "Lo voy a pensar"',
+            msg: `¡Claro, sin presión! 😊 Solo te comento que los cupos son limitados y nos gustaría reservarte el horario que más te convenga 💙 ¿Hay alguna duda que te haya quedado o algo en lo que te pueda orientar mejor? 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Te entiendo! 😊 Lo que hace especial a Acroflex es que en cada clase tienes entre 1 y 3 coaches corrigiéndote personalmente — eso hace que tu progreso sea real y sostenido 💙 Además la matrícula de S/50 es única: la pagas una sola vez en la vida 🧡 ¿Te animas con el paquete de 4 clases para conocer el curso?` },
+          { label: '⏰ "No tengo mucho tiempo"',
+            msg: `¡Tenemos horarios desde las 6:30 am hasta las 9:55 pm, de lunes a domingo! 😊 Seguro encontramos algo que se acomode a tu rutina 💙 ¿Cuál sería tu día o franja horaria más libre? 🧡` },
+        ]
+      },
+
+      { num: 7, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Te confirmo todo 💙
+
+📋 Tu inscripción:
+• Curso: Acroflex Jóvenes y Adultos
+• Horario: [ej. Lunes y Miércoles, 8:00 pm – 9:25 pm]
+• Paquete: [X clases] → S/[precio]
+• Matrícula única: S/50 ✅ (solo se paga una vez)
+• Total a pagar: S/[precio + 50 si es su primera vez]
+
+¡Ya estás a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)` },
+    ]
+  },
+
+  // ══ ACROFLEX ADULTOS — PAPÁ ══
+  'acroflex-adultos-papa': {
+    title: '🤸 Acroflex Jóvenes y Adultos',
+    badge: 'Papá / Mamá escribe',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, qué bueno que se comunicaron con nosotros 💙
+
+Acroflex es un curso multinivel de acrobacias para jóvenes y adultos, desde los 14 años 🤸
+
+Trabajamos con un programa mensual: cada mes exploramos diferentes acrobacias y elementos nuevos, siempre con progresión real. Tu hijo/a puede empezar completamente desde cero 💪
+
+En cada clase hay entre 1 y 3 coaches corrigiéndole la técnica personalmente para que avance más seguro y rápido.` },
+
+      { num: 2, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video del curso Acroflex. Dale un momento para que lo vean antes de continuar.' },
+
+      { num: 3, title: '¿Quieren ver horarios y precios?', type: 'message',
+        msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
+
+      { num: 4, title: 'Enviar horarios y mensualidades', type: 'images',
+        note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
+        images: [
+          { src: 'horarios-acroflex.png', label: 'Imagen 1 — Horarios Junio Acroflex' },
+          { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
+        ]},
+
+      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¡Todo esto está disponible para su hijo/a! 💙 Cuéntennos, ¿qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
+
+      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '😅 "No tiene experiencia / está muy rígido"',
+            msg: `¡No hay problema para nada! 😊 Acroflex es multinivel, empezamos exactamente donde tu hijo/a está 💙 No necesita experiencia previa ni ser flexible — los coaches los guían desde el inicio con técnica y mucha seguridad 💪 ¡La mayoría de nuestros alumnos empezaron así!` },
+          { label: '🤔 "Lo vamos a pensar"',
+            msg: `¡Claro, sin presión! 😊 Solo les comentamos que los cupos son limitados y nos gustaría reservarles el horario que más les convenga 💙 ¿Hay alguna duda que les haya quedado o algo en lo que les pueda orientar mejor? 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Les entiendo! 😊 Lo que hace especial a Acroflex es que en cada clase su hijo/a tiene entre 1 y 3 coaches corrigiéndolo/a personalmente — eso hace que el progreso sea real y seguro 💙 Además la matrícula de S/50 es única: se paga una sola vez en la vida 🧡 ¿Les animamos con el paquete de 4 clases para que conozca el curso?` },
+          { label: '⏰ "No nos cuadra el horario"',
+            msg: `¡Tenemos horarios desde las 6:30 am hasta las 9:55 pm, de lunes a domingo! 😊 Seguro encontramos algo que se acomode a su rutina 💙 ¿Cuál sería el día o franja horaria más libre para su hijo/a? 🧡` },
+        ]
+      },
+
+      { num: 7, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
+
+📋 Inscripción de su hijo/a:
+• Curso: Acroflex Jóvenes y Adultos
+• Horario: [ej. Martes y Jueves, 7:00 pm – 8:25 pm]
+• Paquete: [X clases] → S/[precio]
+• Matrícula única: S/50 ✅ (solo se paga una vez)
+• Total a pagar: S/[precio + 50 si es primera vez]
+
+¡Ya están a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)` },
+    ]
+  },
+
+  // ══ ACROFLEX TEENS — PAPÁ ══
+  'acroflex-teens-papa': {
+    title: '🧒 Acroflex Teens (7–13 años)',
+    badge: 'Papá / Mamá escribe',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, qué gusto que se comunicaron con nosotros 💙
+
+Acroflex Teens es nuestro curso de acrobacias para niños y niñas de 7 a 13 años 🤸
+
+Es multinivel: tu hijo/a empieza exactamente donde está y avanza con un programa mensual donde cada mes trabajamos diferentes acrobacias y elementos nuevos. Todo con técnica y mucha seguridad 💪
+
+En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que progresen bien.` },
+
+      { num: 2, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video de Acroflex Teens. Dale un momento para que lo vean antes de continuar.' },
+
+      { num: 3, title: '¿Quieren ver horarios y precios?', type: 'message',
+        msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
+
+      { num: 4, title: 'Enviar horarios y mensualidades', type: 'images',
+        note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
+        images: [
+          { src: 'horarios-acroflex.png', label: 'Imagen 1 — Horarios Junio Acroflex Teens' },
+          { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
+        ]},
+
+      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¡Todo esto está disponible para su hijo/a! 💙 Cuéntennos, ¿qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
+
+      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '😅 "No tiene experiencia / es muy joven"',
+            msg: `¡Perfecto para empezar! 😊 Acroflex Teens está diseñado exactamente para eso: niños que empiezan desde cero 💙 El programa avanza de acuerdo al ritmo de cada niño/a, con coaches que corrigen la técnica y cuidan la seguridad en todo momento 💪` },
+          { label: '🤔 "Lo vamos a pensar"',
+            msg: `¡Claro, sin apuro! 😊 Solo les comentamos que los cupos son limitados y nos gustaría reservarles el horario que más les convenga 💙 ¿Hay alguna duda que les haya quedado o algo en lo que les pueda orientar mejor? 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Les entiendo! 😊 En Acroflex Teens su hijo/a tiene entre 1 y 3 coaches corrigiéndolo personalmente en cada clase — eso marca la diferencia en el progreso real 💙 Además la matrícula de S/50 es única: se paga una sola vez en la vida 🧡 ¿Les animamos con el paquete de 4 clases para empezar?` },
+          { label: '⏰ "No nos cuadra el horario"',
+            msg: `¡Tenemos varios horarios para Teens en las tardes y sábados! 😊 ¿Cuál sería el día más libre para su hijo/a? Vemos qué opción se adapta mejor a su rutina 💙🧡` },
+        ]
+      },
+
+      { num: 7, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
+
+📋 Inscripción de su hijo/a:
+• Curso: Acroflex Teens
+• Horario: [ej. Sábados, 9:00 am – 10:25 am]
+• Paquete: [X clases] → S/[precio]
+• Matrícula única: S/50 ✅ (solo se paga una vez)
+• Total a pagar: S/[precio + 50 si es primera vez]
+
+¡Ya están a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)` },
+    ]
+  },
+
+  // ══ FLEXIPOWER — ALUMNO ══
+  'flexi-alumno': {
+    title: '🧘 FlexiPower',
+    badge: 'Alumno/a escribe directamente',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+
+FlexiPower es nuestro curso de movilidad y flexibilidad para adultos desde los 15 años, para mujeres y hombres 🧘
+
+Empiezas desde cero con técnica real y un programa estructurado. Semana a semana vas notando cambios concretos en tu movilidad y flexibilidad 💪 Y además ayuda a prevenir dolores y reducir el riesgo de lesiones.` },
+
+      { num: 2, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video de FlexiPower. Dale un momento para que lo vea antes de continuar.' },
+
+      { num: 3, title: '¿Quiere ver horarios y precios?', type: 'message',
+        msg: `¿Te gustaría que te enviemos nuestros horarios y mensualidades? 😊` },
+
+      { num: 4, title: 'Enviar horarios y mensualidades', type: 'images',
+        note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
+        images: [
+          { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Junio FlexiPower' },
+          { src: 'mensualidades-flexipower.png', label: 'Imagen 2 — Mensualidades FlexiPower' },
+        ]},
+
+      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¡Todo esto te está esperando! 💙 Cuéntame, ¿qué días de la semana te quedarían mejor para entrenar? Así te ayudo a elegir el horario ideal 😊🧡` },
+
+      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '😅 "No soy nada flexible / no tengo experiencia"',
+            msg: `¡Ese es exactamente el punto de partida perfecto! 😊 FlexiPower empieza desde cero, con técnica y sin forzar el cuerpo 💙 Los coaches te guían en cada posición para que avances de forma segura. ¡Muchos alumnos llegan sin ninguna base y los resultados son increíbles! 💪` },
+          { label: '🤔 "Lo voy a pensar"',
+            msg: `¡Claro, sin presión! 😊 Solo te comento que los cupos son limitados y nos gustaría reservarte el horario que más te convenga 💙 ¿Hay alguna duda que te haya quedado o algo en lo que te pueda orientar mejor? 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Te entiendo! 😊 En FlexiPower tienes coaches corrigiéndote la técnica en cada clase, lo que hace que tu progreso sea real y sin riesgo de lesiones 💙 Además la matrícula de S/50 es única: la pagas una sola vez en la vida 🧡 ¿Te animas con el paquete de 4 clases para conocer el curso?` },
+          { label: '⏰ "No tengo mucho tiempo"',
+            msg: `¡Las clases son de solo 55 minutos y tenemos horarios mañana, tarde y noche! 😊 Seguro encontramos algo que se acomode a tu rutina 💙 ¿Cuál es tu franja horaria más libre? 🧡` },
+        ]
+      },
+
+      { num: 7, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Te confirmo todo 💙
+
+📋 Tu inscripción:
+• Curso: FlexiPower
+• Horario: [ej. Martes y Jueves, 6:00 pm – 6:55 pm]
+• Paquete: [X clases] → S/[precio]
+• Matrícula única: S/50 ✅ (solo se paga una vez)
+• Total a pagar: S/[precio + 50 si es primera vez]
+
+¡Ya estás a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)` },
+    ]
+  },
+
+  // ══ FLEXIPOWER — PAPÁ ══
+  'flexi-papa': {
+    title: '🧘 FlexiPower',
+    badge: 'Papá / Mamá escribe',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, con gusto te cuento sobre FlexiPower 💙
+
+Es nuestro curso de movilidad y flexibilidad para adultos desde los 15 años, para mujeres y hombres 🧘
+
+Tu hijo/a empezaría desde cero con técnica real y un programa estructurado. Semana a semana se van notando cambios concretos en movilidad y flexibilidad 💪 Y además ayuda a prevenir dolores y reducir el riesgo de lesiones.` },
+
+      { num: 2, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video de FlexiPower. Dale un momento para que lo vean antes de continuar.' },
+
+      { num: 3, title: '¿Quieren ver horarios y precios?', type: 'message',
+        msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
+
+      { num: 4, title: 'Enviar horarios y mensualidades', type: 'images',
+        note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
+        images: [
+          { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Junio FlexiPower' },
+          { src: 'mensualidades-flexipower.png', label: 'Imagen 2 — Mensualidades FlexiPower' },
+        ]},
+
+      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¡Todo esto está disponible para su hijo/a! 💙 Cuéntennos, ¿qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
+
+      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '😅 "No tiene experiencia / es muy rígido"',
+            msg: `¡No hay problema! 😊 FlexiPower empieza desde cero, con técnica y sin forzar el cuerpo 💙 Los coaches guían a cada alumno/a de acuerdo a su nivel. ¡El progreso es real y seguro! 💪` },
+          { label: '🤔 "Lo vamos a pensar"',
+            msg: `¡Claro, sin apuro! 😊 Solo les comentamos que los cupos son limitados y nos gustaría reservarles el horario que más les convenga 💙 ¿Hay alguna duda que les haya quedado? 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Les entiendo! 😊 En FlexiPower su hijo/a tiene coaches corrigiéndole la técnica en cada clase — eso garantiza progreso real sin riesgo de lesiones 💙 Además la matrícula de S/50 es única: se paga una sola vez en la vida 🧡` },
+          { label: '⏰ "No nos cuadra el horario"',
+            msg: `¡Tenemos varios horarios mañana, tarde y noche! 😊 ¿Cuál sería el día más libre para su hijo/a? Vemos qué opción se adapta mejor 💙🧡` },
+        ]
+      },
+
+      { num: 7, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
+
+📋 Inscripción de su hijo/a:
+• Curso: FlexiPower
+• Horario: [ej. Sábados intensivo, 9:00 am – 10:25 am]
+• Paquete: [X clases] → S/[precio]
+• Matrícula única: S/50 ✅ (solo se paga una vez)
+• Total a pagar: S/[precio + 50 si es primera vez]
+
+¡Ya están a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)` },
+    ]
+  },
+
+  // ══ POWERKICKS — ALUMNO ══
+  'kicks-alumno': {
+    title: '🦵 PowerKicks',
+    badge: 'Alumno/a escribe directamente',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙🧡
+
+PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión 🦵
+
+No es solo patada — es control, disciplina y técnica real en cada clase. En 1 hora de entrenamiento trabajas fuerza explosiva, movilidad de cadera, precisión y mucha confianza 💪` },
+
+      { num: 2, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video de PowerKicks. Dale un momento para que lo vea antes de continuar.' },
+
+      { num: 3, title: '¿Quiere ver horarios y precios?', type: 'message',
+        msg: `¿Te gustaría que te enviemos nuestros horarios y precios? 😊` },
+
+      { num: 4, title: 'Enviar horarios y precios', type: 'message',
+        note: '⚠️ Solo si respondió que sí.',
+        msg: `¡Claro! Aquí va toda la info 💙
+
+🗓️ Horarios disponibles:
+📌 Sábados: 4:30 pm – 5:30 pm
+
+📦 Opciones:
+• Pack 4 clases → S/200
+• Clase suelta → S/60
+
+🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
+💳 Aceptamos: Visa, Mastercard, American Express` },
+
+      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¡Todo esto te está esperando! 💙 ¿Los sábados te quedarían bien para entrenar? 😊🧡` },
+
+      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '😅 "No tengo experiencia en patadas"',
+            msg: `¡No se necesita! 😊 PowerKicks empieza desde las bases: técnica correcta, movilidad y control 💙 Los coaches te guían desde el principio para que avances de forma segura y con resultados reales 💪` },
+          { label: '🤔 "Lo voy a pensar"',
+            msg: `¡Claro, sin presión! 😊 Solo te comento que los cupos son limitados 💙 ¿Hay alguna duda que te haya quedado o algo en lo que te pueda orientar? 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Te entiendo! 😊 Con el pack de 4 clases puedes conocer el curso y ver los resultados por ti mismo/a 💙 Y la matrícula de S/50 es única: la pagas una sola vez en la vida 🧡` },
+        ]
+      },
+
+      { num: 7, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Te confirmo todo 💙
+
+📋 Tu inscripción:
+• Curso: PowerKicks
+• Horario: Sábados 4:30 pm – 5:30 pm
+• Pack 4 clases → S/200
+• Matrícula única: S/50 ✅ (solo se paga una vez)
+• Total a pagar: S/250
+
+¡Ya estás a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)` },
+    ]
+  },
+
+  // ══ POWERKICKS — PAPÁ ══
+  'kicks-papa': {
+    title: '🦵 PowerKicks',
+    badge: 'Papá / Mamá escribe',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, qué bueno que escriben 💙🧡
+
+PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión 🦵
+
+No es solo patada — es control, disciplina y técnica real. En 1 hora de entrenamiento tu hijo/a trabaja fuerza explosiva, movilidad de cadera, precisión y confianza 💪` },
+
+      { num: 2, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video de PowerKicks. Dale un momento para que lo vean antes de continuar.' },
+
+      { num: 3, title: '¿Quieren ver horarios y precios?', type: 'message',
+        msg: `¿Les gustaría que les enviemos nuestros horarios y precios? 😊` },
+
+      { num: 4, title: 'Enviar horarios y precios', type: 'message',
+        note: '⚠️ Solo si respondió que sí.',
+        msg: `¡Claro! Aquí va toda la info 💙
+
+🗓️ Horarios disponibles:
+📌 Sábados: 4:30 pm – 5:30 pm
+
+📦 Opciones:
+• Pack 4 clases → S/200
+• Clase suelta → S/60
+
+🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
+💳 Aceptamos: Visa, Mastercard, American Express` },
+
+      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¡Todo esto está disponible para su hijo/a! 💙 ¿Los sábados les quedarían bien para las clases? 😊🧡` },
+
+      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '😅 "No tiene experiencia"',
+            msg: `¡No se necesita! 😊 PowerKicks empieza desde las bases: técnica correcta, movilidad y control 💙 Los coaches guían a cada alumno/a desde el principio con mucha seguridad 💪` },
+          { label: '🤔 "Lo vamos a pensar"',
+            msg: `¡Claro, sin apuro! 😊 Solo les comentamos que los cupos son limitados 💙 ¿Hay alguna duda que les haya quedado? 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Les entiendo! 😊 Con el pack de 4 clases pueden conocer el curso y ver los resultados de primera mano 💙 Y la matrícula de S/50 es única: se paga una sola vez en la vida 🧡` },
+        ]
+      },
+
+      { num: 7, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
+
+📋 Inscripción de su hijo/a:
+• Curso: PowerKicks
+• Horario: Sábados 4:30 pm – 5:30 pm
+• Pack 4 clases → S/200
+• Matrícula única: S/50 ✅ (solo se paga una vez)
+• Total a pagar: S/250
+
+¡Ya están a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)` },
+    ]
+  },
+
+  // ══ BAILARINAS — ALUMNA ══
+  'bailarinas-alumno': {
+    title: '🩰 Acrobacias para Bailarinas',
+    badge: 'Alumna escribe directamente',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 Bienvenida a Acroflex 💙🩰
+
+Acrobacias para Bailarinas es un curso exclusivo dictado personalmente por Camila Garay ⭐
+
+Trabajamos full flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina: elementos reales que vas a poder aplicar directamente en tus clases, presentaciones y audiciones 🤸
+
+Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
+
+      { num: 2, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video de Acrobacias para Bailarinas. Dale un momento para que lo vea antes de continuar.' },
+
+      { num: 3, title: '¿Quiere ver horarios y precios?', type: 'message',
+        msg: `¿Te gustaría que te enviemos nuestros horarios y precios? 😊` },
+
+      { num: 4, title: 'Enviar horarios y precios', type: 'message',
+        note: '⚠️ Solo si respondió que sí.',
+        msg: `¡Claro! Aquí va toda la info 💙
+
+🗓️ Horario:
+📌 Sábados: 2:30 pm – 4:30 pm
+
+📦 Opciones:
+• Pack 4 clases → S/300
+• Clase suelta → S/80
+
+🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
+💳 Aceptamos: Visa, Mastercard, American Express` },
+
+      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¡Todo esto te está esperando! 💙 Cuéntame, ¿qué días te quedarían mejor para las clases? Así te ayudo a elegir el horario ideal 😊🧡` },
+
+      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '😅 "No sé si tengo el nivel"',
+            msg: `¡No te preocupes! 😊 El curso se adapta a tu nivel actual de danza 💙 Los coaches evalúan tus capacidades y trabajan desde donde estás para que el avance sea real y seguro 💪` },
+          { label: '🤔 "Lo voy a pensar"',
+            msg: `¡Claro, sin presión! 😊 Solo te comento que los cupos son limitados 💙 ¿Hay alguna duda que te haya quedado o algo en lo que te pueda orientar mejor? 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Te entiendo! 😊 Es un curso muy especializado con coaches que conocen muy bien la técnica acrobática aplicada a la danza 💙 La matrícula de S/50 además es única: la pagas una sola vez en la vida 🧡` },
+        ]
+      },
+
+      { num: 7, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Te confirmo todo 💙
+
+📋 Tu inscripción:
+• Curso: Acrobacias para Bailarinas
+• Horario: Sábados 2:30 pm – 4:30 pm
+• Pack 4 clases → S/300
+• Matrícula única: S/50 ✅ (solo se paga una vez)
+• Total a pagar: S/350
+
+¡Ya estás a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)` },
+    ]
+  },
+
+  // ══ BAILARINAS — PAPÁ ══
+  'bailarinas-papa': {
+    title: '🩰 Acrobacias para Bailarinas',
+    badge: 'Papá / Mamá escribe',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, con gusto te cuento 💙🩰
+
+Acrobacias para Bailarinas es un curso exclusivo dictado personalmente por Camila Garay ⭐
+
+Trabajamos full flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina: elementos reales que tu hija va a poder aplicar directamente en sus clases, presentaciones y audiciones 🤸
+
+Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
+
+      { num: 2, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video de Acrobacias para Bailarinas. Dale un momento para que lo vean antes de continuar.' },
+
+      { num: 3, title: '¿Quieren ver horarios y precios?', type: 'message',
+        msg: `¿Les gustaría que les enviemos nuestros horarios y precios? 😊` },
+
+      { num: 4, title: 'Enviar horarios y precios', type: 'message',
+        note: '⚠️ Solo si respondió que sí.',
+        msg: `¡Claro! Aquí va toda la info 💙
+
+🗓️ Horario:
+📌 Sábados: 2:30 pm – 4:30 pm
+
+📦 Opciones:
+• Pack 4 clases → S/300
+• Clase suelta → S/80
+
+🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
+💳 Aceptamos: Visa, Mastercard, American Express` },
+
+      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¡Todo esto está disponible para su hija! 💙 Cuéntennos, ¿qué días les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
+
+      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '😅 "No sabemos si tiene el nivel"',
+            msg: `¡No se preocupen! 😊 El curso se adapta al nivel actual de danza de su hija 💙 Los coaches evalúan sus capacidades y trabajan desde donde está para que el avance sea real y seguro 💪` },
+          { label: '🤔 "Lo vamos a pensar"',
+            msg: `¡Claro, sin apuro! 😊 Solo les comentamos que los cupos son limitados 💙 ¿Hay alguna duda que les haya quedado? 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Les entiendo! 😊 Es un curso muy especializado con coaches que conocen la técnica acrobática aplicada a la danza 💙 Además la matrícula de S/50 es única: se paga una sola vez en la vida 🧡` },
+        ]
+      },
+
+      { num: 7, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
+
+📋 Inscripción de su hija:
+• Curso: Acrobacias para Bailarinas
+• Horario: Sábados 2:30 pm – 4:30 pm
+• Pack 4 clases → S/300
+• Matrícula única: S/50 ✅ (solo se paga una vez)
+• Total a pagar: S/350
+
+¡Ya están a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)` },
+    ]
+  },
+};
+
+// ─── RENDERIZAR FLUJO ─────────────────────────
+let _backScreen = 's-home';
+
+function startFlow(flowKey, backScreen) {
+  _backScreen = backScreen;
+  const flow = FLOWS[flowKey];
+  document.getElementById('flow-title').textContent = flow.title;
+  document.getElementById('flow-badge').textContent = flow.badge;
+  document.getElementById('flow-back-btn').onclick = () => go(backScreen);
+
+  const container = document.getElementById('flow-steps');
+  container.innerHTML = '';
+
+  flow.steps.forEach((step, i) => {
+    const card = document.createElement('div');
+    card.className = 'step-card';
+
+    if (step.type === 'note') {
+      card.innerHTML = `
+        <div class="step-header">
+          <span class="step-num">${step.num}</span>
+          <span class="step-title-text">${step.title}</span>
+        </div>
+        <div class="step-internal" style="margin-top:10px">${step.note}</div>`;
+
+    } else if (step.type === 'message') {
+      const noteHtml = step.note ? `<div class="step-internal">${step.note}</div>` : '';
+      card.innerHTML = `
+        <div class="step-header">
+          <span class="step-num">${step.num}</span>
+          <span class="step-title-text">${step.title}</span>
+        </div>
+        ${noteHtml}
+        <div class="msg-box" style="margin-top:${step.note?'4px':'12px'}">
+          <div class="msg-label">💬 Mensaje a enviar</div>
+          <div class="msg-text" id="fm-${i}">${escHtml(step.msg)}</div>
+          <button class="copy-btn" onclick="copyMsg('fm-${i}',this)">📋 Copiar mensaje</button>
+        </div>`;
+
+    } else if (step.type === 'images') {
+      const noteHtml = step.note ? `<div class="step-internal">${step.note}</div>` : '';
+      const imgsHtml = step.images.map(img => `
+        <div class="img-send-box">
+          <div class="img-send-label">📲 Enviar esta imagen por WhatsApp</div>
+          <img src="${img.src}" alt="${img.label}">
+          <div class="img-send-note">${img.label}</div>
+        </div>`).join('');
+      card.innerHTML = `
+        <div class="step-header">
+          <span class="step-num">${step.num}</span>
+          <span class="step-title-text">${step.title}</span>
+        </div>
+        ${noteHtml}
+        ${imgsHtml}`;
+
+    } else if (step.type === 'template') {
+      const noteHtml = step.note ? `<div class="step-internal">${step.note}</div>` : '';
+      const highlighted = escHtml(step.msg).replace(/\[([^\]]+)\]/g,
+        '<span class="template-fill">[$1]</span>');
+      const hasMsg2 = !!step.msg2;
+      const lbl1 = hasMsg2 ? 'Mensaje 1 — completa los [ ] antes de enviar' : 'Plantilla — completa los [ ] antes de enviar';
+      const btn1 = hasMsg2 ? '📋 Copiar mensaje 1' : '📋 Copiar plantilla';
+      let msg2Html = '';
+      if (hasMsg2) {
+        const h2 = escHtml(step.msg2).replace(/\[([^\]]+)\]/g,'<span class="template-fill">[$1]</span>');
+        msg2Html = `
+          <div style="text-align:center;font-size:11px;color:#f97316;font-weight:700;letter-spacing:1px;margin:14px 0 10px">↓ ENVIAR EN UN SEGUNDO MENSAJE ↓</div>
+          <div class="msg-box">
+            <div class="msg-label">✏️ Mensaje 2 — datos de pago</div>
+            <div class="msg-text" id="fm2-${i}">${h2}</div>
+            <button class="copy-btn" onclick="copyMsgRaw('fm2-${i}',this)">📋 Copiar mensaje 2</button>
+          </div>`;
+      }
+      card.innerHTML = `
+        <div class="step-header">
+          <span class="step-num">${step.num}</span>
+          <span class="step-title-text">${step.title}</span>
+        </div>
+        ${noteHtml}
+        <div class="msg-box" style="margin-top:${step.note?'4px':'12px'}">
+          <div class="msg-label">✏️ ${lbl1}</div>
+          <div class="msg-text" id="fm-${i}">${highlighted}</div>
+          <button class="copy-btn" onclick="copyMsgRaw('fm-${i}',this)">${btn1}</button>
+        </div>
+        ${msg2Html}`;
+
+    } else if (step.type === 'objections') {
+      const optsHtml = step.options.map((opt, j) => `
+        <button class="obj-btn" id="obtn-${i}-${j}" onclick="toggleObj(${i},${j})">
+          <span>💬</span> ${escHtml(opt.label)}
+        </button>
+        <div class="obj-msg-box" id="obox-${i}-${j}">
+          <div class="msg-box">
+            <div class="msg-label">💬 Mensaje a enviar</div>
+            <div class="msg-text" id="omsg-${i}-${j}">${escHtml(opt.msg)}</div>
+            <button class="copy-btn" onclick="copyMsg('omsg-${i}-${j}',this)">📋 Copiar mensaje</button>
+          </div>
+        </div>`).join('');
+
+      card.innerHTML = `
+        <div class="step-header">
+          <span class="step-num">${step.num}</span>
+          <span class="step-title-text">${step.title}</span>
+        </div>
+        <div style="font-size:12px;color:#93afd4;margin:10px 0 12px">Selecciona la situación del cliente:</div>
+        ${optsHtml}`;
+    }
+
+    container.appendChild(card);
+  });
+
+  go('s-flow');
+}
+
+function toggleObj(i, j) {
+  const box = document.getElementById(`obox-${i}-${j}`);
+  const btn = document.getElementById(`obtn-${i}-${j}`);
+  const visible = box.style.display === 'block';
+  box.style.display = visible ? 'none' : 'block';
+  btn.classList.toggle('active', !visible);
+}
+
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// Copia el texto real del elemento (sin spans de color)
+function copyMsgRaw(id, btn) {
+  const el = document.getElementById(id);
+  // innerText preserva linebreaks but strips HTML tags — perfect
+  const text = el.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✅ ¡Copiado!';
+    btn.classList.add('copied');
+    showToast();
+    setTimeout(() => { btn.textContent = '📋 Copiar plantilla'; btn.classList.remove('copied'); }, 2500);
+  });
+}
+</script>
+</body>
+</html>
