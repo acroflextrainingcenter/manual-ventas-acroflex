@@ -169,7 +169,11 @@
       </button>
       <button class="btn-situation" onclick="go('s-confirmacion')">
         <span class="emoji">✅</span>
-        <div><div>Confirmación de inscripción</div><div class="btn-desc">Mensajes que se envían después de confirmar el pago</div></div>
+        <div><div>Confirmación — Alumno nuevo</div><div class="btn-desc">Datos, reglamento, declaración y bienvenida</div></div>
+      </button>
+      <button class="btn-situation" onclick="go('s-confirmacion-renovacion')">
+        <span class="emoji">🔁</span>
+        <div><div>Confirmación — Renovación</div><div class="btn-desc">Confirmar turno + reglamento y declaración del mes</div></div>
       </button>
       <button class="btn-situation" onclick="go('s-clasegratis-curso')">
         <span class="emoji">🎁</span>
@@ -751,6 +755,93 @@ Av. Húsares de Junín 374, Jesús María
 
 💪✨ ¡Nos vemos pronto para entrenar con toda la energía!</div>
         <button class="copy-btn" onclick="copyMsgRaw('msg-conf-bienvenida',this)">📋 Copiar mensaje</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     CONFIRMACIÓN RENOVACIÓN
+══════════════════════════════ -->
+<div class="screen" id="s-confirmacion-renovacion">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">🔁 Confirmación — Renovación</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">Envía estos mensajes en orden después de confirmar el pago de renovación.</div>
+
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-num">1</span>
+        <span class="step-title-text">Confirmar turno de renovación</span>
+      </div>
+      <div class="step-internal">✏️ Completa los datos entre [ ] antes de enviar.</div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
+        <div class="msg-text" id="msg-ren-turno">¡Hola <span class="template-fill">[NOMBRE]</span>! 😊 Te confirmamos tu renovación en Acroflex 💙
+
+📋 Detalle de tu inscripción:
+• Curso: <span class="template-fill">[CURSO]</span>
+• Mes: <span class="template-fill">[MES]</span>
+• Horario: <span class="template-fill">[DÍA(S) Y HORA]</span>
+• Paquete: <span class="template-fill">[X CLASES]</span> → S/<span class="template-fill">[PRECIO]</span>
+
+¡Nos vemos en clases! 💪🧡</div>
+        <button class="copy-btn" onclick="copyMsgRaw('msg-ren-turno',this)">📋 Copiar mensaje</button>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-num">2</span>
+        <span class="step-title-text">Enviar Reglamento</span>
+      </div>
+      <div class="step-internal">⚠️ Se llena cada mes, sin excepción.</div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-ren-reglamento">📋 Como cada mes, te pedimos que llenes nuevamente nuestro Reglamento Institucional:
+
+👉 https://forms.gle/FyXzbU8mCEWHcp5X8
+
+¡Gracias por mantener todo en orden! 💙</div>
+        <button class="copy-btn" onclick="copyMsg('msg-ren-reglamento',this)">📋 Copiar mensaje</button>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-num">3</span>
+        <span class="step-title-text">Enviar Declaración Jurada</span>
+      </div>
+      <div class="section-subtitle" style="margin-top:10px;margin-bottom:12px">¿Es adulto o es un menor de edad?</div>
+      <button class="obj-btn" id="obtn-rdec-adulto" onclick="toggleDeclR('adulto')">
+        <span>🧑</span> Es adulto (desde 18 años)
+      </button>
+      <div class="obj-msg-box" id="obox-rdec-adulto">
+        <div class="msg-box">
+          <div class="msg-label">💬 Mensaje a enviar</div>
+          <div class="msg-text" id="msg-rdec-adulto">📝 También necesitamos que llenes nuevamente tu Declaración Jurada de aptitud física este mes:
+
+👉 https://forms.gle/zj9qvShreBGvXKxk8
+
+¡Listo, ya tienes todo al día! 💙🧡</div>
+          <button class="copy-btn" onclick="copyMsg('msg-rdec-adulto',this)">📋 Copiar mensaje</button>
+        </div>
+      </div>
+      <button class="obj-btn" id="obtn-rdec-padre" onclick="toggleDeclR('padre')">
+        <span>👨‍👩‍👧</span> Es menor de edad (papá o mamá llena el formulario)
+      </button>
+      <div class="obj-msg-box" id="obox-rdec-padre">
+        <div class="msg-box">
+          <div class="msg-label">💬 Mensaje a enviar</div>
+          <div class="msg-text" id="msg-rdec-padre">📝 También necesitamos que como apoderado llenes nuevamente la Declaración Jurada de aptitud física de tu hijo/a este mes:
+
+👉 https://forms.gle/Emej1fXXFLLA2qeeA
+
+¡Listo, ya tienen todo al día! 💙🧡</div>
+          <button class="copy-btn" onclick="copyMsg('msg-rdec-padre',this)">📋 Copiar mensaje</button>
+        </div>
       </div>
     </div>
 
@@ -1656,6 +1747,21 @@ function startFlow(flowKey, backScreen) {
   });
 
   go('s-flow');
+}
+
+function toggleDeclR(tipo) {
+  ['adulto','padre'].forEach(t => {
+    const box = document.getElementById(`obox-rdec-${t}`);
+    const btn = document.getElementById(`obtn-rdec-${t}`);
+    if (t === tipo) {
+      const open = box.style.display === 'block';
+      box.style.display = open ? 'none' : 'block';
+      btn.classList.toggle('active', !open);
+    } else {
+      box.style.display = 'none';
+      btn.classList.remove('active');
+    }
+  });
 }
 
 function toggleDecl(tipo) {
