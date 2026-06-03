@@ -118,7 +118,19 @@
   .flow-title { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
   .flow-badge { display: inline-block; background: #1e3a8a; color: #93afd4; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-bottom: 16px; }
 
-  .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px); background: #16a34a; color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; transition: transform .3s ease; z-index: 999; }
+  .fab-home {
+    position: fixed; bottom: 20px; right: 16px; z-index: 200;
+    background: linear-gradient(135deg,#c2410c,#f97316);
+    color: #fff; border: none; border-radius: 50px;
+    padding: 11px 18px; font-size: 13px; font-weight: 700;
+    cursor: pointer; display: none; align-items: center; gap: 7px;
+    box-shadow: 0 4px 16px rgba(249,115,22,.45);
+    transition: transform .15s, opacity .2s;
+  }
+  .fab-home:active { transform: scale(.95); }
+  .fab-home.visible { display: flex; }
+
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(80px); background: #16a34a; color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 13px; font-weight: 600; transition: transform .3s ease; z-index: 999; }
   .toast.show { transform: translateX(-50%) translateY(0); }
 
   @media (max-width: 480px) {
@@ -179,6 +191,7 @@
 </div>
 
 <div class="toast" id="toast">✅ Mensaje copiado</div>
+<button class="fab-home" id="fab-home" onclick="go('s-home')">🏠 Inicio</button>
 
 <!-- ══════════════════════════════
      INICIO
@@ -1056,6 +1069,9 @@ function go(screenId) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(screenId).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  const fab = document.getElementById('fab-home');
+  if (screenId === 's-home') fab.classList.remove('visible');
+  else fab.classList.add('visible');
 }
 
 // ─── COPIAR MENSAJE ───────────────────────────
@@ -1796,6 +1812,7 @@ function startFlow(flowKey, backScreen) {
   });
 
   go('s-flow');
+  document.getElementById('fab-home').classList.add('visible');
 }
 
 function toggleDeclR(tipo) {
