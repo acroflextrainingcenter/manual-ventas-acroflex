@@ -241,6 +241,10 @@
         <span class="emoji">🙋</span>
         <div><div>Quejas o reclamos</div><div class="btn-desc">Un alumno o padre tiene una queja o inconformidad</div></div>
       </button>
+      <button class="btn-situation" onclick="go('s-recordatorio-quien')">
+        <span class="emoji">⏰</span>
+        <div><div>Recordatorio fin de paquete</div><div class="btn-desc">Avisar que el paquete de clases está por vencer</div></div>
+      </button>
       <button class="btn-situation" onclick="go('s-pausa-quien')">
         <span class="emoji">⏸️</span>
         <div><div>Pausa o baja</div><div class="btn-desc">Un alumno quiere pausar, congelar o retirarse</div></div>
@@ -556,6 +560,58 @@ Dime qué días y horarios te quedan mejor y te cuento qué tenemos disponible �
       <div class="step-header"><span class="step-num">+</span><span class="step-title-text">Enviar horarios del curso</span></div>
       <div class="section-subtitle" style="margin-top:10px;margin-bottom:10px">¿Cuál es su curso?</div>
       <div id="horarios-ha"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     RECORDATORIO FIN DE PAQUETE
+══════════════════════════════ -->
+<div class="screen" id="s-recordatorio-quien">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">⏰ Recordatorio fin de paquete</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿A quién le vas a escribir?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice" onclick="go('s-recordatorio-papa')"><span class="ch-emoji">👨‍👩‍👧</span>Papá o Mamá</button>
+      <button class="btn-choice" onclick="go('s-recordatorio-alumno')"><span class="ch-emoji">🧑</span>El alumno / La alumna</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-recordatorio-papa">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-recordatorio-quien')">← Atrás</button>
+    <div class="section-title">⏰ Recordatorio — Papá / Mamá</div>
+    <div class="divider"></div>
+    <div class="step-internal" style="margin-bottom:14px">✏️ Completa los datos entre [ ] antes de enviar.</div>
+    <div class="msg-box">
+      <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
+      <div class="msg-text" id="msg-rec-venc-papa">¡Hola! 😊 Les escribimos para recordarles que el paquete de clases de <span class="template-fill">[NOMBRE DEL ALUMNO]</span> vence el <span class="template-fill">[FECHA DE VENCIMIENTO]</span> 💙
+
+Si desean renovar, pueden hacerlo cuando gusten. Recuerden que del 15 al 20 de cada mes hay preventa con descuento especial 🧡
+
+¡Cualquier consulta aquí estamos! 😊</div>
+      <button class="copy-btn" onclick="copyMsgRaw('msg-rec-venc-papa',this)">📋 Copiar mensaje</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-recordatorio-alumno">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-recordatorio-quien')">← Atrás</button>
+    <div class="section-title">⏰ Recordatorio — Alumno</div>
+    <div class="divider"></div>
+    <div class="step-internal" style="margin-bottom:14px">✏️ Completa los datos entre [ ] antes de enviar.</div>
+    <div class="msg-box">
+      <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
+      <div class="msg-text" id="msg-rec-venc-alumno">¡Hola <span class="template-fill">[NOMBRE]</span>! 😊 Te escribimos para recordarte que tu paquete de clases vence el <span class="template-fill">[FECHA DE VENCIMIENTO]</span> 💙
+
+Si deseas renovar, puedes hacerlo cuando gustes. Recuerda que del 15 al 20 de cada mes hay preventa con descuento especial 🧡
+
+¡Cualquier consulta aquí estamos! 😊</div>
+      <button class="copy-btn" onclick="copyMsgRaw('msg-rec-venc-alumno',this)">📋 Copiar mensaje</button>
     </div>
   </div>
 </div>
