@@ -245,6 +245,10 @@
         <span class="emoji">🙋</span>
         <div><div>Quejas o reclamos</div><div class="btn-desc">Un alumno o padre tiene una queja o inconformidad</div></div>
       </button>
+      <button class="btn-situation" onclick="go('s-particulares')">
+        <span class="emoji">🎯</span>
+        <div><div>Clases particulares</div><div class="btn-desc">Alguien quiere clases 1 a 1 con Camila o con el equipo Acroflex</div></div>
+      </button>
       <button class="btn-situation" onclick="go('s-pausa-quien')">
         <span class="emoji">⏸️</span>
         <div><div>Pausa o baja</div><div class="btn-desc">Un alumno quiere pausar, congelar o retirarse</div></div>
@@ -612,6 +616,61 @@ Dime qué días y horarios te quedan mejor y te cuento qué tenemos disponible �
 
 ¿Lo renovamos hoy? 😊🧡</div>
       <button class="copy-btn" onclick="copyMsgRaw('msg-rec-venc-alumno',this)">📋 Copiar mensaje</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     CLASES PARTICULARES
+══════════════════════════════ -->
+<div class="screen" id="s-particulares">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">🎯 Clases particulares</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">¿Qué tipo de clase particular busca?</div>
+    <div class="btn-choice-grid">
+      <button class="btn-choice" onclick="go('s-part-camila')"><span class="ch-emoji">⭐</span>Con Camila Garay</button>
+      <button class="btn-choice" onclick="go('s-part-equipo')"><span class="ch-emoji">🤸</span>Con el equipo Acroflex</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="s-part-camila">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-particulares')">← Atrás</button>
+    <div class="section-title">⭐ Clases particulares con Camila Garay</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-part-camila">¡Hola! 😊 Qué bueno que estás interesado/a en clases particulares con Camila Garay 💙
+
+Las clases 1 a 1 con Camila se gestionan directamente a través de su equipo en CGC Method. Te paso el contacto para que puedan asesorarte con toda la info 🧡
+
+📲 WhatsApp CGC Method: +51 954 655 122
+
+¡Escríbeles y con gusto te orientan! 😊</div>
+      <button class="copy-btn" onclick="copyMsg('msg-part-camila',this)">📋 Copiar mensaje</button>
+    </div>
+    <div class="note-box"><strong>📌 Recuerda:</strong> Las clases particulares con Camila se coordinan exclusivamente por el canal de CGC Method.</div>
+  </div>
+</div>
+
+<div class="screen" id="s-part-equipo">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-particulares')">← Atrás</button>
+    <div class="section-title">🤸 Clases particulares con el equipo Acroflex</div>
+    <div class="divider"></div>
+    <div class="msg-box">
+      <div class="msg-label">💬 Mensaje a enviar</div>
+      <div class="msg-text" id="msg-part-equipo">¡Hola! 😊 Qué bueno que estás interesado/a en clases particulares con nuestro equipo 💙
+
+Para coordinarlo, te paso el contacto de la encargada de clases particulares de Acroflex, ella te va a orientar con todos los detalles 🧡
+
+📲 WhatsApp: +51 923 043 284
+
+¡Escríbele y con gusto te ayuda! 😊</div>
+      <button class="copy-btn" onclick="copyMsg('msg-part-equipo',this)">📋 Copiar mensaje</button>
     </div>
   </div>
 </div>
