@@ -1870,22 +1870,34 @@ Las clases son multinivel, así que su hijo/a puede empezar desde cero o con exp
 
 Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso', type: 'message',
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
         msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso PowerKicks 🦵💙
 
-PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión 🦵
+PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión. No es solo patada — es control, disciplina y técnica real en cada clase.` },
 
-No es solo patada — es control, disciplina y técnica real en cada clase. En 1 hora de entrenamiento trabajas fuerza explosiva, movilidad de cadera, precisión y mucha confianza 💪
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `En cada clase de 1 hora trabajamos:
+🦵 Técnica de patada desde la base
+💥 Fuerza explosiva de piernas
+🌀 Movilidad y apertura de cadera
+🎯 Precisión y control del movimiento
+💪 Confianza y disciplina física
 
-Si deseas, te puedo enviar los horarios y precios disponibles para que reserves tu cupo. 💙` },
+No necesitas experiencia previa — empezamos desde cero con técnica correcta y mucha seguridad.` },
 
-      { num: 3, title: 'Enviar video del curso', type: 'note',
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `Es ideal para personas que quieren desarrollar una patada poderosa y controlada, mejorar su explosividad y disciplina física, o complementar otra disciplina como danza, artes marciales o acrobacia 🔥` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Si deseas, te puedo enviar los horarios y precios disponibles para que reserves tu cupo. 💙🦵` },
+
+      { num: 6, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de PowerKicks. Dale un momento para que lo vea antes de continuar.' },
 
-      { num: 4, title: '¿Quiere ver horarios y precios?', type: 'message',
+      { num: 7, title: '¿Quiere ver horarios y precios?', type: 'message',
         msg: `¿Te gustaría que te enviemos nuestros horarios y precios? 😊` },
 
-      { num: 5, title: 'Enviar horarios y precios', type: 'message',
+      { num: 8, title: 'Enviar horarios y precios', type: 'message',
         note: '⚠️ Solo si respondió que sí.',
         msg: `¡Claro! Aquí va toda la info 💙
 
@@ -1899,10 +1911,10 @@ Si deseas, te puedo enviar los horarios y precios disponibles para que reserves 
 🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
 💳 Aceptamos: Visa, Mastercard, American Express` },
 
-      { num: 6, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto te está esperando! 💙 ¿Los sábados te quedarían bien para entrenar? 😊🧡` },
 
-      { num: 7, title: 'Manejo de objeciones', type: 'objections',
+      { num: 10, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tengo experiencia en patadas"',
             msg: `¡No se necesita! 😊 PowerKicks empieza desde las bases: técnica correcta, movilidad y control 💙 Los coaches te guían desde el principio para que avances de forma segura y con resultados reales 💪` },
@@ -1913,7 +1925,7 @@ Si deseas, te puedo enviar los horarios y precios disponibles para que reserves 
         ]
       },
 
-      { num: 8, title: 'Resumen de compra', type: 'template',
+      { num: 11, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Te confirmo todo 💙
 
@@ -1946,22 +1958,34 @@ Si deseas, te puedo enviar los horarios y precios disponibles para que reserves 
 
 Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso', type: 'message',
-        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso PowerKicks 🦵💙
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto, según lo que nos dicen, les recomendamos nuestro curso PowerKicks 🦵💙
 
-PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión 🦵
+PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión. No es solo patada — es control, disciplina y técnica real en cada clase.` },
 
-No es solo patada — es control, disciplina y técnica real. En 1 hora de entrenamiento su hijo/a trabaja fuerza explosiva, movilidad de cadera, precisión y confianza 💪
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `En cada clase de 1 hora se trabaja:
+🦵 Técnica de patada desde la base
+💥 Fuerza explosiva de piernas
+🌀 Movilidad y apertura de cadera
+🎯 Precisión y control del movimiento
+💪 Confianza y disciplina física
 
-Si desean, les puedo enviar los horarios y precios disponibles para que reserven su cupo. 💙` },
+No se necesita experiencia previa — empezamos desde cero con técnica correcta y mucha seguridad.` },
 
-      { num: 3, title: 'Enviar video del curso', type: 'note',
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `Es ideal para personas que quieren desarrollar una patada poderosa y controlada, mejorar la explosividad y disciplina física, o complementar otra disciplina como danza, artes marciales o acrobacia 🔥` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Si desean, les puedo enviar los horarios y precios disponibles para que reserven su cupo. 💙🦵` },
+
+      { num: 6, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de PowerKicks. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 4, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 7, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y precios? 😊` },
 
-      { num: 5, title: 'Enviar horarios y precios', type: 'message',
+      { num: 8, title: 'Enviar horarios y precios', type: 'message',
         note: '⚠️ Solo si respondió que sí.',
         msg: `¡Claro! Aquí va toda la info 💙
 
@@ -1975,10 +1999,10 @@ Si desean, les puedo enviar los horarios y precios disponibles para que reserven
 🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
 💳 Aceptamos: Visa, Mastercard, American Express` },
 
-      { num: 6, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto está disponible para su hijo/a! 💙 ¿Los sábados les quedarían bien para las clases? 😊🧡` },
 
-      { num: 7, title: 'Manejo de objeciones', type: 'objections',
+      { num: 10, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tiene experiencia"',
             msg: `¡No se necesita! 😊 PowerKicks empieza desde las bases: técnica correcta, movilidad y control 💙 Los coaches guían a cada alumno/a desde el principio con mucha seguridad 💪` },
@@ -1989,7 +2013,7 @@ Si desean, les puedo enviar los horarios y precios disponibles para que reserven
         ]
       },
 
-      { num: 8, title: 'Resumen de compra', type: 'template',
+      { num: 11, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
@@ -2022,24 +2046,34 @@ Si desean, les puedo enviar los horarios y precios disponibles para que reserven
 
 Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso', type: 'message',
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
         msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso Acrobacias para Bailarinas 🩰💙
 
-Es un curso exclusivo dictado personalmente por Camila Garay ⭐
+Es un curso exclusivo dictado personalmente por Camila Garay ⭐ — con un enfoque 100% pensado para bailarinas.` },
 
-Trabajamos full flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina: elementos reales que vas a poder aplicar directamente en tus clases, presentaciones y audiciones 🤸
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `Trabajamos flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina 🤸: elementos reales que vas a poder aplicar directamente en tus clases, presentaciones y audiciones.
 
-Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.
+No es un curso genérico — cada ejercicio está elegido pensando en lo que una bailarina realmente necesita.` },
 
-Si deseas, te puedo enviar los horarios y precios disponibles para que reserves tu cupo. 💙🩰` },
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `En cada clase trabajamos:
+🩰 Splits y aperturas (frontal y lateral)
+🌉 Puentes y movilidad de columna
+🤸 Acrobacias aplicadas a la danza (ruedas, mortal, parada de manos)
+💪 Fuerza y control corporal para bailarinas
+✨ Técnica limpia y progresiva desde tu nivel actual` },
 
-      { num: 3, title: 'Enviar video del curso', type: 'note',
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Si deseas, te puedo enviar los horarios y precios disponibles para que reserves tu cupo. 💙🩰` },
+
+      { num: 6, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de Acrobacias para Bailarinas. Dale un momento para que lo vea antes de continuar.' },
 
-      { num: 4, title: '¿Quiere ver horarios y precios?', type: 'message',
+      { num: 7, title: '¿Quiere ver horarios y precios?', type: 'message',
         msg: `¿Te gustaría que te enviemos nuestros horarios y precios? 😊` },
 
-      { num: 5, title: 'Enviar horarios y precios', type: 'message',
+      { num: 8, title: 'Enviar horarios y precios', type: 'message',
         note: '⚠️ Solo si respondió que sí.',
         msg: `¡Claro! Aquí va toda la info 💙
 
@@ -2053,10 +2087,10 @@ Si deseas, te puedo enviar los horarios y precios disponibles para que reserves 
 🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
 💳 Aceptamos: Visa, Mastercard, American Express` },
 
-      { num: 6, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto te está esperando! 💙 Cuéntame, ¿qué días te quedarían mejor para las clases? Así te ayudo a elegir el horario ideal 😊🧡` },
 
-      { num: 7, title: 'Manejo de objeciones', type: 'objections',
+      { num: 10, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No sé si tengo el nivel"',
             msg: `¡No te preocupes! 😊 El curso se adapta a tu nivel actual de danza 💙 Los coaches evalúan tus capacidades y trabajan desde donde estás para que el avance sea real y seguro 💪` },
@@ -2067,7 +2101,7 @@ Si deseas, te puedo enviar los horarios y precios disponibles para que reserves 
         ]
       },
 
-      { num: 8, title: 'Resumen de compra', type: 'template',
+      { num: 11, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Te confirmo todo 💙
 
@@ -2100,24 +2134,34 @@ Si deseas, te puedo enviar los horarios y precios disponibles para que reserves 
 
 Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hija, su edad y qué es lo que quieren lograr con las clases? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso', type: 'message',
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
         msg: `Perfecto, según lo que nos dicen, le recomendamos nuestro curso Acrobacias para Bailarinas 🩰💙
 
-Es un curso exclusivo dictado personalmente por Camila Garay ⭐
+Es un curso exclusivo dictado personalmente por Camila Garay ⭐ — con un enfoque 100% pensado para bailarinas.` },
 
-Trabajamos full flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina: elementos reales que [NOMBRE] va a poder aplicar directamente en sus clases, presentaciones y audiciones 🤸
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `Trabajamos flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina 🤸: elementos reales que [NOMBRE] va a poder aplicar directamente en sus clases, presentaciones y audiciones.
 
-Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.
+No es un curso genérico — cada ejercicio está elegido pensando en lo que una bailarina realmente necesita.` },
 
-Si desean, les puedo enviar los horarios y precios disponibles para que reserven su cupo. 💙🩰` },
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `En cada clase trabajan:
+🩰 Splits y aperturas (frontal y lateral)
+🌉 Puentes y movilidad de columna
+🤸 Acrobacias aplicadas a la danza (ruedas, mortal, parada de manos)
+💪 Fuerza y control corporal para bailarinas
+✨ Técnica limpia y progresiva desde su nivel actual` },
 
-      { num: 3, title: 'Enviar video del curso', type: 'note',
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Si desean, les puedo enviar los horarios y precios disponibles para que reserven su cupo. 💙🩰` },
+
+      { num: 6, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de Acrobacias para Bailarinas. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 4, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 7, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y precios? 😊` },
 
-      { num: 5, title: 'Enviar horarios y precios', type: 'message',
+      { num: 8, title: 'Enviar horarios y precios', type: 'message',
         note: '⚠️ Solo si respondió que sí.',
         msg: `¡Claro! Aquí va toda la info 💙
 
@@ -2131,10 +2175,10 @@ Si desean, les puedo enviar los horarios y precios disponibles para que reserven
 🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
 💳 Aceptamos: Visa, Mastercard, American Express` },
 
-      { num: 6, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto está disponible para su hija! 💙 Cuéntennos, ¿qué días les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
 
-      { num: 7, title: 'Manejo de objeciones', type: 'objections',
+      { num: 10, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No sabemos si tiene el nivel"',
             msg: `¡No se preocupen! 😊 El curso se adapta al nivel actual de danza de su hija 💙 Los coaches evalúan sus capacidades y trabajan desde donde está para que el avance sea real y seguro 💪` },
@@ -2145,7 +2189,7 @@ Si desean, les puedo enviar los horarios y precios disponibles para que reserven
         ]
       },
 
-      { num: 8, title: 'Resumen de compra', type: 'template',
+      { num: 11, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
