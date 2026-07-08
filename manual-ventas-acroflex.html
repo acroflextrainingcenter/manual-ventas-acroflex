@@ -1597,32 +1597,54 @@ Si desean, les puedo enviar los horarios y valores disponibles para que reserven
 
 Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso', type: 'message',
-        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso Acroflex Teens 🧒🤸
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto, según lo que nos dicen, le recomendamos nuestro curso Acroflex Teens 🧒🤸‍♀️💙
 
-Acroflex Teens es nuestro curso de acrobacias para niños y niñas de 7 a 13 años. Es multinivel: su hijo/a empieza exactamente donde está y avanza con un programa mensual donde cada mes trabajamos diferentes acrobacias y elementos nuevos. Todo con técnica y mucha seguridad 💪
+Acroflex Teens está diseñado para niños y niñas de 7 a 14 años. Aquí no solo enseñamos acrobacia — en Acroflex creemos que el deporte es una herramienta para formar personas 💪✨
 
-En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que progresen bien.
+Por eso, además de trabajar habilidades físicas, fomentamos valores como la disciplina, el respeto, la perseverancia y la responsabilidad.` },
 
-Si desean, les puedo enviar los horarios y valores disponibles para que reserven su cupo. 💙` },
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `Promovemos el respeto hacia uno mismo, hacia los compañeros y hacia los entrenadores 🤝, creando un ambiente positivo donde cada alumno pueda desarrollarse con confianza y seguridad.
 
-      { num: 3, title: 'Enviar video del curso', type: 'note',
+Trabajamos con una metodología multinivel 📈, respetando el proceso individual de cada niño/a. No hacemos comparaciones: acompañamos a cada alumno en su propio camino de crecimiento 🌱
+
+Y damos mucha importancia a la técnica correcta desde la base, porque una buena ejecución permite avanzar con mayor seguridad, control corporal y confianza.` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `Durante las clases trabajarán:
+
+🤸‍♀️ Parada de manos
+🌪️ Aspas
+🔄 Rodamientos
+💥 Mortales (según nivel y progresión)
+💪 Fuerza y flexibilidad aplicada a la acrobacia` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Nuestro objetivo es que cada alumno desarrolle habilidades físicas, confianza en sí mismo y herramientas que le sirvan dentro y fuera del entrenamiento. ✨
+
+En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que su progreso sea real y seguro 🙌💙` },
+
+      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+        msg: `Con mucho gusto les comparto los horarios y valores disponibles 😊💙` },
+
+      { num: 7, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de Acroflex Teens. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 4, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 8, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 5, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
           { src: 'horarios-teens.png', label: 'Imagen 1 — Horarios Julio Acroflex Teens' },
           { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
         ]},
 
-      { num: 6, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto está disponible para su hijo/a! 💙 Cuéntennos, ¿qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
 
-      { num: 7, title: 'Manejo de objeciones', type: 'objections',
+      { num: 11, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tiene experiencia / es muy joven"',
             msg: `¡Perfecto para empezar! 😊 Acroflex Teens está diseñado exactamente para eso: niños que empiezan desde cero 💙 El programa avanza de acuerdo al ritmo de cada niño/a, con coaches que corrigen la técnica y cuidan la seguridad en todo momento 💪` },
@@ -1635,7 +1657,7 @@ Si desean, les puedo enviar los horarios y valores disponibles para que reserven
         ]
       },
 
-      { num: 8, title: 'Resumen de compra', type: 'template',
+      { num: 12, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
