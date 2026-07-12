@@ -1420,45 +1420,55 @@ const FLOWS = {
     title: '🤸 Acroflex Jóvenes y Adultos',
     badge: 'Alumno/a escribe directamente',
     steps: [
-      { num: 1, title: 'Presentar el curso', type: 'message',
+      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
         msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
 
-Acroflex Jóvenes y Adultos 14+ 🤸‍♀️💙
-Es el curso ideal para quienes desean desarrollar acrobacia, fuerza, flexibilidad y control corporal, ya sea que empiecen desde cero o que ya tengan experiencia.
+Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
 
-Nuestra metodología está basada en los fundamentos de la gimnasia y la acrobacia de piso, priorizando siempre una técnica limpia, segura y progresiva. Las clases son multinivel, porque entendemos que cada alumno tiene un proceso diferente. Respetamos los tiempos de aprendizaje de cada persona y adaptamos los ejercicios según su nivel y capacidades.
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso Acroflex Jóvenes y Adultos 🤸‍♀️💙
 
-En cada clase trabajamos:
+Es el curso ideal para quienes desean desarrollar acrobacia, fuerza, flexibilidad y control corporal, ya sea que empiecen desde cero o que ya tengan experiencia.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `Nuestra metodología está basada en los fundamentos de la gimnasia y la acrobacia de piso, priorizando siempre una técnica limpia, segura y progresiva.
+
+Las clases son multinivel, porque entendemos que cada alumno tiene un proceso diferente. Respetamos los tiempos de aprendizaje de cada persona y adaptamos los ejercicios según su nivel y capacidades.` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `En cada clase trabajamos:
 ✨ Acrobacias de piso (rodamientos, ruedas, parada de manos y progresiones de mortales)
 ✨ Fuerza y preparación física
 ✨ Flexibilidad y movilidad
-✨ Equilibrio, coordinación y control corporal
+✨ Equilibrio, coordinación y control corporal` },
 
-Hoy más que nunca es importante mantenerse activo y fuerte. Por eso, complementamos cada entrenamiento con ejercicios de fortalecimiento que te ayudarán a moverte mejor, prevenir lesiones y ganar confianza en tu cuerpo.
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Hoy más que nunca es importante mantenerse activo y fuerte. Por eso, complementamos cada entrenamiento con ejercicios de fortalecimiento que te ayudarán a moverte mejor, prevenir lesiones y ganar confianza en tu cuerpo.
 
 Además, encontrarás un ambiente positivo donde podrás conocer personas con intereses similares, aprender en equipo y disfrutar el proceso mientras celebras cada avance. 💙
 
-No necesitas experiencia previa.
+No necesitas experiencia previa.` },
 
-Si deseas, te puedo enviar los horarios y valores disponibles para que reserves tu cupo. 💙🤸‍♀️` },
+      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+        msg: `Si deseas, te puedo enviar los horarios y valores disponibles para que reserves tu cupo. 💙🤸‍♀️` },
 
-      { num: 2, title: 'Enviar video del curso', type: 'note',
+      { num: 7, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video del curso Acroflex. Dale un momento para que lo vea antes de continuar.' },
 
-      { num: 3, title: '¿Quiere ver horarios y precios?', type: 'message',
+      { num: 8, title: '¿Quiere ver horarios y precios?', type: 'message',
         msg: `¿Te gustaría que te enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 4, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
-          { src: 'horarios-acroflex.png', label: 'Imagen 1 — Horarios Junio Acroflex' },
+          { src: 'horarios-acroflex.png', label: 'Imagen 1 — Horarios Julio Acroflex' },
           { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
         ]},
 
-      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto te está esperando! 💙 Cuéntame, ¿qué días de la semana te quedarían mejor para entrenar? Así te ayudo a elegir el horario ideal 😊🧡` },
 
-      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+      { num: 11, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tengo experiencia / estoy muy rígido"',
             msg: `¡No te preocupes para nada! 😊 Acroflex es multinivel, lo que significa que empezamos exactamente donde tú estás 💙 No necesitas experiencia previa ni ser flexible — los coaches te guían desde el inicio con técnica y mucha seguridad 💪 ¡La mayoría de nuestros alumnos empezaron igual que tú!` },
@@ -1471,7 +1481,7 @@ Si deseas, te puedo enviar los horarios y valores disponibles para que reserves 
         ]
       },
 
-      { num: 7, title: 'Resumen de compra', type: 'template',
+      { num: 12, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Te confirmo todo 💙
 
@@ -1482,7 +1492,7 @@ Si deseas, te puedo enviar los horarios y valores disponibles para que reserves 
 • Matrícula única: S/50 ✅ (solo se paga una vez)
 • Total a pagar: S/[precio + 50 si es su primera vez]
 
-¡Ya estás a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+`,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
 
 ➡️ Yape o Plin: 923 043 284
@@ -1490,7 +1500,9 @@ Si deseas, te puedo enviar los horarios y valores disponibles para que reserves 
 💵 CCI: 002-191-10455294002859
 
 💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)` },
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
 
@@ -1499,45 +1511,55 @@ Si deseas, te puedo enviar los horarios y valores disponibles para que reserves 
     title: '🤸 Acroflex Jóvenes y Adultos',
     badge: 'Papá / Mamá escribe',
     steps: [
-      { num: 1, title: 'Presentar el curso', type: 'message',
+      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
         msg: `¡Hola! 😊 Bienvenido/a a Acroflex, qué bueno que se comunicaron con nosotros 💙
 
-Acroflex Jóvenes y Adultos 14+ 🤸‍♀️💙
-Es el curso ideal para quienes desean desarrollar acrobacia, fuerza, flexibilidad y control corporal, ya sea que empiecen desde cero o que ya tengan experiencia.
+Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
 
-Nuestra metodología está basada en los fundamentos de la gimnasia y la acrobacia de piso, priorizando siempre una técnica limpia, segura y progresiva. Las clases son multinivel, porque entendemos que cada alumno tiene un proceso diferente. Respetamos los tiempos de aprendizaje de cada persona y adaptamos los ejercicios según su nivel y capacidades.
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto, según lo que nos dicen, les recomendamos nuestro curso Acroflex Jóvenes y Adultos 🤸‍♀️💙
 
-En cada clase trabajamos:
+Es el curso ideal para quienes desean desarrollar acrobacia, fuerza, flexibilidad y control corporal, ya sea que empiecen desde cero o que ya tengan experiencia.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `Nuestra metodología está basada en los fundamentos de la gimnasia y la acrobacia de piso, priorizando siempre una técnica limpia, segura y progresiva.
+
+Las clases son multinivel, porque entendemos que cada alumno tiene un proceso diferente. Respetamos los tiempos de aprendizaje de cada persona y adaptamos los ejercicios según su nivel y capacidades.` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `En cada clase trabajamos:
 ✨ Acrobacias de piso (rodamientos, ruedas, parada de manos y progresiones de mortales)
 ✨ Fuerza y preparación física
 ✨ Flexibilidad y movilidad
-✨ Equilibrio, coordinación y control corporal
+✨ Equilibrio, coordinación y control corporal` },
 
-Hoy más que nunca es importante mantenerse activo y fuerte. Por eso, complementamos cada entrenamiento con ejercicios de fortalecimiento que ayudarán a su hijo/a a moverse mejor, prevenir lesiones y ganar confianza en su cuerpo.
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Hoy más que nunca es importante mantenerse activo y fuerte. Por eso, complementamos cada entrenamiento con ejercicios de fortalecimiento que ayudarán a su hijo/a a moverse mejor, prevenir lesiones y ganar confianza en su cuerpo.
 
 Además, encontrará un ambiente positivo donde podrá conocer personas con intereses similares, aprender en equipo y disfrutar el proceso mientras celebra cada avance. 💙
 
-No necesita experiencia previa.
+No necesita experiencia previa.` },
 
-Si desean, les puedo enviar los horarios y valores disponibles para que reserven su cupo. 💙🤸‍♀️` },
+      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+        msg: `Si desean, les puedo enviar los horarios y valores disponibles para que reserven su cupo. 💙🤸‍♀️` },
 
-      { num: 2, title: 'Enviar video del curso', type: 'note',
+      { num: 7, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video del curso Acroflex. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 3, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 8, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 4, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
-          { src: 'horarios-acroflex.png', label: 'Imagen 1 — Horarios Junio Acroflex' },
+          { src: 'horarios-acroflex.png', label: 'Imagen 1 — Horarios Julio Acroflex' },
           { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
         ]},
 
-      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto está disponible para su hijo/a! 💙 Cuéntennos, ¿qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
 
-      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+      { num: 11, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tiene experiencia / está muy rígido"',
             msg: `¡No hay problema para nada! 😊 Acroflex es multinivel, empezamos exactamente donde tu hijo/a está 💙 No necesita experiencia previa ni ser flexible — los coaches los guían desde el inicio con técnica y mucha seguridad 💪 ¡La mayoría de nuestros alumnos empezaron así!` },
@@ -1550,7 +1572,7 @@ Si desean, les puedo enviar los horarios y valores disponibles para que reserven
         ]
       },
 
-      { num: 7, title: 'Resumen de compra', type: 'template',
+      { num: 12, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
@@ -1561,7 +1583,7 @@ Si desean, les puedo enviar los horarios y valores disponibles para que reserven
 • Matrícula única: S/50 ✅ (solo se paga una vez)
 • Total a pagar: S/[precio + 50 si es primera vez]
 
-¡Ya están a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+`,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
 
 ➡️ Yape o Plin: 923 043 284
@@ -1569,7 +1591,9 @@ Si desean, les puedo enviar los horarios y valores disponibles para que reserven
 💵 CCI: 002-191-10455294002859
 
 💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)` },
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
 
@@ -1578,32 +1602,56 @@ Si desean, les puedo enviar los horarios y valores disponibles para que reserven
     title: '🧒 Acroflex Teens (7–13 años)',
     badge: 'Papá / Mamá escribe',
     steps: [
-      { num: 1, title: 'Presentar el curso', type: 'message',
+      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
         msg: `¡Hola! 😊 Bienvenido/a a Acroflex, qué gusto que se comunicaron con nosotros 💙
 
-Acroflex Teens es nuestro curso de acrobacias para niños y niñas de 7 a 13 años 🤸
+Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
 
-Es multinivel: tu hijo/a empieza exactamente donde está y avanza con un programa mensual donde cada mes trabajamos diferentes acrobacias y elementos nuevos. Todo con técnica y mucha seguridad 💪
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto, según lo que nos dicen, les recomendamos nuestro curso Acroflex Teens 🧒🤸‍♀️💙
 
-En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que progresen bien.` },
+En Acroflex creemos que el deporte es una herramienta para formar personas. Por eso, además de enseñar acrobacia, fomentamos valores como la disciplina, el respeto, la perseverancia y la responsabilidad. ✨` },
 
-      { num: 2, title: 'Enviar video del curso', type: 'note',
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `Promovemos el respeto hacia uno mismo, hacia los compañeros y hacia los entrenadores 🤝, creando un ambiente positivo donde cada alumno pueda desarrollarse con confianza y seguridad.
+
+Trabajamos con una metodología multinivel, respetando el proceso individual de cada niño/a. Entendemos que cada persona aprende a un ritmo diferente, por lo que no hacemos comparaciones — acompañamos a cada alumno en su propio camino de crecimiento. 🌱` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `Damos mucha importancia a la técnica correcta desde la base, porque creemos que una buena ejecución permite avanzar con mayor seguridad, control corporal y confianza 💪
+
+Durante las clases trabajarán:
+🤸‍♀️ Parada de manos
+🌪️ Aspas
+🔄 Rodamientos
+💥 Mortales (según nivel y progresión)
+💪 Fuerza y flexibilidad aplicada a la acrobacia` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Nuestro objetivo es que cada alumno desarrolle habilidades físicas, confianza en sí mismo y herramientas que le sirvan dentro y fuera del entrenamiento. ✨
+
+En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que su progreso sea real y seguro 🙌💙` },
+
+      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+        msg: `Con mucho gusto les comparto los horarios y valores disponibles 😊💙` },
+
+      { num: 7, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de Acroflex Teens. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 3, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 8, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 4, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
-          { src: 'horarios-teens.png', label: 'Imagen 1 — Horarios Junio Acroflex Teens' },
+          { src: 'horarios-teens.png', label: 'Imagen 1 — Horarios Julio Acroflex Teens' },
           { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
         ]},
 
-      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto está disponible para su hijo/a! 💙 Cuéntennos, ¿qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
 
-      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+      { num: 11, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tiene experiencia / es muy joven"',
             msg: `¡Perfecto para empezar! 😊 Acroflex Teens está diseñado exactamente para eso: niños que empiezan desde cero 💙 El programa avanza de acuerdo al ritmo de cada niño/a, con coaches que corrigen la técnica y cuidan la seguridad en todo momento 💪` },
@@ -1616,7 +1664,7 @@ En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que pro
         ]
       },
 
-      { num: 7, title: 'Resumen de compra', type: 'template',
+      { num: 12, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
@@ -1627,7 +1675,7 @@ En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que pro
 • Matrícula única: S/50 ✅ (solo se paga una vez)
 • Total a pagar: S/[precio + 50 si es primera vez]
 
-¡Ya están a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+`,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
 
 ➡️ Yape o Plin: 923 043 284
@@ -1635,7 +1683,9 @@ En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que pro
 💵 CCI: 002-191-10455294002859
 
 💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)` },
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
 
@@ -1644,30 +1694,56 @@ En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que pro
     title: '🧘 FlexiPower',
     badge: 'Alumno/a escribe directamente',
     steps: [
-      { num: 1, title: 'Presentar el curso', type: 'message',
+      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
         msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
 
-FlexiPower es nuestro curso de movilidad y flexibilidad para adultos desde los 15 años, para mujeres y hombres 🧘
+Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
 
-Empiezas desde cero con técnica real y un programa estructurado. Semana a semana vas notando cambios concretos en tu movilidad y flexibilidad 💪 Y además ayuda a prevenir dolores y reducir el riesgo de lesiones.` },
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso FlexiPower – Fuerza y Flexibilidad para tu cuerpo 💪🧡
 
-      { num: 2, title: 'Enviar video del curso', type: 'note',
+FlexiPower es un curso enfocado en desarrollar fuerza y flexibilidad al mismo tiempo, algo clave para mejorar el control corporal y prevenir lesiones.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `A diferencia de solo estirar, aquí trabajamos flexibilidad activa 💡: el músculo no solo se alarga, sino que también se fortalece en ese rango de movimiento. Esto permite ganar movilidad real y segura en las articulaciones.` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `Durante las clases se trabaja:
+✨ Aperturas de piernas (split frontal y lateral)
+✨ Fuerza de piernas y caderas
+✨ Movilidad de cadera y espalda
+✨ Control del core
+✨ Ejercicios de elongación activa y técnica de flexibilidad` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Es ideal para:
+⭐ Personas que quieren lograr el spagat o split
+⭐ Bailarines, deportistas o artistas
+⭐ Personas que quieren mejorar su movilidad y postura
+⭐ Adultos que desean ganar flexibilidad sin lesionarse
+
+Las clases son multinivel, así que puedes empezar desde cero o con experiencia 🙌` },
+
+      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+        msg: `Si deseas, te puedo enviar los horarios y valores disponibles para que reserves tu cupo. 💙🧘` },
+
+      { num: 7, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de FlexiPower. Dale un momento para que lo vea antes de continuar.' },
 
-      { num: 3, title: '¿Quiere ver horarios y precios?', type: 'message',
+      { num: 8, title: '¿Quiere ver horarios y precios?', type: 'message',
         msg: `¿Te gustaría que te enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 4, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
-          { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Junio FlexiPower' },
+          { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Julio FlexiPower' },
           { src: 'mensualidades-flexipower.png', label: 'Imagen 2 — Mensualidades FlexiPower' },
         ]},
 
-      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto te está esperando! 💙 Cuéntame, ¿qué días de la semana te quedarían mejor para entrenar? Así te ayudo a elegir el horario ideal 😊🧡` },
 
-      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+      { num: 11, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No soy nada flexible / no tengo experiencia"',
             msg: `¡Ese es exactamente el punto de partida perfecto! 😊 FlexiPower empieza desde cero, con técnica y sin forzar el cuerpo 💙 Los coaches te guían en cada posición para que avances de forma segura. ¡Muchos alumnos llegan sin ninguna base y los resultados son increíbles! 💪` },
@@ -1680,7 +1756,7 @@ Empiezas desde cero con técnica real y un programa estructurado. Semana a seman
         ]
       },
 
-      { num: 7, title: 'Resumen de compra', type: 'template',
+      { num: 12, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Te confirmo todo 💙
 
@@ -1691,7 +1767,7 @@ Empiezas desde cero con técnica real y un programa estructurado. Semana a seman
 • Matrícula única: S/50 ✅ (solo se paga una vez)
 • Total a pagar: S/[precio + 50 si es primera vez]
 
-¡Ya estás a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+`,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
 
 ➡️ Yape o Plin: 923 043 284
@@ -1699,7 +1775,9 @@ Empiezas desde cero con técnica real y un programa estructurado. Semana a seman
 💵 CCI: 002-191-10455294002859
 
 💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)` },
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
 
@@ -1708,30 +1786,56 @@ Empiezas desde cero con técnica real y un programa estructurado. Semana a seman
     title: '🧘 FlexiPower',
     badge: 'Papá / Mamá escribe',
     steps: [
-      { num: 1, title: 'Presentar el curso', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, con gusto te cuento sobre FlexiPower 💙
+      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, con gusto les contamos 💙
 
-Es nuestro curso de movilidad y flexibilidad para adultos desde los 15 años, para mujeres y hombres 🧘
+Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
 
-Tu hijo/a empezaría desde cero con técnica real y un programa estructurado. Semana a semana se van notando cambios concretos en movilidad y flexibilidad 💪 Y además ayuda a prevenir dolores y reducir el riesgo de lesiones.` },
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto, según lo que nos dicen, les recomendamos nuestro curso FlexiPower – Fuerza y Flexibilidad para el cuerpo 💪🧡
 
-      { num: 2, title: 'Enviar video del curso', type: 'note',
+FlexiPower es un curso enfocado en desarrollar fuerza y flexibilidad al mismo tiempo, algo clave para mejorar el control corporal y prevenir lesiones.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `A diferencia de solo estirar, aquí trabajamos flexibilidad activa 💡: el músculo no solo se alarga, sino que también se fortalece en ese rango de movimiento. Esto permite ganar movilidad real y segura en las articulaciones.` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `Durante las clases se trabaja:
+✨ Aperturas de piernas (split frontal y lateral)
+✨ Fuerza de piernas y caderas
+✨ Movilidad de cadera y espalda
+✨ Control del core
+✨ Ejercicios de elongación activa y técnica de flexibilidad` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Es ideal para:
+⭐ Personas que quieren lograr el spagat o split
+⭐ Bailarines, deportistas o artistas
+⭐ Personas que quieren mejorar su movilidad y postura
+⭐ Adultos que desean ganar flexibilidad sin lesionarse
+
+Las clases son multinivel, así que su hijo/a puede empezar desde cero o con experiencia 🙌` },
+
+      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+        msg: `Si desean, les puedo enviar los horarios y valores disponibles para que reserven su cupo. 💙🧘` },
+
+      { num: 7, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de FlexiPower. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 3, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 8, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 4, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
-          { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Junio FlexiPower' },
+          { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Julio FlexiPower' },
           { src: 'mensualidades-flexipower.png', label: 'Imagen 2 — Mensualidades FlexiPower' },
         ]},
 
-      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto está disponible para su hijo/a! 💙 Cuéntennos, ¿qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
 
-      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+      { num: 11, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tiene experiencia / es muy rígido"',
             msg: `¡No hay problema! 😊 FlexiPower empieza desde cero, con técnica y sin forzar el cuerpo 💙 Los coaches guían a cada alumno/a de acuerdo a su nivel. ¡El progreso es real y seguro! 💪` },
@@ -1744,7 +1848,7 @@ Tu hijo/a empezaría desde cero con técnica real y un programa estructurado. Se
         ]
       },
 
-      { num: 7, title: 'Resumen de compra', type: 'template',
+      { num: 12, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
@@ -1755,7 +1859,7 @@ Tu hijo/a empezaría desde cero con técnica real y un programa estructurado. Se
 • Matrícula única: S/50 ✅ (solo se paga una vez)
 • Total a pagar: S/[precio + 50 si es primera vez]
 
-¡Ya están a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+`,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
 
 ➡️ Yape o Plin: 923 043 284
@@ -1763,7 +1867,9 @@ Tu hijo/a empezaría desde cero con técnica real y un programa estructurado. Se
 💵 CCI: 002-191-10455294002859
 
 💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)` },
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
 
@@ -1772,20 +1878,39 @@ Tu hijo/a empezaría desde cero con técnica real y un programa estructurado. Se
     title: '🦵 PowerKicks',
     badge: 'Alumno/a escribe directamente',
     steps: [
-      { num: 1, title: 'Presentar el curso', type: 'message',
+      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
         msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙🧡
 
-PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión 🦵
+Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
 
-No es solo patada — es control, disciplina y técnica real en cada clase. En 1 hora de entrenamiento trabajas fuerza explosiva, movilidad de cadera, precisión y mucha confianza 💪` },
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso PowerKicks 🦵💙
 
-      { num: 2, title: 'Enviar video del curso', type: 'note',
+PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión. No es solo patada — es control, disciplina y técnica real en cada clase.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `En cada clase de 1 hora trabajamos:
+🦵 Técnica de patada desde la base
+💥 Fuerza explosiva de piernas
+🌀 Movilidad y apertura de cadera
+🎯 Precisión y control del movimiento
+💪 Confianza y disciplina física
+
+No necesitas experiencia previa — empezamos desde cero con técnica correcta y mucha seguridad.` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `Es ideal para personas que quieren desarrollar una patada poderosa y controlada, mejorar su explosividad y disciplina física, o complementar otra disciplina como danza, artes marciales o acrobacia 🔥` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Si deseas, te puedo enviar los horarios y precios disponibles para que reserves tu cupo. 💙🦵` },
+
+      { num: 6, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de PowerKicks. Dale un momento para que lo vea antes de continuar.' },
 
-      { num: 3, title: '¿Quiere ver horarios y precios?', type: 'message',
+      { num: 7, title: '¿Quiere ver horarios y precios?', type: 'message',
         msg: `¿Te gustaría que te enviemos nuestros horarios y precios? 😊` },
 
-      { num: 4, title: 'Enviar horarios y precios', type: 'message',
+      { num: 8, title: 'Enviar horarios y precios', type: 'message',
         note: '⚠️ Solo si respondió que sí.',
         msg: `¡Claro! Aquí va toda la info 💙
 
@@ -1799,10 +1924,10 @@ No es solo patada — es control, disciplina y técnica real en cada clase. En 1
 🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
 💳 Aceptamos: Visa, Mastercard, American Express` },
 
-      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto te está esperando! 💙 ¿Los sábados te quedarían bien para entrenar? 😊🧡` },
 
-      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+      { num: 10, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tengo experiencia en patadas"',
             msg: `¡No se necesita! 😊 PowerKicks empieza desde las bases: técnica correcta, movilidad y control 💙 Los coaches te guían desde el principio para que avances de forma segura y con resultados reales 💪` },
@@ -1813,7 +1938,7 @@ No es solo patada — es control, disciplina y técnica real en cada clase. En 1
         ]
       },
 
-      { num: 7, title: 'Resumen de compra', type: 'template',
+      { num: 11, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Te confirmo todo 💙
 
@@ -1824,7 +1949,7 @@ No es solo patada — es control, disciplina y técnica real en cada clase. En 1
 • Matrícula única: S/50 ✅ (solo se paga una vez)
 • Total a pagar: S/250
 
-¡Ya estás a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+`,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
 
 ➡️ Yape o Plin: 923 043 284
@@ -1832,7 +1957,9 @@ No es solo patada — es control, disciplina y técnica real en cada clase. En 1
 💵 CCI: 002-191-10455294002859
 
 💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)` },
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
 
@@ -1841,20 +1968,39 @@ No es solo patada — es control, disciplina y técnica real en cada clase. En 1
     title: '🦵 PowerKicks',
     badge: 'Papá / Mamá escribe',
     steps: [
-      { num: 1, title: 'Presentar el curso', type: 'message',
+      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
         msg: `¡Hola! 😊 Bienvenido/a a Acroflex, qué bueno que escriben 💙🧡
 
-PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión 🦵
+Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
 
-No es solo patada — es control, disciplina y técnica real. En 1 hora de entrenamiento tu hijo/a trabaja fuerza explosiva, movilidad de cadera, precisión y confianza 💪` },
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto, según lo que nos dicen, les recomendamos nuestro curso PowerKicks 🦵💙
 
-      { num: 2, title: 'Enviar video del curso', type: 'note',
+PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión. No es solo patada — es control, disciplina y técnica real en cada clase.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `En cada clase de 1 hora se trabaja:
+🦵 Técnica de patada desde la base
+💥 Fuerza explosiva de piernas
+🌀 Movilidad y apertura de cadera
+🎯 Precisión y control del movimiento
+💪 Confianza y disciplina física
+
+No se necesita experiencia previa — empezamos desde cero con técnica correcta y mucha seguridad.` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `Es ideal para personas que quieren desarrollar una patada poderosa y controlada, mejorar la explosividad y disciplina física, o complementar otra disciplina como danza, artes marciales o acrobacia 🔥` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Si desean, les puedo enviar los horarios y precios disponibles para que reserven su cupo. 💙🦵` },
+
+      { num: 6, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de PowerKicks. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 3, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 7, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y precios? 😊` },
 
-      { num: 4, title: 'Enviar horarios y precios', type: 'message',
+      { num: 8, title: 'Enviar horarios y precios', type: 'message',
         note: '⚠️ Solo si respondió que sí.',
         msg: `¡Claro! Aquí va toda la info 💙
 
@@ -1868,10 +2014,10 @@ No es solo patada — es control, disciplina y técnica real. En 1 hora de entre
 🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
 💳 Aceptamos: Visa, Mastercard, American Express` },
 
-      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto está disponible para su hijo/a! 💙 ¿Los sábados les quedarían bien para las clases? 😊🧡` },
 
-      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+      { num: 10, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tiene experiencia"',
             msg: `¡No se necesita! 😊 PowerKicks empieza desde las bases: técnica correcta, movilidad y control 💙 Los coaches guían a cada alumno/a desde el principio con mucha seguridad 💪` },
@@ -1882,7 +2028,7 @@ No es solo patada — es control, disciplina y técnica real. En 1 hora de entre
         ]
       },
 
-      { num: 7, title: 'Resumen de compra', type: 'template',
+      { num: 11, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
@@ -1893,7 +2039,7 @@ No es solo patada — es control, disciplina y técnica real. En 1 hora de entre
 • Matrícula única: S/50 ✅ (solo se paga una vez)
 • Total a pagar: S/250
 
-¡Ya están a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+`,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
 
 ➡️ Yape o Plin: 923 043 284
@@ -1901,7 +2047,9 @@ No es solo patada — es control, disciplina y técnica real. En 1 hora de entre
 💵 CCI: 002-191-10455294002859
 
 💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)` },
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
 
@@ -1910,22 +2058,39 @@ No es solo patada — es control, disciplina y técnica real. En 1 hora de entre
     title: '🩰 Acrobacias para Bailarinas',
     badge: 'Alumna escribe directamente',
     steps: [
-      { num: 1, title: 'Presentar el curso', type: 'message',
+      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
         msg: `¡Hola! 😊 Bienvenida a Acroflex 💙🩰
 
-Acrobacias para Bailarinas es un curso exclusivo dictado personalmente por Camila Garay ⭐
+Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
 
-Trabajamos full flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina: elementos reales que vas a poder aplicar directamente en tus clases, presentaciones y audiciones 🤸
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso Acrobacias para Bailarinas 🩰💙
 
-Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
+Es un curso exclusivo dictado personalmente por Camila Garay ⭐ — con un enfoque 100% pensado para bailarinas.` },
 
-      { num: 2, title: 'Enviar video del curso', type: 'note',
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `Trabajamos flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina 🤸: elementos reales que vas a poder aplicar directamente en tus clases, presentaciones y audiciones.
+
+No es un curso genérico — cada ejercicio está elegido pensando en lo que una bailarina realmente necesita.` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `En cada clase trabajamos:
+🩰 Splits y aperturas (frontal y lateral)
+🌉 Puentes y movilidad de columna
+🤸 Acrobacias aplicadas a la danza (ruedas, mortal, parada de manos)
+💪 Fuerza y control corporal para bailarinas
+✨ Técnica limpia y progresiva desde tu nivel actual` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Si deseas, te puedo enviar los horarios y precios disponibles para que reserves tu cupo. 💙🩰` },
+
+      { num: 6, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de Acrobacias para Bailarinas. Dale un momento para que lo vea antes de continuar.' },
 
-      { num: 3, title: '¿Quiere ver horarios y precios?', type: 'message',
+      { num: 7, title: '¿Quiere ver horarios y precios?', type: 'message',
         msg: `¿Te gustaría que te enviemos nuestros horarios y precios? 😊` },
 
-      { num: 4, title: 'Enviar horarios y precios', type: 'message',
+      { num: 8, title: 'Enviar horarios y precios', type: 'message',
         note: '⚠️ Solo si respondió que sí.',
         msg: `¡Claro! Aquí va toda la info 💙
 
@@ -1939,10 +2104,10 @@ Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
 🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
 💳 Aceptamos: Visa, Mastercard, American Express` },
 
-      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto te está esperando! 💙 Cuéntame, ¿qué días te quedarían mejor para las clases? Así te ayudo a elegir el horario ideal 😊🧡` },
 
-      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+      { num: 10, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No sé si tengo el nivel"',
             msg: `¡No te preocupes! 😊 El curso se adapta a tu nivel actual de danza 💙 Los coaches evalúan tus capacidades y trabajan desde donde estás para que el avance sea real y seguro 💪` },
@@ -1953,7 +2118,7 @@ Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
         ]
       },
 
-      { num: 7, title: 'Resumen de compra', type: 'template',
+      { num: 11, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Te confirmo todo 💙
 
@@ -1964,7 +2129,7 @@ Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
 • Matrícula única: S/50 ✅ (solo se paga una vez)
 • Total a pagar: S/350
 
-¡Ya estás a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+`,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
 
 ➡️ Yape o Plin: 923 043 284
@@ -1972,7 +2137,9 @@ Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
 💵 CCI: 002-191-10455294002859
 
 💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)` },
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
 
@@ -1981,22 +2148,39 @@ Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
     title: '🩰 Acrobacias para Bailarinas',
     badge: 'Papá / Mamá escribe',
     steps: [
-      { num: 1, title: 'Presentar el curso', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, con gusto te cuento 💙🩰
+      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙🩰
 
-Acrobacias para Bailarinas es un curso exclusivo dictado personalmente por Camila Garay ⭐
+Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hija, su edad y qué es lo que quieren lograr con las clases? 🧡` },
 
-Trabajamos full flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina: elementos reales que tu hija va a poder aplicar directamente en sus clases, presentaciones y audiciones 🤸
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto, según lo que nos dicen, le recomendamos nuestro curso Acrobacias para Bailarinas 🩰💙
 
-Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
+Es un curso exclusivo dictado personalmente por Camila Garay ⭐ — con un enfoque 100% pensado para bailarinas.` },
 
-      { num: 2, title: 'Enviar video del curso', type: 'note',
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `Trabajamos flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina 🤸: elementos reales que [NOMBRE] va a poder aplicar directamente en sus clases, presentaciones y audiciones.
+
+No es un curso genérico — cada ejercicio está elegido pensando en lo que una bailarina realmente necesita.` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `En cada clase trabajan:
+🩰 Splits y aperturas (frontal y lateral)
+🌉 Puentes y movilidad de columna
+🤸 Acrobacias aplicadas a la danza (ruedas, mortal, parada de manos)
+💪 Fuerza y control corporal para bailarinas
+✨ Técnica limpia y progresiva desde su nivel actual` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Si desean, les puedo enviar los horarios y precios disponibles para que reserven su cupo. 💙🩰` },
+
+      { num: 6, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de Acrobacias para Bailarinas. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 3, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 7, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y precios? 😊` },
 
-      { num: 4, title: 'Enviar horarios y precios', type: 'message',
+      { num: 8, title: 'Enviar horarios y precios', type: 'message',
         note: '⚠️ Solo si respondió que sí.',
         msg: `¡Claro! Aquí va toda la info 💙
 
@@ -2010,10 +2194,10 @@ Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
 🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
 💳 Aceptamos: Visa, Mastercard, American Express` },
 
-      { num: 5, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto está disponible para su hija! 💙 Cuéntennos, ¿qué días les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
 
-      { num: 6, title: 'Manejo de objeciones', type: 'objections',
+      { num: 10, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No sabemos si tiene el nivel"',
             msg: `¡No se preocupen! 😊 El curso se adapta al nivel actual de danza de su hija 💙 Los coaches evalúan sus capacidades y trabajan desde donde está para que el avance sea real y seguro 💪` },
@@ -2024,7 +2208,7 @@ Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
         ]
       },
 
-      { num: 7, title: 'Resumen de compra', type: 'template',
+      { num: 11, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
@@ -2035,7 +2219,7 @@ Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
 • Matrícula única: S/50 ✅ (solo se paga una vez)
 • Total a pagar: S/350
 
-¡Ya están a un paso! 😊 Cualquier consulta aquí estamos 🧡`,
+`,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
 
 ➡️ Yape o Plin: 923 043 284
@@ -2043,7 +2227,9 @@ Es un curso muy especializado, con un enfoque 100% pensado para bailarinas.` },
 💵 CCI: 002-191-10455294002859
 
 💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)` },
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
 };
