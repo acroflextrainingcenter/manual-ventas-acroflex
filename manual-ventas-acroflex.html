@@ -1516,44 +1516,50 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
 
 Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso', type: 'message',
-        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso Acroflex Jóvenes y Adultos 🤸‍♀️💙
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto, según lo que nos dicen, les recomendamos nuestro curso Acroflex Jóvenes y Adultos 🤸‍♀️💙
 
-Es el curso ideal para quienes desean desarrollar acrobacia, fuerza, flexibilidad y control corporal, ya sea que empiecen desde cero o que ya tengan experiencia.
+Es el curso ideal para quienes desean desarrollar acrobacia, fuerza, flexibilidad y control corporal, ya sea que empiecen desde cero o que ya tengan experiencia.` },
 
-Nuestra metodología está basada en los fundamentos de la gimnasia y la acrobacia de piso, priorizando siempre una técnica limpia, segura y progresiva. Las clases son multinivel, porque entendemos que cada alumno tiene un proceso diferente. Respetamos los tiempos de aprendizaje de cada persona y adaptamos los ejercicios según su nivel y capacidades.
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `Nuestra metodología está basada en los fundamentos de la gimnasia y la acrobacia de piso, priorizando siempre una técnica limpia, segura y progresiva.
 
-En cada clase trabajamos:
+Las clases son multinivel, porque entendemos que cada alumno tiene un proceso diferente. Respetamos los tiempos de aprendizaje de cada persona y adaptamos los ejercicios según su nivel y capacidades.` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `En cada clase trabajamos:
 ✨ Acrobacias de piso (rodamientos, ruedas, parada de manos y progresiones de mortales)
 ✨ Fuerza y preparación física
 ✨ Flexibilidad y movilidad
-✨ Equilibrio, coordinación y control corporal
+✨ Equilibrio, coordinación y control corporal` },
 
-Hoy más que nunca es importante mantenerse activo y fuerte. Por eso, complementamos cada entrenamiento con ejercicios de fortalecimiento que ayudarán a su hijo/a a moverse mejor, prevenir lesiones y ganar confianza en su cuerpo.
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Hoy más que nunca es importante mantenerse activo y fuerte. Por eso, complementamos cada entrenamiento con ejercicios de fortalecimiento que ayudarán a su hijo/a a moverse mejor, prevenir lesiones y ganar confianza en su cuerpo.
 
 Además, encontrará un ambiente positivo donde podrá conocer personas con intereses similares, aprender en equipo y disfrutar el proceso mientras celebra cada avance. 💙
 
-No necesita experiencia previa.
+No necesita experiencia previa.` },
 
-Si desean, les puedo enviar los horarios y valores disponibles para que reserven su cupo. 💙🤸‍♀️` },
+      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+        msg: `Si desean, les puedo enviar los horarios y valores disponibles para que reserven su cupo. 💙🤸‍♀️` },
 
-      { num: 3, title: 'Enviar video del curso', type: 'note',
+      { num: 7, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video del curso Acroflex. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 4, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 8, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 5, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
           { src: 'horarios-acroflex.png', label: 'Imagen 1 — Horarios Julio Acroflex' },
           { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
         ]},
 
-      { num: 6, title: 'Invitar a cerrar la compra', type: 'message',
+      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
         msg: `¡Todo esto está disponible para su hijo/a! 💙 Cuéntennos, ¿qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
 
-      { num: 7, title: 'Manejo de objeciones', type: 'objections',
+      { num: 11, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tiene experiencia / está muy rígido"',
             msg: `¡No hay problema para nada! 😊 Acroflex es multinivel, empezamos exactamente donde tu hijo/a está 💙 No necesita experiencia previa ni ser flexible — los coaches los guían desde el inicio con técnica y mucha seguridad 💪 ¡La mayoría de nuestros alumnos empezaron así!` },
@@ -1566,7 +1572,7 @@ Si desean, les puedo enviar los horarios y valores disponibles para que reserven
         ]
       },
 
-      { num: 8, title: 'Resumen de compra', type: 'template',
+      { num: 12, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
