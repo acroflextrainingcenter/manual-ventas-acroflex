@@ -309,6 +309,9 @@
       <button class="btn-choice" onclick="startFlow('kicks-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🦵</span>PowerKicks</button>
       <button class="btn-choice" onclick="startFlow('bailarinas-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🩰</span>Acrobacias<br>Bailarinas</button>
     </div>
+    <div style="margin-top:10px">
+      <button class="btn-choice" style="width:100%" onclick="startFlow('after-office-alumno','s-informes-curso-alumno')"><span class="ch-emoji">💻</span>After Office Move <span style="font-size:11px;opacity:0.7">— Online</span></button>
+    </div>
   </div>
 </div>
 
@@ -2219,6 +2222,112 @@ No es un curso genérico — cada ejercicio está elegido pensando en lo que una
 • Matrícula única: S/50 ✅ (solo se paga una vez)
 • Total a pagar: S/350
 
+`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
+    ]
+  },
+
+  // ══ AFTER OFFICE MOVE — ALUMNO ══
+  'after-office-alumno': {
+    title: '💻 After Office Move',
+    badge: 'Alumno/a escribe directamente',
+    steps: [
+      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+
+Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
+
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro programa After Office Move 💻🧡
+
+After Office Move es un curso online en vivo por Zoom creado especialmente para personas que trabajan o estudian muchas horas sentadas y terminan el día con el cuerpo rígido, cansado o sin energía para ejercitarse.
+
+La idea es simple: terminas tu jornada, abres tu laptop y entrenas desde casa. Sin trasladarte, sin gimnasio, sin excusas. 🏠` },
+
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `En cada clase de 60 minutos trabajamos:
+🔄 Movilidad de columna, hombros y caderas
+💪 Activación muscular y fuerza básica
+🧘 Flexibilidad y yoga aplicado
+🌀 Circuitos funcionales adaptados para principiantes
+🌬️ Respiración y liberación de tensión
+
+No buscamos entrenamientos extremos — buscamos que termines la clase sintiéndote activo/a, con más energía y orgulloso/a de haberte movido. ✨` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `A diferencia de una rutina grabada, aquí entrenas en vivo con nuestro equipo Acroflex 🙌
+
+Los coaches guían cada ejercicio, dan correcciones en tiempo real y ofrecen variaciones para distintos niveles. No necesitas experiencia previa ni ser flexible para empezar.
+
+📅 Lunes a jueves · ⏰ 6:00 pm – 7:00 pm · 📍 Desde tu laptop, donde estés` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Es ideal para ti si:
+⭐ Pasas muchas horas frente a una pantalla
+⭐ Terminas el día con espalda rígida o cuello tenso
+⭐ Quieres crear una rutina de movimiento sin salir de casa
+⭐ Buscas algo guiado, progresivo y acompañado
+⭐ Vives en Perú o en cualquier país y puedes conectarte al horario` },
+
+      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+        msg: `Si deseas, te puedo enviar los paquetes y precios disponibles para que reserves tu cupo. 💙💻` },
+
+      { num: 7, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video de After Office Move. Dale un momento para que lo vea antes de continuar.' },
+
+      { num: 8, title: '¿Quiere ver precios?', type: 'message',
+        msg: `¿Te gustaría que te enviemos los paquetes y precios disponibles? 😊` },
+
+      { num: 9, title: 'Enviar precios', type: 'message',
+        note: '⚠️ Solo si respondió que sí.',
+        msg: `¡Claro! Aquí va toda la info 💙
+
+📅 Lunes a jueves · 6:00 pm – 7:00 pm · Online por Zoom
+
+📦 Paquetes (vigencia 1 mes):
+• Pack 8 clases → S/150 (ideal 2 veces/semana · S/18.75 por clase)
+• Pack 12 clases → S/220 ⭐ el más elegido (ideal 3 veces/semana · S/18.33 por clase)
+• Pack 16 clases → S/280 💪 máximo avance (lunes a jueves · S/17.50 por clase)
+
+🎯 Clase de prueba → S/25
+
+💻 Clases en vivo con guía, correcciones y motivación en tiempo real.
+📍 Desde tu laptop, estés donde estés.` },
+
+      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¡Todo esto desde la comodidad de tu casa! 💙 Cuéntame, ¿cuántas veces por semana te gustaría entrenar? Así te ayudo a elegir el paquete ideal 😊🧡` },
+
+      { num: 11, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '😅 "Llevo mucho tiempo sin hacer ejercicio"',
+            msg: `¡Ese es exactamente el perfil para el que fue creado After Office Move! 😊 El curso empieza desde cero, con ejercicios progresivos y sin presión 💙 Los coaches te guían en cada movimiento para que avances de forma segura. Llegar a la clase ya es una victoria. 💪` },
+          { label: '🤔 "Lo voy a pensar"',
+            msg: `¡Claro, sin presión! 😊 Solo te cuento que los cupos son limitados y las clases son en vivo — una vez que empieces vas a notar la diferencia desde la primera semana 💙 ¿Hay alguna duda que te haya quedado? 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Te entiendo! 😊 Tené en cuenta que son clases en vivo con coaches que te guían y corrigen en tiempo real — no es una rutina grabada 💙 Y con la clase de prueba a S/25 puedes experimentar el curso antes de decidirte. ¿Te animas? 🧡` },
+          { label: '⏰ "No sé si puedo a esa hora"',
+            msg: `El horario es de lunes a jueves de 6:00 pm a 7:00 pm, hora Perú 💙 Si vives en otro país puedes calcular tu zona horaria y conectarte desde donde estés 😊 ¿Cuál es tu horario o zona horaria? Te ayudo a ver si te cuadra 🧡` },
+        ]
+      },
+
+      { num: 12, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Te confirmo todo 💙
+
+📋 Tu inscripción:
+• Curso: After Office Move (Online por Zoom)
+• Horario: Lunes a jueves, 6:00 pm – 7:00 pm hora Perú
+• Paquete: [X clases] → S/[precio]
+• Total a pagar: S/[precio]
 `,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
 
