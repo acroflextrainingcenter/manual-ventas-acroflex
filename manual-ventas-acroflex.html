@@ -293,6 +293,12 @@
     <div style="margin-top:10px">
       <button class="btn-choice" style="width:100%" onclick="startFlow('bailarinas-papa','s-informes-curso-papa')"><span class="ch-emoji">🩰</span>Acrobacias para Bailarinas</button>
     </div>
+    <div style="margin-top:10px">
+      <button class="btn-choice" style="width:100%" onclick="startFlow('acroflex-kids-papa','s-informes-curso-papa')"><span class="ch-emoji">🧒</span>Acroflex Kids <span style="font-size:11px;opacity:0.7">— 4 a 6 años</span></button>
+    </div>
+    <div style="margin-top:10px">
+      <button class="btn-choice" style="width:100%" onclick="startFlow('after-office-papa','s-informes-curso-papa')"><span class="ch-emoji">💻</span>After Office Move <span style="font-size:11px;opacity:0.7">— Online</span></button>
+    </div>
   </div>
 </div>
 
@@ -2341,6 +2347,209 @@ Los coaches guían cada ejercicio, dan correcciones en tiempo real y ofrecen var
 Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
+
+  'acroflex-kids-papa': {
+    title: '🧒 Acroflex Kids',
+    badge: 'Papá o Mamá escribe',
+    steps: [
+      { num: 1, title: 'Pedir nombre del niño, edad y objetivo', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+
+Para poder orientarte mejor, ¿me puedes decir el nombre de tu hijo/a, su edad y qué es lo que están buscando? 🧡` },
+
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto, según lo que nos cuentas, te recomendamos Acroflex Kids 🧒🧡
+
+Acroflex Kids es nuestro programa de gimnasia presencial diseñado especialmente para niños de 4 a 6 años — una de las etapas más importantes para desarrollar las bases del movimiento.
+
+En esta edad el cuerpo absorbe todo con una facilidad increíble, y la gimnasia es uno de los deportes más completos que existe para aprovechar ese momento 🌟` },
+
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `En cada clase de 55 minutos los niños trabajan:
+🤸 Coordinación y equilibrio
+💪 Fuerza y habilidades motrices
+🌀 Flexibilidad desde cero
+🎯 Conciencia corporal y lateralidad
+🌟 Disciplina, confianza y respeto` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `Uno de nuestros grandes diferenciadores es que cada clase está guiada por dos entrenadores 💙
+
+Esto significa que tu peque recibe más atención personalizada, aprende con seguridad y se siente acompañado en cada paso — sin que ningún niño se quede atrás. 🙌` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Y lo más importante: mientras se divierten, también están desarrollando valores 🧡
+
+Los niños aprenden a seguir instrucciones, a respetar a sus compañeros y a comprometerse con un proceso — habilidades que los acompañan mucho más allá del deporte. ✨` },
+
+      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+        msg: `Si deseas, te puedo enviar los horarios y precios disponibles para que reserves el cupo de tu hijo/a. 💙🧒` },
+
+      { num: 7, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video/reel de Acroflex Kids. Dale un momento para que lo vea antes de continuar.' },
+
+      { num: 8, title: '¿Quiere ver horarios y precios?', type: 'message',
+        msg: `¿Te gustaría que te enviemos los horarios y precios disponibles? 😊` },
+
+      { num: 9, title: 'Enviar horarios y precios', type: 'message',
+        note: '⚠️ Solo si respondió que sí.',
+        msg: `¡Claro! Aquí va toda la info 💙
+
+📅 Lunes y miércoles · ⏰ 4:00 pm – 4:55 pm · 📍 Presencial en Acroflex
+
+💰 Inversión:
+• Matrícula única: S/50 (solo se paga una vez)
+• Mensualidad (8 clases al mes): S/300
+
+🎯 Clase suelta: S/40
+
+Los cupos son limitados para garantizar la atención personalizada de cada niño. 🌟` },
+
+      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¿Qué te parece? Si quieres asegurar el cupo de [NOMBRE DEL NIÑO/A] podemos reservarlo ahora mismo 😊💙 ¿Tienes alguna duda antes de decidirte? 🧡` },
+
+      { num: 11, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '🤔 "Lo voy a pensar"',
+            msg: `¡Claro, sin presión! 😊 Solo te cuento que los cupos son muy limitados — trabajamos con grupos pequeños precisamente para garantizar la atención de cada niño 💙 Si te queda alguna duda, con gusto te la resuelvo ahora 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Te entiendo! 😊 Considera que cada clase tiene dos entrenadores dedicados a un grupo pequeño de niños 💙 Eso garantiza que tu hijo/a aprenda con seguridad y atención real — no es una clase masiva. La matrícula de S/50 es única, así que desde el segundo mes solo pagas la mensualidad 🧡` },
+          { label: '⏰ "No me cuadra el horario"',
+            msg: `Actualmente tenemos horario los lunes y miércoles de 4:00 pm a 4:55 pm 💙 Si ese horario no te queda, dinos y anotamos tu contacto — en caso de que abramos un nuevo grupo te avisamos de inmediato 😊🧡` },
+          { label: '❓ "¿Mi hijo/a puede empezar sin experiencia?"',
+            msg: `¡Por supuesto! 😊 Acroflex Kids está diseñado desde cero — no se necesita ninguna experiencia previa 💙 Los coaches adaptan cada ejercicio al nivel de cada niño para que aprenda de forma progresiva y segura 🧡` },
+        ]
+      },
+
+      { num: 12, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Te confirmo todo 💙
+
+📋 Inscripción de [NOMBRE DEL NIÑO/A]:
+• Curso: Acroflex Kids (Presencial)
+• Horario: Lunes y miércoles, 4:00 pm – 4:55 pm
+• Matrícula única: S/50
+• Mensualidad (8 clases): S/300
+• Total primer mes: S/350
+`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
+    ]
+  },
+
+  'after-office-papa': {
+    title: '💻 After Office Move',
+    badge: 'Papá o Mamá escribe',
+    steps: [
+      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+
+Para poder orientarte mejor, ¿me puedes decir tu nombre, la edad de quien tomará el curso y qué es lo que están buscando? 🧡` },
+
+      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+        msg: `Perfecto, según lo que nos cuentas, le recomendamos nuestro programa After Office Move 💻🧡
+
+After Office Move es un curso online en vivo por Zoom creado especialmente para personas que trabajan o estudian muchas horas sentadas y terminan el día con el cuerpo rígido, cansado o sin energía para ejercitarse.
+
+La idea es simple: terminas la jornada, abres la laptop y entrenas desde casa. Sin trasladarse, sin gimnasio, sin excusas. 🏠` },
+
+      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+        msg: `En cada clase de 60 minutos se trabaja:
+🔄 Movilidad de columna, hombros y caderas
+💪 Activación muscular y fuerza básica
+🧘 Flexibilidad y yoga aplicado
+🌀 Circuitos funcionales adaptados para principiantes
+🌬️ Respiración y liberación de tensión
+
+No buscamos entrenamientos extremos — buscamos que termine la clase sintiéndose activo/a, con más energía y orgulloso/a de haberse movido. ✨` },
+
+      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+        msg: `A diferencia de una rutina grabada, aquí se entrena en vivo con nuestro equipo Acroflex 🙌
+
+Los coaches guían cada ejercicio, dan correcciones en tiempo real y ofrecen variaciones para distintos niveles. No se necesita experiencia previa ni ser flexible para empezar.
+
+📅 Lunes a jueves · ⏰ 6:00 pm – 7:00 pm · 📍 Desde la laptop, donde estén` },
+
+      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+        msg: `Es ideal si:
+⭐ Pasa muchas horas frente a una pantalla
+⭐ Termina el día con espalda rígida o cuello tenso
+⭐ Quiere crear una rutina de movimiento sin salir de casa
+⭐ Busca algo guiado, progresivo y acompañado
+⭐ Vive en Perú o en cualquier país y puede conectarse al horario` },
+
+      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+        msg: `Si deseas, te puedo enviar los paquetes y precios disponibles para que reserve el cupo. 💙💻` },
+
+      { num: 7, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía aquí el video de After Office Move. Dale un momento para que lo vea antes de continuar.' },
+
+      { num: 8, title: '¿Quiere ver precios?', type: 'message',
+        msg: `¿Te gustaría que te enviemos los paquetes y precios disponibles? 😊` },
+
+      { num: 9, title: 'Enviar precios', type: 'message',
+        note: '⚠️ Solo si respondió que sí.',
+        msg: `¡Claro! Aquí va toda la info 💙
+
+📅 Lunes a jueves · 6:00 pm – 7:00 pm · Online por Zoom
+
+📦 Paquetes (vigencia 1 mes):
+• Pack 8 clases → S/150 (ideal 2 veces/semana)
+• Pack 12 clases → S/220 ⭐ el más elegido (ideal 3 veces/semana)
+• Pack 16 clases → S/280 💪 máximo avance (lunes a jueves)
+
+🎯 Clase de prueba → S/25
+
+💻 Clases en vivo con guía, correcciones y motivación en tiempo real.
+📍 Desde la laptop, estén donde estén.` },
+
+      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
+        msg: `¡Todo esto desde la comodidad del hogar! 💙 Cuéntame, ¿cuántas veces por semana le gustaría entrenar? Así los ayudo a elegir el paquete ideal 😊🧡` },
+
+      { num: 11, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '😅 "Lleva mucho tiempo sin hacer ejercicio"',
+            msg: `¡Ese es exactamente el perfil para el que fue creado After Office Move! 😊 El curso empieza desde cero, con ejercicios progresivos y sin presión 💙 Los coaches guían cada movimiento para que avance de forma segura. Llegar a la clase ya es una victoria. 💪` },
+          { label: '🤔 "Lo va a pensar"',
+            msg: `¡Claro, sin presión! 😊 Solo les cuento que los cupos son limitados y las clases son en vivo — una vez que empiece va a notar la diferencia desde la primera semana 💙 ¿Les quedó alguna duda? 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Te entiendo! 😊 Ten en cuenta que son clases en vivo con coaches que guían y corrigen en tiempo real — no es una rutina grabada 💙 Y con la clase de prueba a S/25 puede experimentar el curso antes de decidirse. ¿Se animan? 🧡` },
+          { label: '⏰ "No sé si puede a esa hora"',
+            msg: `El horario es de lunes a jueves de 6:00 pm a 7:00 pm, hora Perú 💙 Si viven en otro país pueden calcular su zona horaria y conectarse desde donde estén 😊 ¿Cuál es su horario o zona horaria? Los ayudo a ver si les cuadra 🧡` },
+        ]
+      },
+
+      { num: 12, title: 'Resumen de compra', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Te confirmamos todo 💙
+
+📋 Inscripción:
+• Curso: After Office Move (Online por Zoom)
+• Horario: Lunes a jueves, 6:00 pm – 7:00 pm hora Perú
+• Paquete: [X clases] → S/[precio]
+• Total a pagar: S/[precio]
+`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
+    ]
+  },
+
 };
 
 // ─── RENDERIZAR FLUJO ─────────────────────────
