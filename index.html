@@ -299,6 +299,9 @@
     <div style="margin-top:10px">
       <button class="btn-choice" style="width:100%" onclick="startFlow('after-office-papa','s-informes-curso-papa')"><span class="ch-emoji">💻</span>After Office Move <span style="font-size:11px;opacity:0.7">— Online</span></button>
     </div>
+    <div style="margin-top:10px">
+      <button class="btn-choice" style="width:100%;background:linear-gradient(135deg,#c0392b,#e67e22);border-color:#e74c3c" onclick="startFlow('full-day-papa','s-informes-curso-papa')"><span class="ch-emoji">🔥</span>Full Day Acroflex <span style="font-size:11px;opacity:0.9">— 29 Ago · EVENTO</span></button>
+    </div>
   </div>
 </div>
 
@@ -317,6 +320,9 @@
     </div>
     <div style="margin-top:10px">
       <button class="btn-choice" style="width:100%" onclick="startFlow('after-office-alumno','s-informes-curso-alumno')"><span class="ch-emoji">💻</span>After Office Move <span style="font-size:11px;opacity:0.7">— Online</span></button>
+    </div>
+    <div style="margin-top:10px">
+      <button class="btn-choice" style="width:100%;background:linear-gradient(135deg,#c0392b,#e67e22);border-color:#e74c3c" onclick="startFlow('full-day-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🔥</span>Full Day Acroflex <span style="font-size:11px;opacity:0.9">— 29 Ago · EVENTO</span></button>
     </div>
   </div>
 </div>
@@ -2536,6 +2542,190 @@ Los coaches guían cada ejercicio, dan correcciones en tiempo real y ofrecen var
 • Horario: Lunes a jueves, 6:00 pm – 7:00 pm hora Perú
 • Paquete: [X clases] → S/[precio]
 • Total a pagar: S/[precio]
+`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
+    ]
+  },
+
+  'full-day-alumno': {
+    title: '🔥 Full Day Acroflex',
+    badge: 'Alumno/a escribe directamente',
+    steps: [
+      { num: 1, title: 'Pedir nombre y qué workshop le interesa', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+
+Para orientarte mejor con el Full Day, ¿me puedes decir tu nombre y qué workshops te llamaron la atención? 🔥` },
+
+      { num: 2, title: 'Presentar el Full Day', type: 'message',
+        msg: `¡Perfecto [NOMBRE]! 🔥 El sábado 29 de agosto organizamos el Full Day en Acroflex — un evento especial con 3 workshops intensivos en un solo día, para todos los niveles.
+
+📍 Acroflex – Jesús María
+📅 Sábado 29 de agosto` },
+
+      { num: 3, title: 'Describir los 3 workshops', type: 'message',
+        msg: `Los 3 workshops del día son:
+
+🔵 Mi Primera Acrobacia — 9:00 am a 11:00 am
+Para quienes quieren empezar desde cero. Aprenderás parada de manos, volantín adelante, volantín atrás y principios de aspa — de forma progresiva, segura y guiada.
+
+🟠 Intensivo de Arcos — 11:30 am a 1:00 pm
+Multinivel. Trabajarás arañitas, escorpiones, agujas/needles, movilidad de hombros y fuerza activa para dominar tus arcos con más control.
+
+🔴 Mortales Lab — 2:00 pm a 4:00 pm
+Para alumnos con base previa. Progresiones técnicas para mortal adelante, mortal atrás, técnica de salto, agrupación y recepción con seguridad y confianza.` },
+
+      { num: 4, title: 'Rutas según nivel', type: 'message',
+        msg: `Puedes elegir la ruta que más se ajuste a ti 🗺️
+
+⭐ Si quieres empezar desde cero:
+→ Mi Primera Acrobacia + Intensivo de Arcos
+
+⭐ Si ya tienes base y quieres avanzar:
+→ Intensivo de Arcos + Mortales Lab
+
+👑 Si quieres aprovechar al máximo el Full Day:
+→ Los 3 workshops completos
+
+También puedes tomar solo 1 workshop si lo prefieres. Los cupos son limitados 🔥` },
+
+      { num: 5, title: 'Enviar imágenes del evento', type: 'note',
+        note: '📲 Envía las imágenes del Full Day: portada general + cada workshop que le interese al alumno. Guárdalas desde WhatsApp antes de enviar.' },
+
+      { num: 6, title: 'Precios con descuento', type: 'message',
+        msg: `🎟️ Precios especiales de lanzamiento:
+
+• 1 workshop: ~~S/80~~ → S/70 (ahorras S/10)
+• 2 workshops: ~~S/145~~ → S/130 (ahorras S/15)
+• Full Day (3 workshops): ~~S/200~~ → S/180 (ahorras S/20)
+
+⚠️ Cupos limitados — una vez que se llene el grupo, ya no hay disponibilidad.` },
+
+      { num: 7, title: 'Invitar a reservar', type: 'message',
+        msg: `¿Cuál es tu nivel actual y qué workshops te interesan? Así te ayudo a elegir la mejor ruta para ti 😊💙` },
+
+      { num: 8, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '🤔 "No sé si tengo el nivel"',
+            msg: `¡No te preocupes! 😊 Mi Primera Acrobacia e Intensivo de Arcos son aptos para todos los niveles — no necesitas experiencia previa 💙 Mortales Lab sí requiere base acrobática previa. ¿Me cuentas qué has practicado antes? Así te recomiendo la mejor ruta 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Te entiendo! 😊 Considera que son workshops intensivos de 2 horas cada uno, con entrenadores Acroflex guiando cada ejercicio 💙 El precio de lanzamiento ya tiene descuento — normalmente serían S/80 por workshop. ¿Cuántos workshops te interesan? 🧡` },
+          { label: '🤔 "Lo voy a pensar"',
+            msg: `¡Claro! 😊 Solo te cuento que los cupos son limitados y se llenan rápido — el año pasado se agotaron días antes 💙 Si tienes alguna duda que te ayude a decidirte, con gusto te la resuelvo ahora 🧡` },
+          { label: '⏰ "No sé si puedo ese día"',
+            msg: `¡Entendido! 😊 Los workshops son independientes, así que puedes venir solo a los que te queden bien según el horario 💙 Mi Primera Acrobacia 9-11am, Intensivo de Arcos 11:30am-1pm, Mortales Lab 2-4pm. ¿Cuál te cuadra mejor? 🧡` },
+        ]
+      },
+
+      { num: 9, title: 'Resumen de reserva', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Te confirmo tu inscripción al Full Day 💙
+
+📋 Tu reserva:
+• Evento: Full Day Acroflex
+• Fecha: Sábado 29 de agosto
+• Workshop(s): [WORKSHOP/S ELEGIDOS]
+• Total a pagar: S/[PRECIO]
+`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
+    ]
+  },
+
+  'full-day-papa': {
+    title: '🔥 Full Day Acroflex',
+    badge: 'Papá o Mamá escribe',
+    steps: [
+      { num: 1, title: 'Pedir nombre del hijo/a y qué workshop le interesa', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+
+Para orientarte mejor con el Full Day, ¿me puedes decir el nombre de tu hijo/a, su edad y qué workshops les llamaron la atención? 🔥` },
+
+      { num: 2, title: 'Presentar el Full Day', type: 'message',
+        msg: `¡Perfecto! 🔥 El sábado 29 de agosto organizamos el Full Day en Acroflex — un evento especial con 3 workshops intensivos en un solo día, para todos los niveles.
+
+📍 Acroflex – Jesús María
+📅 Sábado 29 de agosto` },
+
+      { num: 3, title: 'Describir los 3 workshops', type: 'message',
+        msg: `Los 3 workshops del día son:
+
+🔵 Mi Primera Acrobacia — 9:00 am a 11:00 am
+Para quienes quieren empezar desde cero. Aprenderán parada de manos, volantín adelante, volantín atrás y principios de aspa — de forma progresiva, segura y guiada.
+
+🟠 Intensivo de Arcos — 11:30 am a 1:00 pm
+Multinivel. Trabajarán arañitas, escorpiones, agujas/needles, movilidad de hombros y fuerza activa para dominar los arcos con más control.
+
+🔴 Mortales Lab — 2:00 pm a 4:00 pm
+Para alumnos con base previa. Progresiones técnicas para mortal adelante, mortal atrás, técnica de salto, agrupación y recepción con seguridad y confianza.` },
+
+      { num: 4, title: 'Rutas según nivel', type: 'message',
+        msg: `Pueden elegir la ruta que más se ajuste a su nivel 🗺️
+
+⭐ Si quiere empezar desde cero:
+→ Mi Primera Acrobacia + Intensivo de Arcos
+
+⭐ Si ya tiene base y quiere avanzar:
+→ Intensivo de Arcos + Mortales Lab
+
+👑 Si quieren aprovechar al máximo el Full Day:
+→ Los 3 workshops completos
+
+También pueden tomar solo 1 workshop. Los cupos son limitados 🔥` },
+
+      { num: 5, title: 'Enviar imágenes del evento', type: 'note',
+        note: '📲 Envía las imágenes del Full Day: portada general + cada workshop que le interese. Guárdalas desde WhatsApp antes de enviar.' },
+
+      { num: 6, title: 'Precios con descuento', type: 'message',
+        msg: `🎟️ Precios especiales de lanzamiento:
+
+• 1 workshop: ~~S/80~~ → S/70 (ahorras S/10)
+• 2 workshops: ~~S/145~~ → S/130 (ahorras S/15)
+• Full Day (3 workshops): ~~S/200~~ → S/180 (ahorras S/20)
+
+⚠️ Cupos limitados — una vez que se llene el grupo, ya no hay disponibilidad.` },
+
+      { num: 7, title: 'Invitar a reservar', type: 'message',
+        msg: `¿Cuál es el nivel actual de su hijo/a y qué workshops les interesan? Así los ayudo a elegir la mejor ruta 😊💙` },
+
+      { num: 8, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '🤔 "No sé si tiene el nivel"',
+            msg: `¡No se preocupen! 😊 Mi Primera Acrobacia e Intensivo de Arcos son aptos para todos los niveles — no se necesita experiencia previa 💙 Mortales Lab sí requiere base acrobática. ¿Me cuentan qué ha practicado antes? Así les recomiendo la mejor ruta 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `¡Los entiendo! 😊 Son workshops intensivos de 2 horas cada uno con entrenadores Acroflex 💙 El precio ya tiene descuento de lanzamiento. ¿Cuántos workshops les interesan? 🧡` },
+          { label: '🤔 "Lo vamos a pensar"',
+            msg: `¡Claro! 😊 Solo les cuento que los cupos son muy limitados y se llenan rápido 💙 Si tienen alguna duda que les ayude a decidirse, con gusto la resuelvo ahora 🧡` },
+          { label: '⏰ "No sabemos si puede ese día"',
+            msg: `¡Entendido! Los workshops son independientes, así que pueden venir solo a los que les queden bien según el horario 💙 Mi Primera Acrobacia 9-11am, Intensivo de Arcos 11:30am-1pm, Mortales Lab 2-4pm. ¿Cuál les cuadra mejor? 🧡` },
+        ]
+      },
+
+      { num: 9, title: 'Resumen de reserva', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Confirmamos la inscripción al Full Day 💙
+
+📋 Reserva de [NOMBRE DEL ALUMNO/A]:
+• Evento: Full Day Acroflex
+• Fecha: Sábado 29 de agosto
+• Workshop(s): [WORKSHOP/S ELEGIDOS]
+• Total a pagar: S/[PRECIO]
 `,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
 
