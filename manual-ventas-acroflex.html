@@ -327,12 +327,7 @@
     <div class="flow-title" id="flow-title"></div>
     <div class="flow-badge" id="flow-badge"></div>
     <div class="divider"></div>
-    <div id="flow-step-counter" style="text-align:center;font-size:12px;color:#93afd4;margin-bottom:12px;letter-spacing:1px"></div>
     <div id="flow-steps"></div>
-    <div id="flow-nav" style="display:flex;gap:10px;margin-top:18px">
-      <button id="flow-prev-btn" onclick="flowStep(-1)" style="flex:1;padding:12px;background:#1e2d4a;border:1px solid #2d4a7a;border-radius:10px;color:#93afd4;font-size:14px;cursor:pointer">← Paso anterior</button>
-      <button id="flow-next-btn" onclick="flowStep(1)" style="flex:1;padding:12px;background:#f97316;border:none;border-radius:10px;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Siguiente →</button>
-    </div>
   </div>
 </div>
 
@@ -1909,31 +1904,6 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
 
 // ─── RENDERIZAR FLUJO ─────────────────────────
 let _backScreen = 's-home';
-let _flowCards = [];
-let _flowCurrentStep = 0;
-
-function updateFlowNav() {
-  const total = _flowCards.length;
-  const cur = _flowCurrentStep;
-  _flowCards.forEach((c, i) => c.style.display = i === cur ? '' : 'none');
-  document.getElementById('flow-step-counter').textContent = `PASO ${cur + 1} DE ${total}`;
-  document.getElementById('flow-prev-btn').style.display = cur === 0 ? 'none' : '';
-  document.getElementById('flow-next-btn').textContent = cur === total - 1 ? '✅ Finalizar' : 'Siguiente →';
-  document.getElementById('flow-next-btn').style.background = cur === total - 1 ? '#16a34a' : '#f97316';
-  document.getElementById('s-flow').querySelector('.content').scrollTop = 0;
-  window.scrollTo(0,0);
-}
-
-function flowStep(dir) {
-  const next = _flowCurrentStep + dir;
-  if (next < 0 || next >= _flowCards.length) return;
-  if (dir === 1 && _flowCurrentStep === _flowCards.length - 1) {
-    document.getElementById('flow-back-btn').click(); return;
-  }
-  _flowCurrentStep = next;
-  updateFlowNav();
-}
-
 function startFlow(flowKey, backScreen) {
   _backScreen = backScreen;
   const flow = FLOWS[flowKey];
@@ -2042,10 +2012,8 @@ function startFlow(flowKey, backScreen) {
     }
 
     container.appendChild(card);
-    _flowCards.push(card);
   });
 
-  updateFlowNav();
   go('s-flow');
   document.getElementById('fab-home').classList.add('visible');
 }
