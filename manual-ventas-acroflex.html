@@ -294,10 +294,6 @@
       <button class="btn-choice" onclick="startFlow('acroflex-adultos-papa','s-informes-curso-papa')"><span class="ch-emoji">🤸</span>Acroflex<br>Jóvenes/Adultos</button>
       <button class="btn-choice" onclick="startFlow('acroflex-teens-papa','s-informes-curso-papa')"><span class="ch-emoji">🧒</span>Acroflex<br>Teens (7–13)</button>
       <button class="btn-choice" onclick="startFlow('flexi-papa','s-informes-curso-papa')"><span class="ch-emoji">🧘</span>FlexiPower</button>
-      <button class="btn-choice" onclick="startFlow('kicks-papa','s-informes-curso-papa')"><span class="ch-emoji">🦵</span>PowerKicks</button>
-    </div>
-    <div style="margin-top:10px">
-      <button class="btn-choice" style="width:100%" onclick="startFlow('bailarinas-papa','s-informes-curso-papa')"><span class="ch-emoji">🩰</span>Acrobacias para Bailarinas</button>
     </div>
     <div style="margin-top:10px">
       <button class="btn-choice" style="width:100%;background:linear-gradient(135deg,#c0392b,#e67e22);border-color:#e74c3c" onclick="startFlow('full-day-papa','s-informes-curso-papa')"><span class="ch-emoji">🔥</span>Full Day Acroflex <span style="font-size:11px;opacity:0.9">— 29 Ago · EVENTO</span></button>
@@ -315,8 +311,6 @@
     <div class="btn-choice-grid">
       <button class="btn-choice" onclick="startFlow('acroflex-adultos-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🤸</span>Acroflex<br>Jóvenes/Adultos</button>
       <button class="btn-choice" onclick="startFlow('flexi-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🧘</span>FlexiPower</button>
-      <button class="btn-choice" onclick="startFlow('kicks-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🦵</span>PowerKicks</button>
-      <button class="btn-choice" onclick="startFlow('bailarinas-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🩰</span>Acrobacias<br>Bailarinas</button>
     </div>
     <div style="margin-top:10px">
       <button class="btn-choice" style="width:100%;background:linear-gradient(135deg,#c0392b,#e67e22);border-color:#e74c3c" onclick="startFlow('full-day-alumno','s-informes-curso-alumno')"><span class="ch-emoji">🔥</span>Full Day Acroflex <span style="font-size:11px;opacity:0.9">— 29 Ago · EVENTO</span></button>
@@ -714,14 +708,6 @@ Para coordinarlo, te paso el contacto de la encargada de clases particulares de 
         <span class="emoji">🧘</span>
         <div><div>FlexiPower</div><div class="btn-desc">2 bloques + liga de números</div></div>
       </button>
-      <button class="btn-situation" onclick="go('s-impl-kicks')">
-        <span class="emoji">🦵</span>
-        <div><div>PowerKicks</div><div class="btn-desc">2 bloques de yoga + liga de números</div></div>
-      </button>
-      <button class="btn-situation" onclick="go('s-impl-bailarinas')">
-        <span class="emoji">🩰</span>
-        <div><div>Acrobacias para Bailarinas</div><div class="btn-desc">2 bloques + liga de números + muñequeras</div></div>
-      </button>
     </div>
   </div>
 </div>
@@ -769,63 +755,7 @@ Nosotros los tenemos disponibles aquí en la academia para que no tengas que bus
       <button class="copy-btn" onclick="copyMsg('msg-impl-flexi',this)">📋 Copiar mensaje</button>
     </div>
   </div>
-</div>
-
-<div class="screen" id="s-impl-kicks">
-  <div class="content">
-    <button class="back-btn" onclick="go('s-implementos')">← Atrás</button>
-    <div class="section-title">🦵 Implementos — PowerKicks</div>
-    <div class="divider"></div>
-    <div class="note-box">📌 Enviar este mensaje justo después de confirmar la inscripción.</div>
-    <div class="msg-box" style="margin-top:14px">
-      <div class="msg-label">💬 Mensaje a enviar</div>
-      <div class="msg-text" id="msg-impl-kicks">¡Una cosita más antes de empezar! 🧡
-
-Para las clases de PowerKicks necesitarás estos implementos:
-
-🟦 2 bloques de yoga
-🔴 1 liga de números (resistencia)
-
-Los usaremos en los ejercicios de técnica y acondicionamiento 💥
-
-Nosotros los tenemos disponibles aquí en la academia para que no tengas que buscarlos 😊
-
-¿Te interesa adquirirlos con nosotros? Con gusto te damos el precio 💙</div>
-      <button class="copy-btn" onclick="copyMsg('msg-impl-kicks',this)">📋 Copiar mensaje</button>
-    </div>
-  </div>
-</div>
-
-<div class="screen" id="s-impl-bailarinas">
-  <div class="content">
-    <button class="back-btn" onclick="go('s-implementos')">← Atrás</button>
-    <div class="section-title">🩰 Implementos — Acrobacias para Bailarinas</div>
-    <div class="divider"></div>
-    <div class="note-box">📌 Enviar este mensaje justo después de confirmar la inscripción.</div>
-    <div class="msg-box" style="margin-top:14px">
-      <div class="msg-label">💬 Mensaje a enviar</div>
-      <div class="msg-text" id="msg-impl-bailarinas">¡Una cosita más antes de empezar! 🧡
-
-Para las clases de Acrobacias para Bailarinas necesitarás estos implementos:
-
-🟦 2 bloques de yoga
-🔴 1 liga de números (resistencia)
-🧤 Muñequeras
-
-Son parte fundamental del trabajo técnico que hacemos en clase 🩰💪
-
-Nosotros los tenemos disponibles aquí en la academia para que no tengas que buscarlos 😊
-
-¿Te interesa adquirirlos con nosotros? Con gusto te damos el precio 💙</div>
-      <button class="copy-btn" onclick="copyMsg('msg-impl-bailarinas',this)">📋 Copiar mensaje</button>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════
-     PAUSA O BAJA
-══════════════════════════════ -->
-<div class="screen" id="s-pausa-quien">
+</div><div class="screen" id="s-pausa-quien">
   <div class="content">
     <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
     <div class="section-title">⏸️ Pausa o baja</div>
@@ -886,8 +816,6 @@ Cuando quieras retomar, aquí te esperamos 🧡 ¿Hay algo en que podamos mejora
     <div class="btn-choice-grid">
       <button class="btn-choice" onclick="go('s-precios-acroflex')"><span class="ch-emoji">🤸</span>Acroflex</button>
       <button class="btn-choice" onclick="go('s-precios-flexi')"><span class="ch-emoji">🧘</span>FlexiPower</button>
-      <button class="btn-choice" onclick="go('s-precios-kicks')"><span class="ch-emoji">🦵</span>PowerKicks</button>
-      <button class="btn-choice" onclick="go('s-precios-bailarinas')"><span class="ch-emoji">🩰</span>Bailarinas</button>
     </div>
   </div>
 </div>
@@ -978,65 +906,7 @@ Cuando quieras retomar, aquí te esperamos 🧡 ¿Hay algo en que podamos mejora
       <button class="copy-btn" onclick="copyMsg('msg-precios-flexi',this)">📋 Copiar mensaje</button>
     </div>
   </div>
-</div>
-
-<div class="screen" id="s-precios-kicks">
-  <div class="content">
-    <button class="back-btn" onclick="go('s-precios-curso')">← Atrás</button>
-    <div class="section-title">🦵 Precios — PowerKicks</div>
-    <div class="divider"></div>
-    <div class="info-card">
-      <div class="info-card-title">💰 Precios</div>
-      <p>Pack 4 clases → <span class="highlight">S/200</span></p>
-      <p>Clase suelta → <span class="highlight">S/60</span></p>
-    </div>
-    <div class="msg-box" style="margin-top:16px">
-      <div class="msg-label">💬 Mensaje a enviar</div>
-      <div class="msg-text" id="msg-precios-kicks">¡Hola! 😊 Te paso los precios de PowerKicks 💙🧡
-
-💰 Opciones:
-• Pack 4 clases → S/200
-• Clase suelta → S/60
-
-🗓️ Horarios: Sábados 4:30 pm – 5:30 pm
-🎓 Matrícula única: S/50 (una sola vez en la vida).
-
-¿Alguna pregunta más? 😊</div>
-      <button class="copy-btn" onclick="copyMsg('msg-precios-kicks',this)">📋 Copiar mensaje</button>
-    </div>
-  </div>
-</div>
-
-<div class="screen" id="s-precios-bailarinas">
-  <div class="content">
-    <button class="back-btn" onclick="go('s-precios-curso')">← Atrás</button>
-    <div class="section-title">🩰 Precios — Acrobacias para Bailarinas</div>
-    <div class="divider"></div>
-    <div class="info-card">
-      <div class="info-card-title">💰 Precios</div>
-      <p>Pack 4 clases → <span class="highlight">S/300</span></p>
-      <p>Clase suelta → <span class="highlight">S/80</span></p>
-    </div>
-    <div class="msg-box" style="margin-top:16px">
-      <div class="msg-label">💬 Mensaje a enviar</div>
-      <div class="msg-text" id="msg-precios-bailarinas">¡Hola! 😊 Te paso los precios de Acrobacias para Bailarinas 💙🩰
-
-💰 Opciones:
-• Pack 4 clases → S/300
-• Clase suelta → S/80
-
-🎓 Matrícula única: S/50 (una sola vez en la vida).
-
-¿Tienes alguna consulta adicional? 😊</div>
-      <button class="copy-btn" onclick="copyMsg('msg-precios-bailarinas',this)">📋 Copiar mensaje</button>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════
-     CONFIRMACIÓN DE INSCRIPCIÓN
-══════════════════════════════ -->
-<div class="screen" id="s-confirmacion">
+</div><div class="screen" id="s-confirmacion">
   <div class="content">
     <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
     <div class="section-title">✅ Confirmación de inscripción</div>
@@ -1258,8 +1128,6 @@ Av. Húsares de Junín 374, Jesús María
     <div class="btn-choice-grid">
       <button class="btn-choice" onclick="go('s-cg-acroflex')"><span class="ch-emoji">🤸</span>Acroflex</button>
       <button class="btn-choice" onclick="go('s-cg-flexi')"><span class="ch-emoji">🧘</span>FlexiPower</button>
-      <button class="btn-choice" onclick="go('s-cg-kicks')"><span class="ch-emoji">🦵</span>PowerKicks</button>
-      <button class="btn-choice" onclick="go('s-cg-bailarinas')"><span class="ch-emoji">🩰</span>Bailarinas</button>
     </div>
   </div>
 </div>
@@ -1304,53 +1172,7 @@ Puedes venir, sentir el ambiente y ver tu progreso desde la primera clase 💪
       <button class="copy-btn" onclick="copyMsg('msg-cg-flexi',this)">📋 Copiar mensaje</button>
     </div>
   </div>
-</div>
-
-<div class="screen" id="s-cg-kicks">
-  <div class="content">
-    <button class="back-btn" onclick="go('s-clasegratis-curso')">← Atrás</button>
-    <div class="section-title">🦵 Clase gratis — PowerKicks</div>
-    <div class="divider"></div>
-    <div class="msg-box">
-      <div class="msg-label">💬 Mensaje a enviar</div>
-      <div class="msg-text" id="msg-cg-kicks">¡Hola! 😊 Clases gratuitas no manejamos, pero sí tenemos clase suelta para que puedas conocer PowerKicks antes de inscribirte 💙
-
-🦵 PowerKicks:
-• Clase suelta 1hr → S/60
-
-Puedes venir, entrenar con los coaches y decidir con más seguridad 💪
-
-¿Te gustaría que te enviemos los horarios disponibles? 😊🧡</div>
-      <button class="copy-btn" onclick="copyMsg('msg-cg-kicks',this)">📋 Copiar mensaje</button>
-    </div>
-  </div>
-</div>
-
-<div class="screen" id="s-cg-bailarinas">
-  <div class="content">
-    <button class="back-btn" onclick="go('s-clasegratis-curso')">← Atrás</button>
-    <div class="section-title">🩰 Clase gratis — Acrobacias Bailarinas</div>
-    <div class="divider"></div>
-    <div class="msg-box">
-      <div class="msg-label">💬 Mensaje a enviar</div>
-      <div class="msg-text" id="msg-cg-bailarinas">¡Hola! 😊 Clases gratuitas no manejamos, pero sí tenemos clase suelta para que puedas conocer el curso antes de inscribirte 💙
-
-🩰 Acrobacias para Bailarinas es un curso exclusivo dictado por Camila Garay. Trabajamos full flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina ⭐
-
-• Clase suelta → S/80
-
-Puedes venir, entrenar con Camila y decidir con más seguridad 💪
-
-¿Te gustaría que te enviemos los horarios disponibles? 😊🧡</div>
-      <button class="copy-btn" onclick="copyMsg('msg-cg-bailarinas',this)">📋 Copiar mensaje</button>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════
-     QUEJAS / RECLAMOS
-══════════════════════════════ -->
-<div class="screen" id="s-queja-quien">
+</div><div class="screen" id="s-queja-quien">
   <div class="content">
     <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
     <div class="section-title">🙋 Quejas o reclamos</div>
@@ -1891,365 +1713,6 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
   },
 
   // ══ POWERKICKS — ALUMNO ══
-  'kicks-alumno': {
-    title: '🦵 PowerKicks',
-    badge: 'Alumno/a escribe directamente',
-    steps: [
-      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙🧡
-
-Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
-
-      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
-        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso PowerKicks 🦵💙
-
-PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión. No es solo patada — es control, disciplina y técnica real en cada clase.` },
-
-      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
-        msg: `En cada clase de 1 hora trabajamos:
-🦵 Técnica de patada desde la base
-💥 Fuerza explosiva de piernas
-🌀 Movilidad y apertura de cadera
-🎯 Precisión y control del movimiento
-💪 Confianza y disciplina física
-
-No necesitas experiencia previa — empezamos desde cero con técnica correcta y mucha seguridad.` },
-
-      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
-        msg: `Es ideal para personas que quieren desarrollar una patada poderosa y controlada, mejorar su explosividad y disciplina física, o complementar otra disciplina como danza, artes marciales o acrobacia 🔥` },
-
-      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
-        msg: `Si deseas, te puedo enviar los horarios y precios disponibles para que reserves tu cupo. 💙🦵` },
-
-      { num: 6, title: 'Enviar video del curso', type: 'note',
-        note: '📹 Envía aquí el video de PowerKicks. Dale un momento para que lo vea antes de continuar.' },
-
-      { num: 7, title: '¿Quiere ver horarios y precios?', type: 'message',
-        msg: `¿Te gustaría que te enviemos nuestros horarios y precios? 😊` },
-
-      { num: 8, title: 'Enviar horarios y precios', type: 'message',
-        note: '⚠️ Solo si respondió que sí.',
-        msg: `¡Claro! Aquí va toda la info 💙
-
-🗓️ Horarios disponibles:
-📌 Sábados: 4:30 pm – 5:30 pm
-
-📦 Opciones:
-• Pack 4 clases → S/200
-• Clase suelta → S/60
-
-🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
-💳 Aceptamos: Visa, Mastercard, American Express` },
-
-      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
-        msg: `¡Todo esto te está esperando! 💙 ¿Los sábados te quedarían bien para entrenar? 😊🧡` },
-
-      { num: 10, title: 'Manejo de objeciones', type: 'objections',
-        options: [
-          { label: '😅 "No tengo experiencia en patadas"',
-            msg: `¡No se necesita! 😊 PowerKicks empieza desde las bases: técnica correcta, movilidad y control 💙 Los coaches te guían desde el principio para que avances de forma segura y con resultados reales 💪` },
-          { label: '🤔 "Lo voy a pensar"',
-            msg: `¡Claro, sin presión! 😊 Solo te comento que los cupos son limitados 💙 ¿Hay alguna duda que te haya quedado o algo en lo que te pueda orientar? 🧡` },
-          { label: '💸 "Está un poco caro"',
-            msg: `¡Te entiendo! 😊 Con el pack de 4 clases puedes conocer el curso y ver los resultados por ti mismo/a 💙 Y la matrícula de S/50 es única: la pagas una sola vez en la vida 🧡` },
-        ]
-      },
-
-      { num: 11, title: 'Resumen de compra', type: 'template',
-        note: '✏️ Completa los datos entre [ ] antes de enviar.',
-        msg: `¡Perfecto! 🎉 Te confirmo todo 💙
-
-📋 Tu inscripción:
-• Curso: PowerKicks
-• Horario: Sábados 4:30 pm – 5:30 pm
-• Pack 4 clases → S/200
-• Matrícula única: S/50 ✅ (solo se paga una vez)
-• Total a pagar: S/250
-
-`,
-        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
-
-➡️ Yape o Plin: 923 043 284
-💵 Cuenta BCP Soles: 191-045529-4-0028
-💵 CCI: 002-191-10455294002859
-
-💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)
-
-Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
-    ]
-  },
-
-  // ══ POWERKICKS — PAPÁ ══
-  'kicks-papa': {
-    title: '🦵 PowerKicks',
-    badge: 'Papá / Mamá escribe',
-    steps: [
-      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, qué bueno que escriben 💙🧡
-
-Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
-
-      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
-        msg: `Perfecto, según lo que nos dicen, les recomendamos nuestro curso PowerKicks 🦵💙
-
-PowerKicks es nuestro curso de patadas con enfoque en fuerza, altura y precisión. No es solo patada — es control, disciplina y técnica real en cada clase.` },
-
-      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
-        msg: `En cada clase de 1 hora se trabaja:
-🦵 Técnica de patada desde la base
-💥 Fuerza explosiva de piernas
-🌀 Movilidad y apertura de cadera
-🎯 Precisión y control del movimiento
-💪 Confianza y disciplina física
-
-No se necesita experiencia previa — empezamos desde cero con técnica correcta y mucha seguridad.` },
-
-      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
-        msg: `Es ideal para personas que quieren desarrollar una patada poderosa y controlada, mejorar la explosividad y disciplina física, o complementar otra disciplina como danza, artes marciales o acrobacia 🔥` },
-
-      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
-        msg: `Si desean, les puedo enviar los horarios y precios disponibles para que reserven su cupo. 💙🦵` },
-
-      { num: 6, title: 'Enviar video del curso', type: 'note',
-        note: '📹 Envía aquí el video de PowerKicks. Dale un momento para que lo vean antes de continuar.' },
-
-      { num: 7, title: '¿Quieren ver horarios y precios?', type: 'message',
-        msg: `¿Les gustaría que les enviemos nuestros horarios y precios? 😊` },
-
-      { num: 8, title: 'Enviar horarios y precios', type: 'message',
-        note: '⚠️ Solo si respondió que sí.',
-        msg: `¡Claro! Aquí va toda la info 💙
-
-🗓️ Horarios disponibles:
-📌 Sábados: 4:30 pm – 5:30 pm
-
-📦 Opciones:
-• Pack 4 clases → S/200
-• Clase suelta → S/60
-
-🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
-💳 Aceptamos: Visa, Mastercard, American Express` },
-
-      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
-        msg: `¡Todo esto está disponible para su hijo/a! 💙 ¿Los sábados les quedarían bien para las clases? 😊🧡` },
-
-      { num: 10, title: 'Manejo de objeciones', type: 'objections',
-        options: [
-          { label: '😅 "No tiene experiencia"',
-            msg: `¡No se necesita! 😊 PowerKicks empieza desde las bases: técnica correcta, movilidad y control 💙 Los coaches guían a cada alumno/a desde el principio con mucha seguridad 💪` },
-          { label: '🤔 "Lo vamos a pensar"',
-            msg: `¡Claro, sin apuro! 😊 Solo les comentamos que los cupos son limitados 💙 ¿Hay alguna duda que les haya quedado? 🧡` },
-          { label: '💸 "Está un poco caro"',
-            msg: `¡Les entiendo! 😊 Con el pack de 4 clases pueden conocer el curso y ver los resultados de primera mano 💙 Y la matrícula de S/50 es única: se paga una sola vez en la vida 🧡` },
-        ]
-      },
-
-      { num: 11, title: 'Resumen de compra', type: 'template',
-        note: '✏️ Completa los datos entre [ ] antes de enviar.',
-        msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
-
-📋 Inscripción de su hijo/a:
-• Curso: PowerKicks
-• Horario: Sábados 4:30 pm – 5:30 pm
-• Pack 4 clases → S/200
-• Matrícula única: S/50 ✅ (solo se paga una vez)
-• Total a pagar: S/250
-
-`,
-        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
-
-➡️ Yape o Plin: 923 043 284
-💵 Cuenta BCP Soles: 191-045529-4-0028
-💵 CCI: 002-191-10455294002859
-
-💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)
-
-Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
-    ]
-  },
-
-  // ══ BAILARINAS — ALUMNA ══
-  'bailarinas-alumno': {
-    title: '🩰 Acrobacias para Bailarinas',
-    badge: 'Alumna escribe directamente',
-    steps: [
-      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
-        msg: `¡Hola! 😊 Bienvenida a Acroflex 💙🩰
-
-Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
-
-      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
-        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso Acrobacias para Bailarinas 🩰💙
-
-Es un curso exclusivo dictado personalmente por Camila Garay ⭐ — con un enfoque 100% pensado para bailarinas.` },
-
-      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
-        msg: `Trabajamos flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina 🤸: elementos reales que vas a poder aplicar directamente en tus clases, presentaciones y audiciones.
-
-No es un curso genérico — cada ejercicio está elegido pensando en lo que una bailarina realmente necesita.` },
-
-      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
-        msg: `En cada clase trabajamos:
-🩰 Splits y aperturas (frontal y lateral)
-🌉 Puentes y movilidad de columna
-🤸 Acrobacias aplicadas a la danza (ruedas, mortal, parada de manos)
-💪 Fuerza y control corporal para bailarinas
-✨ Técnica limpia y progresiva desde tu nivel actual` },
-
-      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
-        msg: `Si deseas, te puedo enviar los horarios y precios disponibles para que reserves tu cupo. 💙🩰` },
-
-      { num: 6, title: 'Enviar video del curso', type: 'note',
-        note: '📹 Envía aquí el video de Acrobacias para Bailarinas. Dale un momento para que lo vea antes de continuar.' },
-
-      { num: 7, title: '¿Quiere ver horarios y precios?', type: 'message',
-        msg: `¿Te gustaría que te enviemos nuestros horarios y precios? 😊` },
-
-      { num: 8, title: 'Enviar horarios y precios', type: 'message',
-        note: '⚠️ Solo si respondió que sí.',
-        msg: `¡Claro! Aquí va toda la info 💙
-
-🗓️ Horario:
-📌 Sábados: 2:30 pm – 4:30 pm
-
-📦 Opciones:
-• Pack 4 clases → S/300
-• Clase suelta → S/80
-
-🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
-💳 Aceptamos: Visa, Mastercard, American Express` },
-
-      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
-        msg: `¡Todo esto te está esperando! 💙 Cuéntame, ¿qué días te quedarían mejor para las clases? Así te ayudo a elegir el horario ideal 😊🧡` },
-
-      { num: 10, title: 'Manejo de objeciones', type: 'objections',
-        options: [
-          { label: '😅 "No sé si tengo el nivel"',
-            msg: `¡No te preocupes! 😊 El curso se adapta a tu nivel actual de danza 💙 Los coaches evalúan tus capacidades y trabajan desde donde estás para que el avance sea real y seguro 💪` },
-          { label: '🤔 "Lo voy a pensar"',
-            msg: `¡Claro, sin presión! 😊 Solo te comento que los cupos son limitados 💙 ¿Hay alguna duda que te haya quedado o algo en lo que te pueda orientar mejor? 🧡` },
-          { label: '💸 "Está un poco caro"',
-            msg: `¡Te entiendo! 😊 Es un curso muy especializado con coaches que conocen muy bien la técnica acrobática aplicada a la danza 💙 La matrícula de S/50 además es única: la pagas una sola vez en la vida 🧡` },
-        ]
-      },
-
-      { num: 11, title: 'Resumen de compra', type: 'template',
-        note: '✏️ Completa los datos entre [ ] antes de enviar.',
-        msg: `¡Perfecto! 🎉 Te confirmo todo 💙
-
-📋 Tu inscripción:
-• Curso: Acrobacias para Bailarinas
-• Horario: Sábados 2:30 pm – 4:30 pm
-• Pack 4 clases → S/300
-• Matrícula única: S/50 ✅ (solo se paga una vez)
-• Total a pagar: S/350
-
-`,
-        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
-
-➡️ Yape o Plin: 923 043 284
-💵 Cuenta BCP Soles: 191-045529-4-0028
-💵 CCI: 002-191-10455294002859
-
-💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)
-
-Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
-    ]
-  },
-
-  // ══ BAILARINAS — PAPÁ ══
-  'bailarinas-papa': {
-    title: '🩰 Acrobacias para Bailarinas',
-    badge: 'Papá / Mamá escribe',
-    steps: [
-      { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙🩰
-
-Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hija, su edad y qué es lo que quieren lograr con las clases? 🧡` },
-
-      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
-        msg: `Perfecto, según lo que nos dicen, le recomendamos nuestro curso Acrobacias para Bailarinas 🩰💙
-
-Es un curso exclusivo dictado personalmente por Camila Garay ⭐ — con un enfoque 100% pensado para bailarinas.` },
-
-      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
-        msg: `Trabajamos flexibilidad y acrobacias específicamente las que las bailarinas usan en su disciplina 🤸: elementos reales que [NOMBRE] va a poder aplicar directamente en sus clases, presentaciones y audiciones.
-
-No es un curso genérico — cada ejercicio está elegido pensando en lo que una bailarina realmente necesita.` },
-
-      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
-        msg: `En cada clase trabajan:
-🩰 Splits y aperturas (frontal y lateral)
-🌉 Puentes y movilidad de columna
-🤸 Acrobacias aplicadas a la danza (ruedas, mortal, parada de manos)
-💪 Fuerza y control corporal para bailarinas
-✨ Técnica limpia y progresiva desde su nivel actual` },
-
-      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
-        msg: `Si desean, les puedo enviar los horarios y precios disponibles para que reserven su cupo. 💙🩰` },
-
-      { num: 6, title: 'Enviar video del curso', type: 'note',
-        note: '📹 Envía aquí el video de Acrobacias para Bailarinas. Dale un momento para que lo vean antes de continuar.' },
-
-      { num: 7, title: '¿Quieren ver horarios y precios?', type: 'message',
-        msg: `¿Les gustaría que les enviemos nuestros horarios y precios? 😊` },
-
-      { num: 8, title: 'Enviar horarios y precios', type: 'message',
-        note: '⚠️ Solo si respondió que sí.',
-        msg: `¡Claro! Aquí va toda la info 💙
-
-🗓️ Horario:
-📌 Sábados: 2:30 pm – 4:30 pm
-
-📦 Opciones:
-• Pack 4 clases → S/300
-• Clase suelta → S/80
-
-🎓 Matrícula única: S/50 (se paga una sola vez en la vida)
-💳 Aceptamos: Visa, Mastercard, American Express` },
-
-      { num: 9, title: 'Invitar a cerrar la compra', type: 'message',
-        msg: `¡Todo esto está disponible para su hija! 💙 Cuéntennos, ¿qué días les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
-
-      { num: 10, title: 'Manejo de objeciones', type: 'objections',
-        options: [
-          { label: '😅 "No sabemos si tiene el nivel"',
-            msg: `¡No se preocupen! 😊 El curso se adapta al nivel actual de danza de su hija 💙 Los coaches evalúan sus capacidades y trabajan desde donde está para que el avance sea real y seguro 💪` },
-          { label: '🤔 "Lo vamos a pensar"',
-            msg: `¡Claro, sin apuro! 😊 Solo les comentamos que los cupos son limitados 💙 ¿Hay alguna duda que les haya quedado? 🧡` },
-          { label: '💸 "Está un poco caro"',
-            msg: `¡Les entiendo! 😊 Es un curso muy especializado con coaches que conocen la técnica acrobática aplicada a la danza 💙 Además la matrícula de S/50 es única: se paga una sola vez en la vida 🧡` },
-        ]
-      },
-
-      { num: 11, title: 'Resumen de compra', type: 'template',
-        note: '✏️ Completa los datos entre [ ] antes de enviar.',
-        msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
-
-📋 Inscripción de su hija:
-• Curso: Acrobacias para Bailarinas
-• Horario: Sábados 2:30 pm – 4:30 pm
-• Pack 4 clases → S/300
-• Matrícula única: S/50 ✅ (solo se paga una vez)
-• Total a pagar: S/350
-
-`,
-        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
-
-➡️ Yape o Plin: 923 043 284
-💵 Cuenta BCP Soles: 191-045529-4-0028
-💵 CCI: 002-191-10455294002859
-
-💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
-(Los pagos con tarjeta tienen un 5% de recargo.)
-
-Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
-    ]
-  },
-
 
   'full-day-alumno': {
     title: '🔥 Full Day Acroflex',
