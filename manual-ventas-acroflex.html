@@ -6,82 +6,87 @@
 <title>Manual de Ventas — Acroflex</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Arial, sans-serif; background: #0a0e1a; color: #fff; min-height: 100vh; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f1f5f9; color: #1e293b; min-height: 100vh; }
   .screen { display: none; }
   .screen.active { display: block; }
 
   .header {
-    background: linear-gradient(135deg, #0d1b3e 0%, #1a2f6e 50%, #0d1b3e 100%);
+    background: #1e3a8a;
     border-bottom: 3px solid #f97316;
     padding: 14px 20px;
     text-align: center;
     position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(30,58,138,.25);
   }
   .header-logo img { height: 66px; width: auto; display: block; margin: 0 auto; }
-  .header-sub { font-size: 11px; color: #93afd4; letter-spacing: 2px; margin-top: 5px; text-transform: uppercase; }
+  .header-sub { font-size: 11px; color: #bfdbfe; letter-spacing: 2px; margin-top: 5px; text-transform: uppercase; }
 
   .content { max-width: 600px; margin: 0 auto; padding: 24px 16px 40px; }
 
   .back-btn {
-    background: none; border: none; color: #93afd4; font-size: 14px;
-    cursor: pointer; padding: 0 0 16px 0; display: flex; align-items: center; gap: 6px; transition: color .2s;
+    background: none; border: none; color: #64748b; font-size: 14px;
+    cursor: pointer; padding: 0 0 16px 0; display: flex; align-items: center; gap: 6px; transition: color .2s; font-weight: 600;
   }
-  .back-btn:hover { color: #fff; }
+  .back-btn:hover { color: #f97316; }
 
-  .section-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; line-height: 1.3; }
-  .section-subtitle { font-size: 13px; color: #93afd4; margin-bottom: 22px; line-height: 1.5; }
+  .section-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; line-height: 1.3; color: #1e293b; }
+  .section-subtitle { font-size: 13px; color: #64748b; margin-bottom: 22px; line-height: 1.5; }
   .divider { width: 40px; height: 3px; background: #f97316; border-radius: 2px; margin: 10px 0 20px; }
 
-  .btn-grid { display: flex; flex-direction: column; gap: 10px; }
+  .btn-grid { display: flex; flex-direction: column; gap: 8px; }
   .btn-situation {
-    background: linear-gradient(135deg, #0f1f4a 0%, #1a3070 100%);
-    border: 1.5px solid #1e3a8a; border-radius: 12px; padding: 16px 18px;
+    background: #fff;
+    border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 14px 18px;
     cursor: pointer; text-align: left; transition: all .2s;
-    display: flex; align-items: center; gap: 14px; color: #fff; font-size: 15px; font-weight: 600;
+    display: flex; align-items: center; gap: 14px; color: #1e293b; font-size: 15px; font-weight: 600;
+    box-shadow: 0 1px 4px rgba(0,0,0,.07);
   }
-  .btn-situation:hover { border-color: #f97316; background: linear-gradient(135deg,#1a2f6e,#243d8a); transform: translateX(4px); }
+  .btn-situation:hover { border-color: #f97316; background: #fff7ed; transform: translateX(3px); box-shadow: 0 2px 10px rgba(249,115,22,.15); }
   .btn-situation .emoji { font-size: 22px; min-width: 30px; text-align: center; }
-  .btn-situation .btn-desc { font-size: 12px; color: #93afd4; font-weight: 400; margin-top: 2px; }
+  .btn-situation .btn-desc { font-size: 12px; color: #64748b; font-weight: 400; margin-top: 2px; }
 
   .btn-choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
   .btn-choice-grid.cols3 { grid-template-columns: 1fr 1fr 1fr; }
   .btn-choice {
-    background: linear-gradient(135deg, #0f1f4a 0%, #1a3070 100%);
-    border: 1.5px solid #1e3a8a; border-radius: 10px; padding: 14px 12px;
-    cursor: pointer; text-align: center; transition: all .2s; color: #fff; font-size: 13px; font-weight: 600; line-height: 1.4;
+    background: #fff;
+    border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 14px 12px;
+    cursor: pointer; text-align: center; transition: all .2s; color: #1e293b; font-size: 13px; font-weight: 600; line-height: 1.4;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
   }
-  .btn-choice:hover { border-color: #f97316; background: linear-gradient(135deg,#1a2f6e,#243d8a); }
+  .btn-choice:hover { border-color: #f97316; background: #fff7ed; box-shadow: 0 2px 8px rgba(249,115,22,.15); }
   .btn-choice .ch-emoji { font-size: 20px; display: block; margin-bottom: 5px; }
-  .btn-choice.orange { background: linear-gradient(135deg,#7c2d00,#c2410c); border-color: #f97316; }
-  .btn-choice.orange:hover { background: linear-gradient(135deg,#9a3800,#ea580c); }
+  .btn-choice.orange { background: linear-gradient(135deg,#ea580c,#f97316); border-color: #f97316; color: #fff; }
+  .btn-choice.orange:hover { background: linear-gradient(135deg,#c2410c,#ea580c); }
 
-  .msg-box { background: #0f1f4a; border: 1.5px solid #1e3a8a; border-radius: 14px; padding: 18px; margin-top: 4px; }
+  .msg-box { background: #fff; border: 1.5px solid #dbeafe; border-radius: 14px; padding: 18px; margin-top: 4px; box-shadow: 0 1px 6px rgba(30,58,138,.08); }
   .msg-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #f97316; font-weight: 700; margin-bottom: 12px; }
-  .msg-text { font-size: 14px; line-height: 1.75; color: #e2e8f0; white-space: pre-wrap; }
-  .template-fill { color: #fbbf24; font-weight: 700; background: rgba(251,191,36,.12); padding: 1px 4px; border-radius: 3px; }
+  .msg-text { font-size: 14px; line-height: 1.75; color: #334155; white-space: pre-wrap; }
+  .template-fill { color: #c2410c; font-weight: 700; background: #fff7ed; padding: 1px 4px; border-radius: 3px; border: 1px solid #fed7aa; }
 
   .copy-btn {
-    background: linear-gradient(135deg,#c2410c,#f97316); border: none; border-radius: 8px;
-    color: #fff; font-size: 13px; font-weight: 700; padding: 10px 18px;
-    cursor: pointer; margin-top: 14px; width: 100%; transition: opacity .2s; letter-spacing: .5px;
+    background: linear-gradient(135deg,#ea580c,#f97316); border: none; border-radius: 8px;
+    color: #fff; font-size: 13px; font-weight: 700; padding: 12px 18px;
+    cursor: pointer; margin-top: 14px; width: 100%; transition: all .2s; letter-spacing: .5px;
+    box-shadow: 0 2px 8px rgba(249,115,22,.3);
   }
-  .copy-btn:hover { opacity: .88; }
-  .copy-btn.copied { background: linear-gradient(135deg,#15803d,#16a34a); }
+  .copy-btn:hover { background: linear-gradient(135deg,#c2410c,#ea580c); box-shadow: 0 4px 14px rgba(249,115,22,.4); }
+  .copy-btn.copied { background: linear-gradient(135deg,#15803d,#16a34a); box-shadow: 0 2px 8px rgba(22,163,74,.3); }
 
   /* HOME CATEGORIES */
   .home-category-label {
     font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
-    padding: 7px 12px; border-radius: 8px; margin-bottom: 10px;
+    padding: 7px 12px; border-radius: 8px; margin-bottom: 8px;
   }
-  .btn-cat-green { border-color: #166534 !important; }
-  .btn-cat-green:hover { background: #0d2a1a !important; }
-  .btn-cat-blue { border-color: #1e3a8a !important; }
-  .btn-cat-red { border-color: #7f1d1d !important; }
-  .btn-cat-red:hover { background: #2a0d0d !important; }
+  .btn-cat-green { border-color: #bbf7d0 !important; }
+  .btn-cat-green:hover { background: #f0fdf4 !important; border-color: #22c55e !important; }
+  .btn-cat-blue { border-color: #dbeafe !important; }
+  .btn-cat-blue:hover { background: #eff6ff !important; border-color: #3b82f6 !important; }
+  .btn-cat-red { border-color: #fecaca !important; }
+  .btn-cat-red:hover { background: #fff1f2 !important; border-color: #ef4444 !important; }
 
   /* BARRA DE PROGRESO */
   .flow-progress-wrap {
-    background: #0a1628; border-radius: 8px; height: 8px;
+    background: #e2e8f0; border-radius: 8px; height: 8px;
     margin: 4px 0 14px; overflow: hidden;
   }
   .flow-progress-bar {
@@ -89,77 +94,77 @@
     border-radius: 8px; transition: width .4s ease;
   }
   .flow-progress-label {
-    font-size: 11px; color: #93afd4; text-align: right; margin-bottom: 4px; letter-spacing: .3px;
+    font-size: 11px; color: #94a3b8; text-align: right; margin-bottom: 4px; letter-spacing: .3px; font-weight: 600;
   }
 
   /* BOTÓN ENVIADO */
   .sent-btn {
-    background: transparent; border: 1.5px solid #334155;
-    border-radius: 8px; color: #64748b; font-size: 12px; font-weight: 700;
-    padding: 7px 14px; cursor: pointer; margin-top: 8px; width: 100%;
+    background: transparent; border: 1.5px solid #e2e8f0;
+    border-radius: 8px; color: #94a3b8; font-size: 12px; font-weight: 700;
+    padding: 10px 14px; cursor: pointer; margin-top: 8px; width: 100%;
     transition: all .2s; letter-spacing: .3px;
   }
-  .sent-btn:hover { border-color: #22c55e; color: #86efac; }
+  .sent-btn:hover { border-color: #22c55e; color: #16a34a; background: #f0fdf4; }
   .sent-btn.sent-done {
-    border-color: #166534; background: #0d2a0d; color: #86efac;
+    border-color: #86efac; background: #f0fdf4; color: #15803d; font-weight: 800;
   }
   .step-card.step-done {
-    opacity: 0.55; border-color: #1a3320;
+    opacity: 0.5; border-color: #d1fae5;
   }
 
   /* STEP CARDS */
-  .step-card { background: #0f1f4a; border: 1.5px solid #1e3a8a; border-radius: 14px; padding: 18px; margin-bottom: 14px; }
+  .step-card { background: #fff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 18px; margin-bottom: 12px; box-shadow: 0 1px 6px rgba(0,0,0,.06); }
   .step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 2px; }
   .step-num {
     background: #f97316; color: #fff; font-weight: 900; font-size: 12px;
     width: 26px; height: 26px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
-  .step-title-text { font-size: 15px; font-weight: 700; }
-  .step-internal { font-size: 12px; color: #fcd34d; background: #1a1a0a; border: 1px solid #854d0e; border-radius: 8px; padding: 9px 12px; margin: 10px 0 0; line-height: 1.6; }
-  .img-send-box { margin-top: 12px; background: #060f27; border: 1.5px dashed #f97316; border-radius: 12px; padding: 14px; text-align: center; }
+  .step-title-text { font-size: 15px; font-weight: 700; color: #1e293b; }
+  .step-internal { font-size: 12px; color: #92400e; background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 9px 12px; margin: 10px 0 0; line-height: 1.6; }
+  .img-send-box { margin-top: 12px; background: #fff7ed; border: 1.5px dashed #f97316; border-radius: 12px; padding: 14px; text-align: center; }
   .img-send-box img { width: 100%; max-width: 320px; border-radius: 8px; display: block; margin: 0 auto 10px; }
   .img-send-label { font-size: 11px; color: #f97316; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-  .img-send-note { font-size: 12px; color: #93afd4; margin-top: 8px; }
-  .step-note-card { background: #0f1f4a; border: 1.5px solid #1e3a8a; border-radius: 14px; padding: 18px; margin-bottom: 14px; }
+  .img-send-note { font-size: 12px; color: #64748b; margin-top: 8px; }
+  .step-note-card { background: #fff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 18px; margin-bottom: 12px; box-shadow: 0 1px 6px rgba(0,0,0,.06); }
 
   /* OBJECTION BUTTONS */
   .obj-btn {
-    background: linear-gradient(135deg,#0f1f4a,#1a3070); border: 1.5px solid #1e3a8a;
+    background: #f8fafc; border: 1.5px solid #e2e8f0;
     border-radius: 10px; padding: 12px 14px; cursor: pointer; text-align: left;
-    color: #e2e8f0; font-size: 13px; font-weight: 600; width: 100%; margin-bottom: 8px;
+    color: #334155; font-size: 13px; font-weight: 600; width: 100%; margin-bottom: 8px;
     display: flex; align-items: center; gap: 10px; transition: all .2s;
   }
-  .obj-btn:hover { border-color: #f97316; }
-  .obj-btn.active { border-color: #f97316; background: linear-gradient(135deg,#1a2f6e,#243d8a); }
+  .obj-btn:hover { border-color: #f97316; background: #fff7ed; color: #1e293b; }
+  .obj-btn.active { border-color: #f97316; background: #fff7ed; color: #1e293b; }
   .obj-msg-box { display: none; margin: -2px 0 10px; }
 
-  .info-card { background: #0f1f4a; border: 1.5px solid #1e3a8a; border-radius: 12px; padding: 16px 18px; margin-bottom: 10px; }
+  .info-card { background: #fff; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 16px 18px; margin-bottom: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.05); }
   .info-card-title { font-size: 13px; font-weight: 700; color: #f97316; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .5px; }
-  .info-card p { font-size: 13px; color: #cbd5e1; line-height: 1.6; margin-bottom: 4px; }
+  .info-card p { font-size: 13px; color: #475569; line-height: 1.6; margin-bottom: 4px; }
   .info-card p:last-child { margin-bottom: 0; }
-  .info-card .highlight { color: #fff; font-weight: 600; }
+  .info-card .highlight { color: #1e293b; font-weight: 600; }
 
   .price-table { width: 100%; border-collapse: collapse; margin-top: 6px; }
-  .price-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #93afd4; font-weight: 600; text-align: left; padding: 6px 8px; border-bottom: 1px solid #1e3a8a; }
-  .price-table td { font-size: 13px; color: #e2e8f0; padding: 8px; border-bottom: 1px solid #111d3a; vertical-align: top; }
+  .price-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; font-weight: 600; text-align: left; padding: 6px 8px; border-bottom: 1px solid #e2e8f0; }
+  .price-table td { font-size: 13px; color: #334155; padding: 8px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
   .price-table tr:last-child td { border-bottom: none; }
   .price-tag { color: #f97316; font-weight: 700; }
 
-  .note-box { background: #1a1a0a; border: 1px solid #854d0e; border-radius: 10px; padding: 12px 14px; margin-top: 12px; font-size: 12px; color: #fcd34d; line-height: 1.6; }
+  .note-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 12px 14px; margin-top: 12px; font-size: 12px; color: #92400e; line-height: 1.6; }
 
-  .home-hero { background: linear-gradient(135deg,#0d1b3e,#1a2f6e); border: 1.5px solid #1e3a8a; border-radius: 16px; padding: 24px 20px; margin-bottom: 24px; text-align: center; }
+  .home-hero { background: linear-gradient(135deg,#1e3a8a,#2563eb); border-radius: 16px; padding: 24px 20px; margin-bottom: 20px; text-align: center; box-shadow: 0 4px 20px rgba(30,58,138,.25); }
   .home-hero-emoji { font-size: 40px; margin-bottom: 10px; }
-  .home-hero h1 { font-size: 20px; font-weight: 900; margin-bottom: 6px; }
-  .home-hero p { font-size: 13px; color: #93afd4; line-height: 1.6; }
-  .section-label { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #f97316; font-weight: 700; margin-bottom: 12px; }
+  .home-hero h1 { font-size: 20px; font-weight: 900; margin-bottom: 6px; color: #fff; }
+  .home-hero p { font-size: 13px; color: #bfdbfe; line-height: 1.6; }
+  .section-label { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #f97316; font-weight: 700; margin-bottom: 10px; }
 
-  .flow-title { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
-  .flow-badge { display: inline-block; background: #1e3a8a; color: #93afd4; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-bottom: 16px; }
+  .flow-title { font-size: 20px; font-weight: 800; margin-bottom: 4px; color: #1e293b; }
+  .flow-badge { display: inline-block; background: #dbeafe; color: #1e3a8a; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 16px; }
 
   .fab-home {
     position: fixed; bottom: 20px; right: 16px; z-index: 200;
-    background: linear-gradient(135deg,#c2410c,#f97316);
+    background: linear-gradient(135deg,#ea580c,#f97316);
     color: #fff; border: none; border-radius: 50px;
     padding: 11px 18px; font-size: 13px; font-weight: 700;
     cursor: pointer; display: none; align-items: center; gap: 7px;
@@ -242,12 +247,12 @@
       <h1>¡Hola, equipo Acroflex! 😊</h1>
       <p>Aquí encuentras exactamente qué responder según cada situación. Elige el caso y el asesor te guía paso a paso.</p>
     </div>
-    <div style="background:#1a1a2e;border:1px dashed #4a5a7a;border-radius:10px;padding:10px 14px;margin-bottom:16px;font-size:12px;color:#93afd4">
-      📅 <strong style="color:#c4d4f4">Recordatorio asesor:</strong> Al inicio de cada mes, confirma que las imágenes de horarios y el precio de cursos estén actualizados. Si cambiaron, avisa a quien administra el manual para actualizar. Horario actual: <strong style="color:#f0c050">Setiembre 2026</strong>
+    <div style="background:#eff6ff;border:1px dashed #93c5fd;border-radius:10px;padding:10px 14px;margin-bottom:16px;font-size:12px;color:#475569">
+      📅 <strong style="color:#1e3a8a">Recordatorio asesor:</strong> Al inicio de cada mes, confirma que las imágenes de horarios y el precio de cursos estén actualizados. Si cambiaron, avisa a quien administra el manual para actualizar. Horario actual: <strong style="color:#f97316">Setiembre 2026</strong>
     </div>
     <div class="section-label">¿Qué situación tienes?</div>
 
-    <div class="home-category-label" style="background:#0d2a0d;border-left:3px solid #22c55e;color:#86efac">🟢 PROSPECTOS NUEVOS</div>
+    <div class="home-category-label" style="background:#f0fdf4;border-left:3px solid #22c55e;color:#15803d">🟢 PROSPECTOS NUEVOS</div>
     <div class="btn-grid">
       <button class="btn-situation btn-cat-green" onclick="go('s-informes-quien')">
         <span class="emoji">👋</span>
@@ -267,7 +272,7 @@
       </button>
     </div>
 
-    <div class="home-category-label" style="background:#0d1f3a;border-left:3px solid #3b82f6;color:#93c5fd;margin-top:8px">🔵 ALUMNOS ACTIVOS</div>
+    <div class="home-category-label" style="background:#eff6ff;border-left:3px solid #3b82f6;color:#1d4ed8;margin-top:8px">🔵 ALUMNOS ACTIVOS</div>
     <div class="btn-grid">
       <button class="btn-situation btn-cat-blue" onclick="go('s-confirmacion')">
         <span class="emoji">✅</span>
@@ -303,7 +308,7 @@
       </button>
     </div>
 
-    <div class="home-category-label" style="background:#2a0d0d;border-left:3px solid #ef4444;color:#fca5a5;margin-top:8px">🔴 SITUACIONES DELICADAS</div>
+    <div class="home-category-label" style="background:#fff1f2;border-left:3px solid #ef4444;color:#b91c1c;margin-top:8px">🔴 SITUACIONES DELICADAS</div>
     <div class="btn-grid">
       <button class="btn-situation btn-cat-red" onclick="go('s-queja-quien')">
         <span class="emoji">🙋</span>
