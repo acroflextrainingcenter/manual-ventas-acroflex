@@ -68,6 +68,45 @@
   .copy-btn:hover { opacity: .88; }
   .copy-btn.copied { background: linear-gradient(135deg,#15803d,#16a34a); }
 
+  /* HOME CATEGORIES */
+  .home-category-label {
+    font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
+    padding: 7px 12px; border-radius: 8px; margin-bottom: 10px;
+  }
+  .btn-cat-green { border-color: #166534 !important; }
+  .btn-cat-green:hover { background: #0d2a1a !important; }
+  .btn-cat-blue { border-color: #1e3a8a !important; }
+  .btn-cat-red { border-color: #7f1d1d !important; }
+  .btn-cat-red:hover { background: #2a0d0d !important; }
+
+  /* BARRA DE PROGRESO */
+  .flow-progress-wrap {
+    background: #0a1628; border-radius: 8px; height: 8px;
+    margin: 4px 0 14px; overflow: hidden;
+  }
+  .flow-progress-bar {
+    height: 100%; background: linear-gradient(90deg,#f97316,#fbbf24);
+    border-radius: 8px; transition: width .4s ease;
+  }
+  .flow-progress-label {
+    font-size: 11px; color: #93afd4; text-align: right; margin-bottom: 4px; letter-spacing: .3px;
+  }
+
+  /* BOTÓN ENVIADO */
+  .sent-btn {
+    background: transparent; border: 1.5px solid #334155;
+    border-radius: 8px; color: #64748b; font-size: 12px; font-weight: 700;
+    padding: 7px 14px; cursor: pointer; margin-top: 8px; width: 100%;
+    transition: all .2s; letter-spacing: .3px;
+  }
+  .sent-btn:hover { border-color: #22c55e; color: #86efac; }
+  .sent-btn.sent-done {
+    border-color: #166534; background: #0d2a0d; color: #86efac;
+  }
+  .step-card.step-done {
+    opacity: 0.55; border-color: #1a3320;
+  }
+
   /* STEP CARDS */
   .step-card { background: #0f1f4a; border: 1.5px solid #1e3a8a; border-radius: 14px; padding: 18px; margin-bottom: 14px; }
   .step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 2px; }
@@ -213,62 +252,72 @@
       📅 <strong style="color:#c4d4f4">Recordatorio asesor:</strong> Al inicio de cada mes, confirma que las imágenes de horarios y el precio de cursos estén actualizados. Si cambiaron, avisa a quien administra el manual para actualizar. Horario actual: <strong style="color:#f0c050">Setiembre 2026</strong>
     </div>
     <div class="section-label">¿Qué situación tienes?</div>
+
+    <div class="home-category-label" style="background:#0d2a0d;border-left:3px solid #22c55e;color:#86efac">🟢 PROSPECTOS NUEVOS</div>
     <div class="btn-grid">
-      <button class="btn-situation" onclick="go('s-informes-quien')">
+      <button class="btn-situation btn-cat-green" onclick="go('s-informes-quien')">
         <span class="emoji">👋</span>
         <div><div>Pedido de informes</div><div class="btn-desc">Alguien escribe por primera vez preguntando por clases</div></div>
       </button>
-      <button class="btn-situation" onclick="go('s-confirmacion')">
-        <span class="emoji">✅</span>
-        <div><div>Confirmación — Alumno nuevo</div><div class="btn-desc">Datos, reglamento, declaración y bienvenida</div></div>
-      </button>
-      <button class="btn-situation" onclick="go('s-confirmacion-renovacion')">
-        <span class="emoji">✅</span>
-        <div><div>Confirmación — Alumno antiguo</div><div class="btn-desc">Confirmar turno + reglamento y declaración del mes</div></div>
-      </button>
-      <button class="btn-situation" onclick="go('s-recordatorio-quien')">
-        <span class="emoji">⏰</span>
-        <div><div>Recordatorio fin de paquete</div><div class="btn-desc">Avisar que el paquete de clases está por vencer</div></div>
-      </button>
-      <button class="btn-situation" onclick="go('s-recuperaciones-quien')">
-        <span class="emoji">🔄</span>
-        <div><div>Recuperaciones</div><div class="btn-desc">Un alumno quiere recuperar una clase que faltó</div></div>
-      </button>
-      <button class="btn-situation" onclick="go('s-renovaciones-fecha')">
-        <span class="emoji">🔁</span>
-        <div><div>Renovaciones</div><div class="btn-desc">Un alumno quiere renovar su paquete del mes</div></div>
-      </button>
-      <button class="btn-situation" onclick="go('s-horario-quien')">
-        <span class="emoji">🗓️</span>
-        <div><div>Cambio de horario</div><div class="btn-desc">Un alumno quiere cambiar el día o la hora de sus clases</div></div>
-      </button>
-      <button class="btn-situation" onclick="go('s-precios-curso')">
+      <button class="btn-situation btn-cat-green" onclick="go('s-precios-curso')">
         <span class="emoji">💰</span>
         <div><div>Preguntas sobre precios</div><div class="btn-desc">Alguien pregunta cuánto cuestan los cursos</div></div>
       </button>
-      <button class="btn-situation" onclick="go('s-clasegratis-curso')">
+      <button class="btn-situation btn-cat-green" onclick="go('s-clasegratis-curso')">
         <span class="emoji">🎁</span>
         <div><div>Preguntan por clase gratis</div><div class="btn-desc">"¿Hay clase de prueba gratuita?" — no hay, pero sí clase suelta</div></div>
       </button>
-      <button class="btn-situation" onclick="go('s-queja-quien')">
-        <span class="emoji">🙋</span>
-        <div><div>Quejas o reclamos</div><div class="btn-desc">Un alumno o padre tiene una queja o inconformidad</div></div>
+      <button class="btn-situation btn-cat-green" onclick="go('s-seguimiento')">
+        <span class="emoji">📩</span>
+        <div><div>Seguimiento</div><div class="btn-desc">El prospecto dijo "lo pienso" y no ha respondido en 24–48h</div></div>
       </button>
-      <button class="btn-situation" onclick="go('s-particulares')">
-        <span class="emoji">🎯</span>
-        <div><div>Clases particulares</div><div class="btn-desc">Alguien quiere clases 1 a 1 con Camila o con el equipo Acroflex</div></div>
+    </div>
+
+    <div class="home-category-label" style="background:#0d1f3a;border-left:3px solid #3b82f6;color:#93c5fd;margin-top:8px">🔵 ALUMNOS ACTIVOS</div>
+    <div class="btn-grid">
+      <button class="btn-situation btn-cat-blue" onclick="go('s-confirmacion')">
+        <span class="emoji">✅</span>
+        <div><div>Confirmación — Alumno nuevo</div><div class="btn-desc">Datos, reglamento, declaración y bienvenida</div></div>
       </button>
-      <button class="btn-situation" onclick="go('s-implementos')">
+      <button class="btn-situation btn-cat-blue" onclick="go('s-confirmacion-renovacion')">
+        <span class="emoji">✅</span>
+        <div><div>Confirmación — Alumno antiguo</div><div class="btn-desc">Confirmar turno + reglamento y declaración del mes</div></div>
+      </button>
+      <button class="btn-situation btn-cat-blue" onclick="go('s-recordatorio-quien')">
+        <span class="emoji">⏰</span>
+        <div><div>Recordatorio fin de paquete</div><div class="btn-desc">Avisar que el paquete de clases está por vencer</div></div>
+      </button>
+      <button class="btn-situation btn-cat-blue" onclick="go('s-recuperaciones-quien')">
+        <span class="emoji">🔄</span>
+        <div><div>Recuperaciones</div><div class="btn-desc">Un alumno quiere recuperar una clase que faltó</div></div>
+      </button>
+      <button class="btn-situation btn-cat-blue" onclick="go('s-renovaciones-fecha')">
+        <span class="emoji">🔁</span>
+        <div><div>Renovaciones</div><div class="btn-desc">Un alumno quiere renovar su paquete del mes</div></div>
+      </button>
+      <button class="btn-situation btn-cat-blue" onclick="go('s-horario-quien')">
+        <span class="emoji">🗓️</span>
+        <div><div>Cambio de horario</div><div class="btn-desc">Un alumno quiere cambiar el día o la hora de sus clases</div></div>
+      </button>
+      <button class="btn-situation btn-cat-blue" onclick="go('s-implementos')">
         <span class="emoji">🛍️</span>
         <div><div>Venta de implementos</div><div class="btn-desc">Ofrecer los implementos del curso justo después de inscribirse</div></div>
       </button>
-      <button class="btn-situation" onclick="go('s-pausa-quien')">
+      <button class="btn-situation btn-cat-blue" onclick="go('s-particulares')">
+        <span class="emoji">🎯</span>
+        <div><div>Clases particulares</div><div class="btn-desc">Alguien quiere clases 1 a 1 con Camila o con el equipo Acroflex</div></div>
+      </button>
+    </div>
+
+    <div class="home-category-label" style="background:#2a0d0d;border-left:3px solid #ef4444;color:#fca5a5;margin-top:8px">🔴 SITUACIONES DELICADAS</div>
+    <div class="btn-grid">
+      <button class="btn-situation btn-cat-red" onclick="go('s-queja-quien')">
+        <span class="emoji">🙋</span>
+        <div><div>Quejas o reclamos</div><div class="btn-desc">Un alumno o padre tiene una queja o inconformidad</div></div>
+      </button>
+      <button class="btn-situation btn-cat-red" onclick="go('s-pausa-quien')">
         <span class="emoji">⏸️</span>
         <div><div>Pausa o baja</div><div class="btn-desc">Un alumno quiere pausar, congelar o retirarse</div></div>
-      </button>
-      <button class="btn-situation" onclick="go('s-seguimiento')">
-        <span class="emoji">📩</span>
-        <div><div>Seguimiento</div><div class="btn-desc">El prospecto dijo "lo pienso" y no ha respondido en 24–48h</div></div>
       </button>
     </div>
   </div>
@@ -334,6 +383,8 @@
     <button class="back-btn" id="flow-back-btn">← Atrás</button>
     <div class="flow-title" id="flow-title"></div>
     <div class="flow-badge" id="flow-badge"></div>
+    <div class="flow-progress-label" id="flow-progress-label"></div>
+    <div class="flow-progress-wrap"><div class="flow-progress-bar" id="flow-progress-bar" style="width:0%"></div></div>
     <div class="divider"></div>
     <div id="flow-steps"></div>
   </div>
@@ -2238,12 +2289,32 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
 
 // ─── RENDERIZAR FLUJO ─────────────────────────
 let _backScreen = 's-home';
+function markSent(cardEl, btn, stepIndex, totalSteps) {
+  cardEl.classList.toggle('step-done');
+  const done = cardEl.classList.contains('step-done');
+  btn.textContent = done ? '✅ Enviado' : '○ Marcar como enviado';
+  btn.classList.toggle('sent-done', done);
+  updateFlowProgress(totalSteps);
+}
+
+function updateFlowProgress(totalSteps) {
+  const cards = document.querySelectorAll('#flow-steps .step-card');
+  const doneCount = document.querySelectorAll('#flow-steps .step-card.step-done').length;
+  const pct = totalSteps > 0 ? Math.round((doneCount / totalSteps) * 100) : 0;
+  document.getElementById('flow-progress-bar').style.width = pct + '%';
+  document.getElementById('flow-progress-label').textContent = `Paso ${doneCount} de ${totalSteps} enviados`;
+}
+
 function startFlow(flowKey, backScreen) {
   _backScreen = backScreen;
   const flow = FLOWS[flowKey];
   document.getElementById('flow-title').textContent = flow.title;
   document.getElementById('flow-badge').textContent = flow.badge;
   document.getElementById('flow-back-btn').onclick = () => go(backScreen);
+
+  const totalSteps = flow.steps.length;
+  document.getElementById('flow-progress-label').textContent = `Paso 0 de ${totalSteps} enviados`;
+  document.getElementById('flow-progress-bar').style.width = '0%';
 
   const container = document.getElementById('flow-steps');
   container.innerHTML = '';
@@ -2342,6 +2413,12 @@ function startFlow(flowKey, backScreen) {
         <div style="font-size:12px;color:#93afd4;margin:10px 0 12px">Selecciona la situación del cliente:</div>
         ${optsHtml}`;
     }
+
+    const sentBtn = document.createElement('button');
+    sentBtn.className = 'sent-btn';
+    sentBtn.textContent = '○ Marcar como enviado';
+    sentBtn.onclick = () => markSent(card, sentBtn, i, totalSteps);
+    card.appendChild(sentBtn);
 
     container.appendChild(card);
   });
