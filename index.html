@@ -1412,50 +1412,37 @@ Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y q
       { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
         msg: `¡Gracias [NOMBRE]! 😊 Una pregunta rápida antes de enviarte todo: ¿qué te motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta del cliente. Te dirá si hay urgencia, evento próximo, frustración acumulada o simple curiosidad. Eso cambia cómo presentas el curso.` },
 
-      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
-        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso Acroflex Jóvenes y Adultos 🤸‍♀️💙
+      { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
+        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos Acroflex Jóvenes y Adultos 🤸‍♀️💙
 
-Es el curso ideal para quienes desean desarrollar acrobacia, fuerza, flexibilidad y control corporal, ya sea que empiecen desde cero o que ya tengan experiencia.` },
+Es el curso ideal para desarrollar acrobacia, fuerza, flexibilidad y control corporal — ya sea que empieces desde cero o que ya tengas experiencia. Las clases son multinivel: adaptamos cada ejercicio a tu nivel y respetamos tu proceso. No necesitas experiencia previa.` },
 
-      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
-        msg: `Nuestra metodología está basada en los fundamentos de la gimnasia y la acrobacia de piso, priorizando siempre una técnica limpia, segura y progresiva.
-
-Las clases son multinivel, porque entendemos que cada alumno tiene un proceso diferente. Respetamos los tiempos de aprendizaje de cada persona y adaptamos los ejercicios según su nivel y capacidades.` },
-
-      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
+      { num: 4, title: 'Presentar el curso (msg 2 — qué trabajan en clase)', type: 'message',
         msg: `En cada clase trabajamos:
 ✨ Acrobacias de piso (rodamientos, ruedas, parada de manos y progresiones de mortales)
 ✨ Fuerza y preparación física
 ✨ Flexibilidad y movilidad
-✨ Equilibrio, coordinación y control corporal` },
+✨ Equilibrio, coordinación y control corporal
 
-      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
-        msg: `Hoy más que nunca es importante mantenerse activo y fuerte. Por eso, complementamos cada entrenamiento con ejercicios de fortalecimiento que te ayudarán a moverte mejor, prevenir lesiones y ganar confianza en tu cuerpo.
+Y lo mejor: tienes entre 1 y 3 coaches corrigiéndote en persona cada clase 💙 Eso hace que el progreso sea real, seguro y sostenido.` },
 
-Además, encontrarás un ambiente positivo donde podrás conocer personas con intereses similares, aprender en equipo y disfrutar el proceso mientras celebras cada avance. 💙
+      { num: 5, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía el video del curso Acroflex ahora. Dale un momento para que lo vea antes de continuar.' },
 
-No necesitas experiencia previa.` },
+      { num: 6, title: 'Ancla de valor + horarios (sin preguntar)', type: 'message',
+        msg: `La mayoría de nuestros alumnos empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Te mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que el cliente vea los precios. No preguntes si quieren verlos — mándalos directo después de este mensaje.` },
 
-      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
-        msg: `Si deseas, te puedo enviar los horarios y valores disponibles para que reserves tu cupo. 💙🤸‍♀️` },
-
-      { num: 8, title: 'Enviar video del curso', type: 'note',
-        note: '📹 Envía aquí el video del curso Acroflex. Dale un momento para que lo vea antes de continuar.' },
-
-      { num: 9, title: '¿Quiere ver horarios y precios?', type: 'message',
-        msg: `¿Te gustaría que te enviemos nuestros horarios y mensualidades? 😊` },
-
-      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
+      { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
+        note: '📲 Envía estas 2 imágenes seguidas sin preguntar si las quieren ver.',
         images: [
           { src: 'horarios-acroflex.jpg', label: 'Imagen 1 — Horarios Setiembre Acroflex' },
           { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
         ]},
 
-      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
-        msg: `¡Todo esto te está esperando! 💙 Cuéntame, ¿qué días de la semana te quedarían mejor para entrenar? Así te ayudo a elegir el horario ideal 😊🧡` },
+      { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
+        msg: `¿Qué días de la semana te quedarían mejor para entrenar? Así te ayudo a elegir el horario ideal 😊🧡` },
 
-      { num: 11, title: 'Manejo de objeciones', type: 'objections',
+      { num: 9, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tengo experiencia / estoy muy rígido"',
             msg: `¡No te preocupes para nada! 😊 Acroflex es multinivel, lo que significa que empezamos exactamente donde tú estás 💙 No necesitas experiencia previa ni ser flexible — los coaches te guían desde el inicio con técnica y mucha seguridad 💪 ¡La mayoría de nuestros alumnos empezaron igual que tú!` },
@@ -1468,7 +1455,7 @@ No necesitas experiencia previa.` },
         ]
       },
 
-      { num: 12, title: 'Resumen de compra', type: 'template',
+      { num: 10, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Te confirmo todo 💙
 
@@ -1506,50 +1493,37 @@ Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/
             { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
         msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarles todo: ¿qué los motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
 
-      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
-        msg: `Perfecto, según lo que nos dicen, les recomendamos nuestro curso Acroflex Jóvenes y Adultos 🤸‍♀️💙
+      { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
+        msg: `Perfecto, según lo que nos dicen, les recomendamos Acroflex Jóvenes y Adultos 🤸‍♀️💙
 
-Es el curso ideal para quienes desean desarrollar acrobacia, fuerza, flexibilidad y control corporal, ya sea que empiecen desde cero o que ya tengan experiencia.` },
+Es el curso ideal para desarrollar acrobacia, fuerza, flexibilidad y control corporal — ya sea que su hijo/a empiece desde cero o que ya tenga experiencia. Las clases son multinivel: adaptamos cada ejercicio a su nivel y respetamos su proceso. No necesita experiencia previa.` },
 
-      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
-        msg: `Nuestra metodología está basada en los fundamentos de la gimnasia y la acrobacia de piso, priorizando siempre una técnica limpia, segura y progresiva.
-
-Las clases son multinivel, porque entendemos que cada alumno tiene un proceso diferente. Respetamos los tiempos de aprendizaje de cada persona y adaptamos los ejercicios según su nivel y capacidades.` },
-
-      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
+      { num: 4, title: 'Presentar el curso (msg 2 — qué trabajan en clase)', type: 'message',
         msg: `En cada clase trabajamos:
 ✨ Acrobacias de piso (rodamientos, ruedas, parada de manos y progresiones de mortales)
 ✨ Fuerza y preparación física
 ✨ Flexibilidad y movilidad
-✨ Equilibrio, coordinación y control corporal` },
+✨ Equilibrio, coordinación y control corporal
 
-      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
-        msg: `Hoy más que nunca es importante mantenerse activo y fuerte. Por eso, complementamos cada entrenamiento con ejercicios de fortalecimiento que ayudarán a su hijo/a a moverse mejor, prevenir lesiones y ganar confianza en su cuerpo.
+Y lo mejor: su hijo/a tiene entre 1 y 3 coaches corrigiéndole en persona cada clase 💙 Eso hace que el progreso sea real, seguro y sostenido.` },
 
-Además, encontrará un ambiente positivo donde podrá conocer personas con intereses similares, aprender en equipo y disfrutar el proceso mientras celebra cada avance. 💙
+      { num: 5, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía el video del curso Acroflex ahora. Dale un momento para que lo vean antes de continuar.' },
 
-No necesita experiencia previa.` },
+      { num: 6, title: 'Ancla de valor + horarios (sin preguntar)', type: 'message',
+        msg: `La mayoría de nuestros alumnos empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Les mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que vean los precios. No preguntes si quieren verlos — mándalos directo después de este mensaje.` },
 
-      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
-        msg: `Si desean, les puedo enviar los horarios y valores disponibles para que reserven su cupo. 💙🤸‍♀️` },
-
-      { num: 8, title: 'Enviar video del curso', type: 'note',
-        note: '📹 Envía aquí el video del curso Acroflex. Dale un momento para que lo vean antes de continuar.' },
-
-      { num: 9, title: '¿Quieren ver horarios y precios?', type: 'message',
-        msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
-
-      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
+      { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
+        note: '📲 Envía estas 2 imágenes seguidas sin preguntar si las quieren ver.',
         images: [
           { src: 'horarios-acroflex.jpg', label: 'Imagen 1 — Horarios Setiembre Acroflex' },
           { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
         ]},
 
-      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
-        msg: `¡Todo esto está disponible para su hijo/a! 💙 Cuéntennos, ¿qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
+      { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
+        msg: `¿Qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
 
-      { num: 11, title: 'Manejo de objeciones', type: 'objections',
+      { num: 9, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tiene experiencia / está muy rígido"',
             msg: `¡No hay problema para nada! 😊 Acroflex es multinivel, empezamos exactamente donde tu hijo/a está 💙 No necesita experiencia previa ni ser flexible — los coaches los guían desde el inicio con técnica y mucha seguridad 💪 ¡La mayoría de nuestros alumnos empezaron así!` },
@@ -1562,7 +1536,7 @@ No necesita experiencia previa.` },
         ]
       },
 
-      { num: 12, title: 'Resumen de compra', type: 'template',
+      { num: 10, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
@@ -1600,51 +1574,38 @@ Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/
             { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
         msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarles todo: ¿qué los motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
 
-      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
-        msg: `Perfecto, según lo que nos dice, le recomendamos nuestro curso Acroflex Teens 🧒🤸‍♀️💙
+      { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
+        msg: `Perfecto, según lo que nos dicen, les recomendamos Acroflex Teens 🧒🤸‍♀️💙
 
-En Acroflex creemos que el deporte es una herramienta para formar personas. Por eso, además de enseñar acrobacia, fomentamos valores como la disciplina, el respeto, la perseverancia y la responsabilidad. ✨` },
+En Acroflex creemos que el deporte forma personas. Además de acrobacia, fomentamos disciplina, respeto y perseverancia — y acompañamos a cada niño/a a su propio ritmo, sin comparaciones. Las clases son multinivel y la técnica siempre va primero.` },
 
-      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
-        msg: `Promovemos el respeto hacia uno mismo, hacia los compañeros y hacia los entrenadores 🤝, creando un ambiente positivo donde cada alumno pueda desarrollarse con confianza y seguridad.
-
-Trabajamos con una metodología multinivel, respetando el proceso individual de cada niño/a. Entendemos que cada persona aprende a un ritmo diferente, por lo que no hacemos comparaciones — acompañamos a cada alumno en su propio camino de crecimiento. 🌱` },
-
-      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
-        msg: `Damos mucha importancia a la técnica correcta desde la base, porque creemos que una buena ejecución permite avanzar con mayor seguridad, control corporal y confianza 💪
-
-Durante las clases trabajarán:
+      { num: 4, title: 'Presentar el curso (msg 2 — qué trabajan en clase)', type: 'message',
+        msg: `Durante las clases trabajan:
 🤸‍♀️ Parada de manos
 🌪️ Aspas
 🔄 Rodamientos
 💥 Mortales (según nivel y progresión)
-💪 Fuerza y flexibilidad aplicada a la acrobacia` },
+💪 Fuerza y flexibilidad aplicada a la acrobacia
 
-      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
-        msg: `Nuestro objetivo es que cada alumno desarrolle habilidades físicas, confianza en sí mismo y herramientas que le sirvan dentro y fuera del entrenamiento. ✨
+Y en cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente — eso hace que el progreso sea real y seguro 🙌💙` },
 
-En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que su progreso sea real y seguro 🙌💙` },
+      { num: 5, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía el video de Acroflex Teens ahora. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
-        msg: `Con mucho gusto les comparto los horarios y valores disponibles 😊💙` },
+      { num: 6, title: 'Ancla de valor + horarios (sin preguntar)', type: 'message',
+        msg: `La mayoría de nuestros alumnos empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Les mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que vean los precios. No preguntes si quieren verlos — mándalos directo después de este mensaje.` },
 
-      { num: 8, title: 'Enviar video del curso', type: 'note',
-        note: '📹 Envía aquí el video de Acroflex Teens. Dale un momento para que lo vean antes de continuar.' },
-
-      { num: 9, title: '¿Quieren ver horarios y precios?', type: 'message',
-        msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
-
-      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
+      { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
+        note: '📲 Envía estas 2 imágenes seguidas sin preguntar si las quieren ver.',
         images: [
-          { src: 'horarios-teens.png', label: 'Imagen 1 — Horarios Julio Acroflex Teens' },
+          { src: 'horarios-teens.png', label: 'Imagen 1 — Horarios Setiembre Acroflex Teens' },
           { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
         ]},
 
-      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
-        msg: `¡Todo esto está disponible para su hijo/a! 💙 Cuéntennos, ¿qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
+      { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
+        msg: `¿Qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
 
-      { num: 11, title: 'Manejo de objeciones', type: 'objections',
+      { num: 9, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tiene experiencia / es muy joven"',
             msg: `¡Perfecto para empezar! 😊 Acroflex Teens está diseñado exactamente para eso: niños que empiezan desde cero 💙 El programa avanza de acuerdo al ritmo de cada niño/a, con coaches que corrigen la técnica y cuidan la seguridad en todo momento 💪` },
@@ -1657,7 +1618,7 @@ En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que su 
         ]
       },
 
-      { num: 12, title: 'Resumen de compra', type: 'template',
+      { num: 10, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
@@ -1695,51 +1656,36 @@ Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y q
             { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
         msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarte todo: ¿qué te motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
 
-      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
-        msg: `Perfecto, según lo que nos dices, te recomendamos nuestro curso Acroflex Teens 🧒🤸‍♀️💙
+      { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
+        msg: `Perfecto, según lo que nos dices, te recomendamos Acroflex Teens 🧒🤸‍♀️💙
 
-En Acroflex creemos que el deporte es una herramienta para formar personas. Por eso, además de enseñar acrobacia, fomentamos valores como la disciplina, el respeto, la perseverancia y la responsabilidad. ✨` },
+En Acroflex creemos que el deporte forma personas. Además de acrobacia, fomentamos disciplina, respeto y perseverancia — y acompañamos a cada alumno/a a su propio ritmo, sin comparaciones. Las clases son multinivel y la técnica siempre va primero.` },
 
-      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
-        msg: `Promovemos el respeto hacia uno mismo, hacia los compañeros y hacia los entrenadores 🤝, creando un ambiente positivo donde cada alumno/a pueda desarrollarse con confianza y seguridad.
-
-Trabajamos con una metodología multinivel, respetando el proceso individual de cada alumno/a. Entendemos que cada persona aprende a un ritmo diferente, por lo que no hacemos comparaciones — acompañamos a cada uno en su propio camino de crecimiento. 🌱` },
-
-      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
-        msg: `Damos mucha importancia a la técnica correcta desde la base, porque creemos que una buena ejecución permite avanzar con mayor seguridad, control corporal y confianza 💪
-
-Durante las clases trabajarás:
+      { num: 4, title: 'Presentar el curso (msg 2 — qué trabajan en clase)', type: 'message',
+        msg: `Durante las clases trabajarás:
 🤸‍♀️ Parada de manos
 🌪️ Aspas
 🔄 Rodamientos
 💥 Mortales (según nivel y progresión)
 💪 Fuerza y flexibilidad aplicada a la acrobacia` },
 
-      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
-        msg: `Nuestro objetivo es que desarrolles habilidades físicas, confianza en ti mismo/a y herramientas que te sirvan dentro y fuera del entrenamiento. ✨
+      { num: 5, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía el video de Acroflex Teens ahora. Dale un momento para que lo vea antes de continuar.' },
 
-En cada clase hay entre 1 y 3 coaches corrigiéndote personalmente para que tu progreso sea real y seguro 🙌💙` },
+      { num: 6, title: 'Ancla de valor + horarios (sin preguntar)', type: 'message',
+        msg: `La mayoría de nuestros alumnos empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Te mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que vean los precios. Manda las imágenes directo sin preguntar.` },
 
-      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
-        msg: `Con mucho gusto te comparto los horarios y valores disponibles 😊💙` },
-
-      { num: 8, title: 'Enviar video del curso', type: 'note',
-        note: '📹 Envía aquí el video de Acroflex Teens. Dale un momento para que lo vea antes de continuar.' },
-
-      { num: 9, title: '¿Quieres ver horarios y precios?', type: 'message',
-        msg: `¿Te gustaría que te enviemos nuestros horarios y mensualidades? 😊` },
-
-      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
+      { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
+        note: '📲 Envía estas 2 imágenes seguidas sin preguntar si las quieren ver.',
         images: [
-          { src: 'horarios-teens.png', label: 'Imagen 1 — Horarios Acroflex Teens' },
+          { src: 'horarios-teens.png', label: 'Imagen 1 — Horarios Setiembre Acroflex Teens' },
           { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
         ]},
 
-      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
-        msg: `¡Todo esto está disponible para ti! 💙 Cuéntame, ¿qué días de la semana te quedarían mejor para las clases? Así te ayudo a elegir el horario ideal 😊🧡` },
+      { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
+        msg: `¿Qué días de la semana te quedarían mejor para las clases? Así te ayudo a elegir el horario ideal 😊🧡` },
 
-      { num: 11, title: 'Manejo de objeciones', type: 'objections',
+      { num: 9, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tengo experiencia"',
             msg: `¡Perfecto para empezar! 😊 Acroflex Teens está diseñado exactamente para eso: para quienes comienzan desde cero 💙 El programa avanza de acuerdo a tu ritmo, con coaches que corrigen la técnica y cuidan tu seguridad en todo momento 💪` },
@@ -1752,7 +1698,7 @@ En cada clase hay entre 1 y 3 coaches corrigiéndote personalmente para que tu p
         ]
       },
 
-      { num: 12, title: 'Resumen de compra', type: 'template',
+      { num: 10, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Te confirmo todo 💙
 
@@ -1790,51 +1736,37 @@ Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y q
             { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
         msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarte todo: ¿qué te motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
 
-      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
-        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso FlexiPower – Fuerza y Flexibilidad para tu cuerpo 💪🧡
+      { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
+        msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos FlexiPower 💪🧡
 
-FlexiPower es un curso enfocado en desarrollar fuerza y flexibilidad al mismo tiempo, algo clave para mejorar el control corporal y prevenir lesiones.` },
+Es un curso enfocado en desarrollar fuerza y flexibilidad al mismo tiempo — clave para mejorar el control corporal y prevenir lesiones. A diferencia de solo estirar, trabajamos flexibilidad activa: el músculo se alarga Y se fortalece. Las clases son multinivel, puedes empezar desde cero.` },
 
-      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
-        msg: `A diferencia de solo estirar, aquí trabajamos flexibilidad activa 💡: el músculo no solo se alarga, sino que también se fortalece en ese rango de movimiento. Esto permite ganar movilidad real y segura en las articulaciones.` },
-
-      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
-        msg: `Durante las clases se trabaja:
+      { num: 4, title: 'Presentar el curso (msg 2 — qué trabajan en clase)', type: 'message',
+        msg: `Durante las clases trabajamos:
 ✨ Aperturas de piernas (split frontal y lateral)
-✨ Fuerza de piernas y caderas
+✨ Fuerza de piernas, caderas y core
 ✨ Movilidad de cadera y espalda
-✨ Control del core
-✨ Ejercicios de elongación activa y técnica de flexibilidad` },
+✨ Elongación activa y técnica de flexibilidad
 
-      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
-        msg: `Es ideal para:
-⭐ Personas que quieren lograr el spagat o split
-⭐ Bailarines, deportistas o artistas
-⭐ Personas que quieren mejorar su movilidad y postura
-⭐ Adultos que desean ganar flexibilidad sin lesionarse
+Es ideal si quieres lograr el split, mejorar tu movilidad, o eres bailarín/a, deportista o artista 🙌` },
 
-Las clases son multinivel, así que puedes empezar desde cero o con experiencia 🙌` },
+      { num: 5, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía el video de FlexiPower ahora. Dale un momento para que lo vea antes de continuar.' },
 
-      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
-        msg: `Si deseas, te puedo enviar los horarios y valores disponibles para que reserves tu cupo. 💙🧘` },
+      { num: 6, title: 'Ancla de valor + horarios (sin preguntar)', type: 'message',
+        msg: `La mayoría de nuestros alumnos empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Te mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que vean los precios. Manda las imágenes directo sin preguntar.` },
 
-      { num: 8, title: 'Enviar video del curso', type: 'note',
-        note: '📹 Envía aquí el video de FlexiPower. Dale un momento para que lo vea antes de continuar.' },
-
-      { num: 9, title: '¿Quiere ver horarios y precios?', type: 'message',
-        msg: `¿Te gustaría que te enviemos nuestros horarios y mensualidades? 😊` },
-
-      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
+      { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
+        note: '📲 Envía estas 2 imágenes seguidas sin preguntar si las quieren ver.',
         images: [
-          { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Julio FlexiPower' },
+          { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Setiembre FlexiPower' },
           { src: 'mensualidades-flexipower.png', label: 'Imagen 2 — Mensualidades FlexiPower' },
         ]},
 
-      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
-        msg: `¡Todo esto te está esperando! 💙 Cuéntame, ¿qué días de la semana te quedarían mejor para entrenar? Así te ayudo a elegir el horario ideal 😊🧡` },
+      { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
+        msg: `¿Qué días de la semana te quedarían mejor para entrenar? Así te ayudo a elegir el horario ideal 😊🧡` },
 
-      { num: 11, title: 'Manejo de objeciones', type: 'objections',
+      { num: 9, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No soy nada flexible / no tengo experiencia"',
             msg: `¡Ese es exactamente el punto de partida perfecto! 😊 FlexiPower empieza desde cero, con técnica y sin forzar el cuerpo 💙 Los coaches te guían en cada posición para que avances de forma segura. ¡Muchos alumnos llegan sin ninguna base y los resultados son increíbles! 💪` },
@@ -1847,7 +1779,7 @@ Las clases son multinivel, así que puedes empezar desde cero o con experiencia 
         ]
       },
 
-      { num: 12, title: 'Resumen de compra', type: 'template',
+      { num: 10, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Te confirmo todo 💙
 
@@ -1885,51 +1817,37 @@ Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/
             { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
         msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarles todo: ¿qué los motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
 
-      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
-        msg: `Perfecto, según lo que nos dicen, les recomendamos nuestro curso FlexiPower – Fuerza y Flexibilidad para el cuerpo 💪🧡
+      { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
+        msg: `Perfecto, según lo que nos dicen, les recomendamos FlexiPower 💪🧡
 
-FlexiPower es un curso enfocado en desarrollar fuerza y flexibilidad al mismo tiempo, algo clave para mejorar el control corporal y prevenir lesiones.` },
+Es un curso enfocado en desarrollar fuerza y flexibilidad al mismo tiempo — clave para mejorar el control corporal y prevenir lesiones. A diferencia de solo estirar, trabajamos flexibilidad activa: el músculo se alarga Y se fortalece. Las clases son multinivel, su hijo/a puede empezar desde cero.` },
 
-      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
-        msg: `A diferencia de solo estirar, aquí trabajamos flexibilidad activa 💡: el músculo no solo se alarga, sino que también se fortalece en ese rango de movimiento. Esto permite ganar movilidad real y segura en las articulaciones.` },
-
-      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
-        msg: `Durante las clases se trabaja:
+      { num: 4, title: 'Presentar el curso (msg 2 — qué trabajan en clase)', type: 'message',
+        msg: `Durante las clases trabajan:
 ✨ Aperturas de piernas (split frontal y lateral)
-✨ Fuerza de piernas y caderas
+✨ Fuerza de piernas, caderas y core
 ✨ Movilidad de cadera y espalda
-✨ Control del core
-✨ Ejercicios de elongación activa y técnica de flexibilidad` },
+✨ Elongación activa y técnica de flexibilidad
 
-      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
-        msg: `Es ideal para:
-⭐ Personas que quieren lograr el spagat o split
-⭐ Bailarines, deportistas o artistas
-⭐ Personas que quieren mejorar su movilidad y postura
-⭐ Adultos que desean ganar flexibilidad sin lesionarse
+Es ideal para quienes quieren lograr el split, mejorar movilidad o si son bailarines/deportistas 🙌` },
 
-Las clases son multinivel, así que su hijo/a puede empezar desde cero o con experiencia 🙌` },
+      { num: 5, title: 'Enviar video del curso', type: 'note',
+        note: '📹 Envía el video de FlexiPower ahora. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
-        msg: `Si desean, les puedo enviar los horarios y valores disponibles para que reserven su cupo. 💙🧘` },
+      { num: 6, title: 'Ancla de valor + horarios (sin preguntar)', type: 'message',
+        msg: `La mayoría de nuestros alumnos empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Les mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que vean los precios. Manda las imágenes directo sin preguntar.` },
 
-      { num: 8, title: 'Enviar video del curso', type: 'note',
-        note: '📹 Envía aquí el video de FlexiPower. Dale un momento para que lo vean antes de continuar.' },
-
-      { num: 9, title: '¿Quieren ver horarios y precios?', type: 'message',
-        msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
-
-      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
+      { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
+        note: '📲 Envía estas 2 imágenes seguidas sin preguntar si las quieren ver.',
         images: [
-          { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Julio FlexiPower' },
+          { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Setiembre FlexiPower' },
           { src: 'mensualidades-flexipower.png', label: 'Imagen 2 — Mensualidades FlexiPower' },
         ]},
 
-      { num: 10, title: 'Invitar a cerrar la compra', type: 'message',
-        msg: `¡Todo esto está disponible para su hijo/a! 💙 Cuéntennos, ¿qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
+      { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
+        msg: `¿Qué días de la semana les quedarían mejor para las clases? Así los ayudamos a elegir el horario ideal 😊🧡` },
 
-      { num: 11, title: 'Manejo de objeciones', type: 'objections',
+      { num: 9, title: 'Manejo de objeciones', type: 'objections',
         options: [
           { label: '😅 "No tiene experiencia / es muy rígido"',
             msg: `¡No hay problema! 😊 FlexiPower empieza desde cero, con técnica y sin forzar el cuerpo 💙 Los coaches guían a cada alumno/a de acuerdo a su nivel. ¡El progreso es real y seguro! 💪` },
@@ -1942,7 +1860,7 @@ Las clases son multinivel, así que su hijo/a puede empezar desde cero o con exp
         ]
       },
 
-      { num: 12, title: 'Resumen de compra', type: 'template',
+      { num: 10, title: 'Resumen de compra', type: 'template',
         note: '✏️ Completa los datos entre [ ] antes de enviar.',
         msg: `¡Perfecto! 🎉 Les confirmamos todo 💙
 
