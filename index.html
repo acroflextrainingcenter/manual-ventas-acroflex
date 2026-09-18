@@ -918,31 +918,33 @@ Cuando quieras retomar, aquí te esperamos con los brazos abiertos 🧡 ¡Mucho 
     <div class="note-box">💡 <strong>¿Cuándo usar esto?</strong> El prospecto mostró interés pero dijo "lo pienso" y no ha respondido en 24–48 horas. Estos mensajes reabren la conversación sin presionar.</div>
 
     <div class="step-card">
-      <div class="step-header"><span class="step-num">1</span><span class="step-title-text">Seguimiento a las 24–48h (suave)</span></div>
+      <div class="step-header"><span class="step-num">1</span><span class="step-title-text">Seguimiento a las 24–48h — pregunta cerrada de avance</span></div>
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label">💬 Mensaje a enviar</div>
-        <div class="msg-text" id="msg-seg-1">¡Hola! 😊 Solo quería pasar a saludarte y ver si te quedó alguna duda sobre Acroflex 💙 Con gusto te ayudo a resolverlas — estamos aquí para lo que necesites 🧡</div>
+        <div class="msg-text" id="msg-seg-1">¡Hola! 😊 ¿Te quedó alguna duda sobre el horario o el precio de Acroflex? Con gusto la resuelvo ahora 💙🧡</div>
         <button class="copy-btn" onclick="copyMsg('msg-seg-1',this)">📋 Copiar mensaje</button>
       </div>
+      <div class="note-box" style="margin-top:10px">🎯 <strong>Por qué funciona:</strong> "¿alguna duda?" es abierto y da excusa de no responder. Esta versión enfoca la respuesta en horario o precio — dos objeciones concretas que puedes resolver de inmediato.</div>
     </div>
 
     <div class="step-card">
-      <div class="step-header"><span class="step-num">2</span><span class="step-title-text">Si mencionó un motivo económico</span></div>
+      <div class="step-header"><span class="step-num">2</span><span class="step-title-text">Si mencionó un motivo económico — explora antes de ofrecer</span></div>
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label">💬 Mensaje a enviar</div>
-        <div class="msg-text" id="msg-seg-2">¡Hola! 😊 Quería avisarte que tenemos cupos disponibles todavía 💙 Si el tema es el presupuesto, podemos orientarte con el paquete que mejor se adapte a tu situación — hay opciones desde 4 clases 🧡 ¿Te gustaría que te enviara el detalle?</div>
+        <div class="msg-text" id="msg-seg-2">¡Hola! 😊 Quería preguntarte algo — ¿el precio te parece elevado por el monto o porque el momento no es el mejor? 🧡</div>
         <button class="copy-btn" onclick="copyMsg('msg-seg-2',this)">📋 Copiar mensaje</button>
       </div>
+      <div class="note-box" style="margin-top:10px">🎯 <strong>Espera la respuesta antes de ofrecer alternativas.</strong> Si dice "el monto": refuerza el valor (coaches personales, matrícula única). Si dice "el momento": ofrece el paquete de 4 clases como entrada. Bajar el precio es siempre la última opción.</div>
     </div>
 
     <div class="step-card">
-      <div class="step-header"><span class="step-num">3</span><span class="step-title-text">Si no respondió después del seguimiento 1</span></div>
+      <div class="step-header"><span class="step-num">3</span><span class="step-title-text">Si no respondió al seguimiento 1 — último intento con cierre de puerta</span></div>
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label">💬 Mensaje a enviar</div>
-        <div class="msg-text" id="msg-seg-3">¡Hola! 😊 Te escribo por última vez para avisarte que los cupos para el horario que te comenté se están llenando 💙 Si decides que no es el momento, lo entendemos perfectamente — cuando quieras, aquí estaremos 🧡</div>
+        <div class="msg-text" id="msg-seg-3">¡Hola! 😊 Solo para cerrar el tema: ¿decidiste que no es el momento para Acroflex? No hay problema si es así — solo quería saberlo para no dejarte sin respuesta 💙🧡</div>
         <button class="copy-btn" onclick="copyMsg('msg-seg-3',this)">📋 Copiar mensaje</button>
       </div>
-      <div class="note-box" style="margin-top:10px">📌 Después de este mensaje, si no responde, cierra la conversación amablemente. No insistir más.</div>
+      <div class="note-box" style="margin-top:10px">🎯 <strong>Por qué funciona:</strong> La pregunta cerrada ("¿decidiste que no?") provoca una respuesta — muchas personas que estaban indecisos responden para aclarar que sí quieren. Si confirma que no es el momento, cierra con amabilidad. No insistir más después de esto.</div>
     </div>
   </div>
 </div>
@@ -1407,40 +1409,43 @@ const FLOWS = {
 
 Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+      { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias [NOMBRE]! 😊 Una pregunta rápida antes de enviarte todo: ¿qué te motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta del cliente. Te dirá si hay urgencia, evento próximo, frustración acumulada o simple curiosidad. Eso cambia cómo presentas el curso.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
         msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso Acroflex Jóvenes y Adultos 🤸‍♀️💙
 
 Es el curso ideal para quienes desean desarrollar acrobacia, fuerza, flexibilidad y control corporal, ya sea que empiecen desde cero o que ya tengan experiencia.` },
 
-      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
         msg: `Nuestra metodología está basada en los fundamentos de la gimnasia y la acrobacia de piso, priorizando siempre una técnica limpia, segura y progresiva.
 
 Las clases son multinivel, porque entendemos que cada alumno tiene un proceso diferente. Respetamos los tiempos de aprendizaje de cada persona y adaptamos los ejercicios según su nivel y capacidades.` },
 
-      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
         msg: `En cada clase trabajamos:
 ✨ Acrobacias de piso (rodamientos, ruedas, parada de manos y progresiones de mortales)
 ✨ Fuerza y preparación física
 ✨ Flexibilidad y movilidad
 ✨ Equilibrio, coordinación y control corporal` },
 
-      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
         msg: `Hoy más que nunca es importante mantenerse activo y fuerte. Por eso, complementamos cada entrenamiento con ejercicios de fortalecimiento que te ayudarán a moverte mejor, prevenir lesiones y ganar confianza en tu cuerpo.
 
 Además, encontrarás un ambiente positivo donde podrás conocer personas con intereses similares, aprender en equipo y disfrutar el proceso mientras celebras cada avance. 💙
 
 No necesitas experiencia previa.` },
 
-      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
         msg: `Si deseas, te puedo enviar los horarios y valores disponibles para que reserves tu cupo. 💙🤸‍♀️` },
 
-      { num: 7, title: 'Enviar video del curso', type: 'note',
+      { num: 8, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video del curso Acroflex. Dale un momento para que lo vea antes de continuar.' },
 
-      { num: 8, title: '¿Quiere ver horarios y precios?', type: 'message',
+      { num: 9, title: '¿Quiere ver horarios y precios?', type: 'message',
         msg: `¿Te gustaría que te enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
           { src: 'horarios-acroflex.jpg', label: 'Imagen 1 — Horarios Setiembre Acroflex' },
@@ -1457,7 +1462,7 @@ No necesitas experiencia previa.` },
           { label: '🤔 "Lo voy a pensar"',
             msg: `¡Claro, sin presión! 😊 Solo te comento que los cupos son limitados y nos gustaría reservarte el horario que más te convenga 💙 ¿Hay alguna duda que te haya quedado o algo en lo que te pueda orientar mejor? 🧡` },
           { label: '💸 "Está un poco caro"',
-            msg: `¡Te entiendo! 😊 Lo que hace especial a Acroflex es que en cada clase tienes entre 1 y 3 coaches corrigiéndote personalmente — eso hace que tu progreso sea real y sostenido 💙 Además la matrícula de S/50 es única: la pagas una sola vez en la vida 🧡 ¿Te animas con el paquete de 4 clases para conocer el curso?` },
+            msg: `Gracias por comentarme eso 😊 Para poder orientarte mejor — ¿por qué te parece elevado? ¿Es el momento o el monto en sí? 🧡`, internal: `🔍 Espera su respuesta ANTES de ofrecer alternativas. Si dice "el monto": enfatiza valor (coaches personales, progreso real, matrícula única de S/50). Si dice "el momento": ofrece el paquete de 4 clases como entrada suave.` },
           { label: '⏰ "No tengo mucho tiempo"',
             msg: `¡Tenemos horarios desde las 6:30 am hasta las 9:55 pm, de lunes a domingo! 😊 Seguro encontramos algo que se acomode a tu rutina 💙 ¿Cuál sería tu día o franja horaria más libre? 🧡` },
         ]
@@ -1498,40 +1503,43 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
 
 Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+            { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarles todo: ¿qué los motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
         msg: `Perfecto, según lo que nos dicen, les recomendamos nuestro curso Acroflex Jóvenes y Adultos 🤸‍♀️💙
 
 Es el curso ideal para quienes desean desarrollar acrobacia, fuerza, flexibilidad y control corporal, ya sea que empiecen desde cero o que ya tengan experiencia.` },
 
-      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
         msg: `Nuestra metodología está basada en los fundamentos de la gimnasia y la acrobacia de piso, priorizando siempre una técnica limpia, segura y progresiva.
 
 Las clases son multinivel, porque entendemos que cada alumno tiene un proceso diferente. Respetamos los tiempos de aprendizaje de cada persona y adaptamos los ejercicios según su nivel y capacidades.` },
 
-      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
         msg: `En cada clase trabajamos:
 ✨ Acrobacias de piso (rodamientos, ruedas, parada de manos y progresiones de mortales)
 ✨ Fuerza y preparación física
 ✨ Flexibilidad y movilidad
 ✨ Equilibrio, coordinación y control corporal` },
 
-      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
         msg: `Hoy más que nunca es importante mantenerse activo y fuerte. Por eso, complementamos cada entrenamiento con ejercicios de fortalecimiento que ayudarán a su hijo/a a moverse mejor, prevenir lesiones y ganar confianza en su cuerpo.
 
 Además, encontrará un ambiente positivo donde podrá conocer personas con intereses similares, aprender en equipo y disfrutar el proceso mientras celebra cada avance. 💙
 
 No necesita experiencia previa.` },
 
-      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
         msg: `Si desean, les puedo enviar los horarios y valores disponibles para que reserven su cupo. 💙🤸‍♀️` },
 
-      { num: 7, title: 'Enviar video del curso', type: 'note',
+      { num: 8, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video del curso Acroflex. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 8, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 9, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
           { src: 'horarios-acroflex.jpg', label: 'Imagen 1 — Horarios Setiembre Acroflex' },
@@ -1548,7 +1556,7 @@ No necesita experiencia previa.` },
           { label: '🤔 "Lo vamos a pensar"',
             msg: `¡Claro, sin presión! 😊 Solo les comentamos que los cupos son limitados y nos gustaría reservarles el horario que más les convenga 💙 ¿Hay alguna duda que les haya quedado o algo en lo que les pueda orientar mejor? 🧡` },
           { label: '💸 "Está un poco caro"',
-            msg: `¡Les entiendo! 😊 Lo que hace especial a Acroflex es que en cada clase su hijo/a tiene entre 1 y 3 coaches corrigiéndolo/a personalmente — eso hace que el progreso sea real y seguro 💙 Además la matrícula de S/50 es única: se paga una sola vez en la vida 🧡 ¿Les animamos con el paquete de 4 clases para que conozca el curso?` },
+            msg: `Gracias por comentarnos eso 😊 Para poder orientarles mejor — ¿por qué les parece elevado? ¿Es el momento o el monto en sí? 🧡`, internal: `🔍 Espera su respuesta ANTES de ofrecer alternativas. Si dicen "el monto": coaches personales, progreso real, matrícula S/50 única. Si dicen "el momento": ofrece el paquete de 4 clases como entrada suave.` },
           { label: '⏰ "No nos cuadra el horario"',
             msg: `¡Tenemos horarios desde las 6:30 am hasta las 9:55 pm, de lunes a domingo! 😊 Seguro encontramos algo que se acomode a su rutina 💙 ¿Cuál sería el día o franja horaria más libre para su hijo/a? 🧡` },
         ]
@@ -1589,17 +1597,20 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
 
 Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+            { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarles todo: ¿qué los motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
         msg: `Perfecto, según lo que nos dice, le recomendamos nuestro curso Acroflex Teens 🧒🤸‍♀️💙
 
 En Acroflex creemos que el deporte es una herramienta para formar personas. Por eso, además de enseñar acrobacia, fomentamos valores como la disciplina, el respeto, la perseverancia y la responsabilidad. ✨` },
 
-      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
         msg: `Promovemos el respeto hacia uno mismo, hacia los compañeros y hacia los entrenadores 🤝, creando un ambiente positivo donde cada alumno pueda desarrollarse con confianza y seguridad.
 
 Trabajamos con una metodología multinivel, respetando el proceso individual de cada niño/a. Entendemos que cada persona aprende a un ritmo diferente, por lo que no hacemos comparaciones — acompañamos a cada alumno en su propio camino de crecimiento. 🌱` },
 
-      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
         msg: `Damos mucha importancia a la técnica correcta desde la base, porque creemos que una buena ejecución permite avanzar con mayor seguridad, control corporal y confianza 💪
 
 Durante las clases trabajarán:
@@ -1609,21 +1620,21 @@ Durante las clases trabajarán:
 💥 Mortales (según nivel y progresión)
 💪 Fuerza y flexibilidad aplicada a la acrobacia` },
 
-      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
         msg: `Nuestro objetivo es que cada alumno desarrolle habilidades físicas, confianza en sí mismo y herramientas que le sirvan dentro y fuera del entrenamiento. ✨
 
 En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que su progreso sea real y seguro 🙌💙` },
 
-      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
         msg: `Con mucho gusto les comparto los horarios y valores disponibles 😊💙` },
 
-      { num: 7, title: 'Enviar video del curso', type: 'note',
+      { num: 8, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de Acroflex Teens. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 8, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 9, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
           { src: 'horarios-teens.png', label: 'Imagen 1 — Horarios Julio Acroflex Teens' },
@@ -1640,7 +1651,7 @@ En cada clase hay entre 1 y 3 coaches corrigiéndolos personalmente para que su 
           { label: '🤔 "Lo vamos a pensar"',
             msg: `¡Claro, sin apuro! 😊 Solo les comentamos que los cupos son limitados y nos gustaría reservarles el horario que más les convenga 💙 ¿Hay alguna duda que les haya quedado o algo en lo que les pueda orientar mejor? 🧡` },
           { label: '💸 "Está un poco caro"',
-            msg: `¡Les entiendo! 😊 En Acroflex Teens su hijo/a tiene entre 1 y 3 coaches corrigiéndolo personalmente en cada clase — eso marca la diferencia en el progreso real 💙 Además la matrícula de S/50 es única: se paga una sola vez en la vida 🧡 ¿Les animamos con el paquete de 4 clases para empezar?` },
+            msg: `Gracias por comentarnos eso 😊 Para poder orientarles mejor — ¿por qué les parece elevado? ¿Es el momento o el monto en sí? 🧡`, internal: `🔍 Espera su respuesta ANTES de ofrecer alternativas. Si dicen "el monto": coaches personales 1-3 por clase, progreso real, matrícula S/50 única. Si dicen "el momento": ofrece el paquete de 4 clases.` },
           { label: '⏰ "No nos cuadra el horario"',
             msg: `¡Tenemos varios horarios para Teens en las tardes y sábados! 😊 ¿Cuál sería el día más libre para su hijo/a? Vemos qué opción se adapta mejor a su rutina 💙🧡` },
         ]
@@ -1681,17 +1692,20 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
 
 Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+            { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarte todo: ¿qué te motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
         msg: `Perfecto, según lo que nos dices, te recomendamos nuestro curso Acroflex Teens 🧒🤸‍♀️💙
 
 En Acroflex creemos que el deporte es una herramienta para formar personas. Por eso, además de enseñar acrobacia, fomentamos valores como la disciplina, el respeto, la perseverancia y la responsabilidad. ✨` },
 
-      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
         msg: `Promovemos el respeto hacia uno mismo, hacia los compañeros y hacia los entrenadores 🤝, creando un ambiente positivo donde cada alumno/a pueda desarrollarse con confianza y seguridad.
 
 Trabajamos con una metodología multinivel, respetando el proceso individual de cada alumno/a. Entendemos que cada persona aprende a un ritmo diferente, por lo que no hacemos comparaciones — acompañamos a cada uno en su propio camino de crecimiento. 🌱` },
 
-      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
         msg: `Damos mucha importancia a la técnica correcta desde la base, porque creemos que una buena ejecución permite avanzar con mayor seguridad, control corporal y confianza 💪
 
 Durante las clases trabajarás:
@@ -1701,21 +1715,21 @@ Durante las clases trabajarás:
 💥 Mortales (según nivel y progresión)
 💪 Fuerza y flexibilidad aplicada a la acrobacia` },
 
-      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
         msg: `Nuestro objetivo es que desarrolles habilidades físicas, confianza en ti mismo/a y herramientas que te sirvan dentro y fuera del entrenamiento. ✨
 
 En cada clase hay entre 1 y 3 coaches corrigiéndote personalmente para que tu progreso sea real y seguro 🙌💙` },
 
-      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
         msg: `Con mucho gusto te comparto los horarios y valores disponibles 😊💙` },
 
-      { num: 7, title: 'Enviar video del curso', type: 'note',
+      { num: 8, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de Acroflex Teens. Dale un momento para que lo vea antes de continuar.' },
 
-      { num: 8, title: '¿Quieres ver horarios y precios?', type: 'message',
+      { num: 9, title: '¿Quieres ver horarios y precios?', type: 'message',
         msg: `¿Te gustaría que te enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
           { src: 'horarios-teens.png', label: 'Imagen 1 — Horarios Acroflex Teens' },
@@ -1732,7 +1746,7 @@ En cada clase hay entre 1 y 3 coaches corrigiéndote personalmente para que tu p
           { label: '🤔 "Lo voy a pensar"',
             msg: `¡Claro, sin apuro! 😊 Solo te comento que los cupos son limitados y me gustaría reservarte el horario que más te convenga 💙 ¿Hay alguna duda que te haya quedado o algo en lo que te pueda orientar mejor? 🧡` },
           { label: '💸 "Está un poco caro"',
-            msg: `¡Te entiendo! 😊 En Acroflex Teens tienes entre 1 y 3 coaches corrigiéndote personalmente en cada clase — eso marca la diferencia en el progreso real 💙 Además la matrícula de S/50 es única: se paga una sola vez en la vida 🧡 ¿Te animamos con el paquete de 4 clases para empezar?` },
+            msg: `Gracias por comentarme eso 😊 Para poder orientarte mejor — ¿por qué te parece elevado? ¿Es el momento o el monto en sí? 🧡`, internal: `🔍 Espera su respuesta ANTES de ofrecer alternativas. Si dice "el monto": coaches personales 1-3 por clase, progreso real, matrícula S/50 única. Si dice "el momento": ofrece el paquete de 4 clases.` },
           { label: '⏰ "No me cuadra el horario"',
             msg: `¡Tenemos varios horarios para Teens en las tardes y sábados! 😊 ¿Cuál sería el día más libre para ti? Vemos qué opción se adapta mejor a tu rutina 💙🧡` },
         ]
@@ -1773,15 +1787,18 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
 
 Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+            { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarte todo: ¿qué te motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
         msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos nuestro curso FlexiPower – Fuerza y Flexibilidad para tu cuerpo 💪🧡
 
 FlexiPower es un curso enfocado en desarrollar fuerza y flexibilidad al mismo tiempo, algo clave para mejorar el control corporal y prevenir lesiones.` },
 
-      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
         msg: `A diferencia de solo estirar, aquí trabajamos flexibilidad activa 💡: el músculo no solo se alarga, sino que también se fortalece en ese rango de movimiento. Esto permite ganar movilidad real y segura en las articulaciones.` },
 
-      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
         msg: `Durante las clases se trabaja:
 ✨ Aperturas de piernas (split frontal y lateral)
 ✨ Fuerza de piernas y caderas
@@ -1789,7 +1806,7 @@ FlexiPower es un curso enfocado en desarrollar fuerza y flexibilidad al mismo ti
 ✨ Control del core
 ✨ Ejercicios de elongación activa y técnica de flexibilidad` },
 
-      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
         msg: `Es ideal para:
 ⭐ Personas que quieren lograr el spagat o split
 ⭐ Bailarines, deportistas o artistas
@@ -1798,16 +1815,16 @@ FlexiPower es un curso enfocado en desarrollar fuerza y flexibilidad al mismo ti
 
 Las clases son multinivel, así que puedes empezar desde cero o con experiencia 🙌` },
 
-      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
         msg: `Si deseas, te puedo enviar los horarios y valores disponibles para que reserves tu cupo. 💙🧘` },
 
-      { num: 7, title: 'Enviar video del curso', type: 'note',
+      { num: 8, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de FlexiPower. Dale un momento para que lo vea antes de continuar.' },
 
-      { num: 8, title: '¿Quiere ver horarios y precios?', type: 'message',
+      { num: 9, title: '¿Quiere ver horarios y precios?', type: 'message',
         msg: `¿Te gustaría que te enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
           { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Julio FlexiPower' },
@@ -1824,7 +1841,7 @@ Las clases son multinivel, así que puedes empezar desde cero o con experiencia 
           { label: '🤔 "Lo voy a pensar"',
             msg: `¡Claro, sin presión! 😊 Solo te comento que los cupos son limitados y nos gustaría reservarte el horario que más te convenga 💙 ¿Hay alguna duda que te haya quedado o algo en lo que te pueda orientar mejor? 🧡` },
           { label: '💸 "Está un poco caro"',
-            msg: `¡Te entiendo! 😊 En FlexiPower tienes coaches corrigiéndote la técnica en cada clase, lo que hace que tu progreso sea real y sin riesgo de lesiones 💙 Además la matrícula de S/50 es única: la pagas una sola vez en la vida 🧡 ¿Te animas con el paquete de 4 clases para conocer el curso?` },
+            msg: `Gracias por comentarme eso 😊 Para poder orientarte mejor — ¿por qué te parece elevado? ¿Es el momento o el monto en sí? 🧡`, internal: `🔍 Espera su respuesta ANTES de ofrecer alternativas. Si dice "el monto": coaches personales, progreso sin riesgo de lesiones, matrícula S/50 única. Si dice "el momento": ofrece el paquete de 4 clases.` },
           { label: '⏰ "No tengo mucho tiempo"',
             msg: `¡Las clases son de solo 55 minutos y tenemos horarios mañana, tarde y noche! 😊 Seguro encontramos algo que se acomode a tu rutina 💙 ¿Cuál es tu franja horaria más libre? 🧡` },
         ]
@@ -1865,15 +1882,18 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
 
 Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
 
-      { num: 2, title: 'Recomendar el curso (msg 1)', type: 'message',
+            { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarles todo: ¿qué los motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
+
+      { num: 3, title: 'Recomendar el curso (msg 1)', type: 'message',
         msg: `Perfecto, según lo que nos dicen, les recomendamos nuestro curso FlexiPower – Fuerza y Flexibilidad para el cuerpo 💪🧡
 
 FlexiPower es un curso enfocado en desarrollar fuerza y flexibilidad al mismo tiempo, algo clave para mejorar el control corporal y prevenir lesiones.` },
 
-      { num: 3, title: 'Recomendar el curso (msg 2)', type: 'message',
+      { num: 4, title: 'Recomendar el curso (msg 2)', type: 'message',
         msg: `A diferencia de solo estirar, aquí trabajamos flexibilidad activa 💡: el músculo no solo se alarga, sino que también se fortalece en ese rango de movimiento. Esto permite ganar movilidad real y segura en las articulaciones.` },
 
-      { num: 4, title: 'Recomendar el curso (msg 3)', type: 'message',
+      { num: 5, title: 'Recomendar el curso (msg 3)', type: 'message',
         msg: `Durante las clases se trabaja:
 ✨ Aperturas de piernas (split frontal y lateral)
 ✨ Fuerza de piernas y caderas
@@ -1881,7 +1901,7 @@ FlexiPower es un curso enfocado en desarrollar fuerza y flexibilidad al mismo ti
 ✨ Control del core
 ✨ Ejercicios de elongación activa y técnica de flexibilidad` },
 
-      { num: 5, title: 'Recomendar el curso (msg 4)', type: 'message',
+      { num: 6, title: 'Recomendar el curso (msg 4)', type: 'message',
         msg: `Es ideal para:
 ⭐ Personas que quieren lograr el spagat o split
 ⭐ Bailarines, deportistas o artistas
@@ -1890,16 +1910,16 @@ FlexiPower es un curso enfocado en desarrollar fuerza y flexibilidad al mismo ti
 
 Las clases son multinivel, así que su hijo/a puede empezar desde cero o con experiencia 🙌` },
 
-      { num: 6, title: 'Recomendar el curso (msg 5)', type: 'message',
+      { num: 7, title: 'Recomendar el curso (msg 5)', type: 'message',
         msg: `Si desean, les puedo enviar los horarios y valores disponibles para que reserven su cupo. 💙🧘` },
 
-      { num: 7, title: 'Enviar video del curso', type: 'note',
+      { num: 8, title: 'Enviar video del curso', type: 'note',
         note: '📹 Envía aquí el video de FlexiPower. Dale un momento para que lo vean antes de continuar.' },
 
-      { num: 8, title: '¿Quieren ver horarios y precios?', type: 'message',
+      { num: 9, title: '¿Quieren ver horarios y precios?', type: 'message',
         msg: `¿Les gustaría que les enviemos nuestros horarios y mensualidades? 😊` },
 
-      { num: 9, title: 'Enviar horarios y mensualidades', type: 'images',
+      { num: 10, title: 'Enviar horarios y mensualidades', type: 'images',
         note: '⚠️ Solo si respondió que sí. Envía estas 2 imágenes seguidas.',
         images: [
           { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios Julio FlexiPower' },
@@ -1916,7 +1936,7 @@ Las clases son multinivel, así que su hijo/a puede empezar desde cero o con exp
           { label: '🤔 "Lo vamos a pensar"',
             msg: `¡Claro, sin apuro! 😊 Solo les comentamos que los cupos son limitados y nos gustaría reservarles el horario que más les convenga 💙 ¿Hay alguna duda que les haya quedado? 🧡` },
           { label: '💸 "Está un poco caro"',
-            msg: `¡Les entiendo! 😊 En FlexiPower su hijo/a tiene coaches corrigiéndole la técnica en cada clase — eso garantiza progreso real sin riesgo de lesiones 💙 Además la matrícula de S/50 es única: se paga una sola vez en la vida 🧡` },
+            msg: `Gracias por comentarnos eso 😊 Para poder orientarles mejor — ¿por qué les parece elevado? ¿Es el momento o el monto en sí? 🧡`, internal: `🔍 Espera su respuesta ANTES de ofrecer alternativas. Si dicen "el monto": coaches personales, progreso sin lesiones, matrícula S/50 única. Si dicen "el momento": ofrece el paquete de 4 clases.` },
           { label: '⏰ "No nos cuadra el horario"',
             msg: `¡Tenemos varios horarios mañana, tarde y noche! 😊 ¿Cuál sería el día más libre para su hijo/a? Vemos qué opción se adapta mejor 💙🧡` },
         ]
@@ -2059,7 +2079,7 @@ También puedes tomar solo 1 workshop si lo prefieres. Los cupos son limitados �
           { label: '🤔 "No sé si tengo el nivel"',
             msg: `¡No te preocupes! 😊 Mi Primera Acrobacia e Intensivo de Arcos son aptos para todos los niveles — no necesitas experiencia previa 💙 Mortales Lab sí requiere base acrobática previa. ¿Me cuentas qué has practicado antes? Así te recomiendo la mejor ruta 🧡` },
           { label: '💸 "Está un poco caro"',
-            msg: `¡Te entiendo! 😊 Considera que son workshops intensivos de 2 horas cada uno, con entrenadores Acroflex guiando cada ejercicio 💙 El precio de lanzamiento ya tiene descuento — normalmente serían S/80 por workshop. ¿Cuántos workshops te interesan? 🧡` },
+            msg: `Gracias por comentarme eso 😊 Para poder orientarte mejor — ¿por qué te parece elevado? ¿Es el momento o el monto en sí? 🧡`, internal: `🔍 Espera su respuesta. Si dice "el monto": 2 horas intensivas con coaches, precio ya con descuento de lanzamiento (normalmente S/80). Si dice "el momento": pregunta si le interesa uno o los tres workshops.` },
           { label: '🤔 "Lo voy a pensar"',
             msg: `¡Claro! 😊 Solo te cuento que los cupos son limitados y se llenan rápido — el año pasado se agotaron días antes 💙 Si tienes alguna duda que te ayude a decidirte, con gusto te la resuelvo ahora 🧡` },
           { label: '⏰ "No sé si puedo ese día"',
@@ -2220,7 +2240,7 @@ También pueden tomar solo 1 workshop. Los cupos son limitados 🔥` },
           { label: '🤔 "No sé si tiene el nivel"',
             msg: `¡No se preocupen! 😊 Mi Primera Acrobacia e Intensivo de Arcos son aptos para todos los niveles — no se necesita experiencia previa 💙 Mortales Lab sí requiere base acrobática. ¿Me cuentan qué ha practicado antes? Así les recomiendo la mejor ruta 🧡` },
           { label: '💸 "Está un poco caro"',
-            msg: `¡Los entiendo! 😊 Son workshops intensivos de 2 horas cada uno con entrenadores Acroflex 💙 El precio ya tiene descuento de lanzamiento. ¿Cuántos workshops les interesan? 🧡` },
+            msg: `Gracias por comentarnos eso 😊 Para poder orientarles mejor — ¿por qué les parece elevado? ¿Es el momento o el monto en sí? 🧡`, internal: `🔍 Espera su respuesta. Si dicen "el monto": 2 horas intensivas con coaches, precio ya con descuento. Si dicen "el momento": pregunta cuántos workshops les interesan.` },
           { label: '🤔 "Lo vamos a pensar"',
             msg: `¡Claro! 😊 Solo les cuento que los cupos son muy limitados y se llenan rápido 💙 Si tienen alguna duda que les ayude a decidirse, con gusto la resuelvo ahora 🧡` },
           { label: '⏰ "No sabemos si puede ese día"',
