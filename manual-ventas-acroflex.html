@@ -308,6 +308,14 @@
       </button>
     </div>
 
+
+    <div class="home-category-label" style="background:#fffbeb;border-left:3px solid #f59e0b;color:#92400e;margin-top:8px">🟡 EVENTOS ESPECIALES</div>
+    <div class="btn-grid">
+      <button class="btn-situation btn-cat-green" style="border-left-color:#f59e0b" onclick="go('s-workshop-oct-quien')">
+        <span class="emoji">🎉</span>
+        <div><div>Workshop 8 de Octubre</div><div class="btn-desc">Feriado: Parada de Manos I, Split Sagital y Full Aspas</div></div>
+      </button>
+    </div>
     <div class="home-category-label" style="background:#fff1f2;border-left:3px solid #ef4444;color:#b91c1c;margin-top:8px">🔴 SITUACIONES DELICADAS</div>
     <div class="btn-grid">
       <button class="btn-situation btn-cat-red" onclick="go('s-queja-quien')">
@@ -318,6 +326,27 @@
         <span class="emoji">⏸️</span>
         <div><div>Pausa o baja</div><div class="btn-desc">Un alumno quiere pausar, congelar o retirarse</div></div>
       </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════
+     WORKSHOP OCT 8 — ¿QUIÉN ESCRIBE?
+══════════════════════════════ -->
+<div class="screen" id="s-workshop-oct-quien">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">🎉 Workshop Feriado 8 de Octubre</div>
+    <div class="divider"></div>
+    <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:12px;color:#78350f">
+      📅 <strong>Miércoles 8 de octubre (feriado)</strong> — Parada de Manos I · Split Sagital · Full Aspas<br>
+      📍 Acroflex – Jesús María · Full Day S/130 (ahorras S/40)
+    </div>
+    <div class="choice-prompt">¿Quién te escribe?</div>
+    <div class="choice-grid">
+      <button class="btn-choice" onclick="startFlow('feriado-oct-papa','s-workshop-oct-quien')"><span class="ch-emoji">👨‍👩‍👧</span>Papá o Mamá</button>
+      <button class="btn-choice" onclick="startFlow('feriado-oct-alumno','s-workshop-oct-quien')"><span class="ch-emoji">🧑</span>El alumno / La alumna</button>
     </div>
   </div>
 </div>
@@ -2215,6 +2244,339 @@ Si no tienen, pueden comprarlas en Acroflex el mismo día 💙` },
 Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
+
+  'feriado-oct-alumno': {
+    title: '🎉 Workshop Feriado 8 de Octubre',
+    badge: 'Alumno/a escribe directamente',
+    steps: [
+      { num: 1, title: 'Pedir nombre y workshop que le interesa', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+
+Para orientarte mejor, ¿me puedes decir tu nombre, tu edad y qué workshop te llamó la atención? 🔥` },
+
+      { num: 2, title: 'Presentar el evento', type: 'message',
+        msg: `¡Genial [NOMBRE]! 🔥 Este miércoles 8 de octubre organizamos 3 workshops especiales en Acroflex — un día para aprender, practicar y vivir la acrobacia en feriado.
+
+📍 Acroflex – Jesús María
+📅 Miércoles 8 de octubre (feriado)` },
+
+      { num: 3, title: 'Describir los 3 workshops', type: 'message',
+        msg: `Los workshops del día son:
+
+🤸 Parada de Manos I — 9:00 a 10:30 am | S/60
+Para quienes quieren aprender o perfeccionar su parada de manos: técnica, balance y progresiones desde cero.
+
+🦵 Split Sagital — 10:30 a 11:30 am | S/50
+El método de Camila Garay para abrir tu split sagital (pierna adelante / pierna atrás). Multinivel, para todos los niveles.
+
+✨ Full Aspas — 11:30 am a 1:00 pm | S/60
+Domina el aspa de molino, aspa de 1 mano y aspa sin manos. Requiere base acrobática previa.
+
+💥 FULL DAY (los 3 workshops): S/130 — ¡ahorras S/40!` },
+
+      { num: 4, title: 'Descripción individual por workshop', type: 'objections',
+        options: [
+          { label: '🤸 ¿Qué es Parada de Manos I?',
+            msg: `🤸 Parada de Manos I — 9:00 a 10:30 am | S/60
+
+Este workshop es para quienes quieren aprender la parada de manos desde cero o mejorar su técnica y balance 💙
+
+En 1.5 horas trabajarás:
+🏋️ Preparación física específica para parada de manos
+🤲 Posición correcta de manos y hombros
+⚖️ Balance y control en pared
+🌟 Progresiones para llegar a parada de manos libre
+
+Apto para todos los niveles. Los coaches te acompañan paso a paso. 🧡` },
+          { label: '🦵 ¿Qué es Split Sagital?',
+            msg: `🦵 Split Sagital — 10:30 a 11:30 am | S/50
+
+El split sagital es el split con una pierna adelante y la otra atrás 💙
+
+Este workshop usa el método de Camila Garay para que avances en tu split de forma segura y progresiva:
+🔥 Calentamiento específico de caderas y piernas
+📐 Técnica correcta para no lastimarte
+📈 Progresiones adaptadas a tu nivel actual
+💪 Ejercicios de fuerza activa para sostener el split
+
+Multinivel — ya sea que estés empezando o que ya estés cerca del suelo. 🧡` },
+          { label: '✨ ¿Qué es Full Aspas?',
+            msg: `✨ Full Aspas — 11:30 am a 1:00 pm | S/60
+
+Este workshop está dirigido a personas con base acrobática previa 💙
+
+En 1.5 horas trabajarás las 3 variantes del aspa:
+🌀 Aspa de molino (dos manos)
+💫 Aspa de 1 mano
+🙌 Aspa sin manos
+
+No es para principiantes absolutos — se requiere tener noción de acrobacia base y algo de experiencia en acrobacias de piso. 🧡` },
+        ]
+      },
+
+      { num: 5, title: 'Rutas según nivel e interés', type: 'message',
+        msg: `Puedes elegir según tu nivel y lo que más quieres trabajar 🗺️
+
+⭐ Si quieres empezar o consolidar bases:
+→ Parada de Manos I + Split Sagital
+
+⭐ Si ya tienes base y quieres avanzar:
+→ Split Sagital + Full Aspas
+
+👑 Para aprovechar el día al máximo:
+→ Full Day — los 3 workshops por S/130 (ahorras S/40)
+
+También puedes tomar solo 1 workshop. Cupos limitados 🔥` },
+
+      { num: 6, title: 'Enviar imágenes del evento', type: 'images',
+        note: '📲 Envía la imagen del evento. Si tienes flyers individuales por workshop, envía los que le interesen.',
+        images: [
+          { src: 'workshop-oct8-portada.jpg', label: 'Imagen — Workshop Feriado 8 de Octubre' },
+        ]},
+
+      { num: 7, title: 'Precios', type: 'message',
+        msg: `🎟️ Precios del evento:
+
+• Parada de Manos I (1.5h): S/60
+• Split Sagital (1h): S/50
+• Full Aspas (1.5h): S/60
+• 💥 FULL DAY (los 3): S/130 — ¡ahorras S/40!
+
+⚠️ Cupos limitados — reserva tu lugar con anticipación.` },
+
+      { num: 8, title: 'Invitar a reservar', type: 'message',
+        msg: `¿Qué workshop te interesa o prefieres el Full Day? Así te confirmo disponibilidad y te cuento cómo reservar 😊💙` },
+
+      { num: 9, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '🤔 "No sé si tengo el nivel"',
+            msg: `¡No te preocupes! 😊 Parada de Manos I y Split Sagital son aptos para todos los niveles — no necesitas experiencia previa 💙 Full Aspas sí requiere base acrobática. ¿Me cuentas qué has practicado? Así te recomiendo la mejor opción 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `Gracias por comentarme eso 😊 Para poder orientarte mejor — ¿por qué te parece elevado? ¿Es el momento o el monto en sí? 🧡`,
+            internal: `🔍 Espera su respuesta. Si dice "el monto": señala que son clases intensivas de 1 a 1.5h con coaches. Si dice "el momento": ofrece un solo workshop como entrada (S/50 el Split Sagital es el más accesible).` },
+          { label: '🤔 "Lo voy a pensar"',
+            msg: `¡Claro! 😊 Solo te cuento que los cupos son limitados y los workshops se llenan rápido 💙 Si tienes alguna duda que te ayude a decidirte, con gusto la resuelvo ahora 🧡` },
+          { label: '⏰ "No sé si puedo ese día"',
+            msg: `¡Entendido! 😊 Los workshops son seguidos pero independientes: Parada de Manos I 9-10:30am, Split Sagital 10:30-11:30am, Full Aspas 11:30am-1pm. Puedes venir solo al que te quede bien según tu horario 💙 ¿Cuál te cuadraría? 🧡` },
+        ]
+      },
+
+      { num: 10, title: 'Implementos por workshop', type: 'objections',
+        options: [
+          { label: '🤸 Implementos — Parada de Manos I',
+            msg: `¡Una cosita antes del evento! 🧡
+
+Para el workshop de Parada de Manos I necesitas traer:
+🧤 Muñequeras (obligatorias para proteger tus muñecas)
+
+Si no tienes, puedes comprarlas en Acroflex el mismo día 💙` },
+          { label: '🦵 Implementos — Split Sagital',
+            msg: `¡Una cosita antes del evento! 🧡
+
+Para el workshop de Split Sagital necesitas traer:
+🟫 2 bloques de yoga
+🔗 1 liga cerrada o liga de números
+
+Si no tienes alguno, puedes comprarlos en Acroflex el mismo día 💙` },
+          { label: '✨ Implementos — Full Aspas',
+            msg: `¡Una cosita antes del evento! 🧡
+
+Para el workshop de Full Aspas necesitas traer:
+🧤 Muñequeras (obligatorias para proteger tus muñecas)
+
+Si no tienes, puedes comprarlas en Acroflex el mismo día 💙` },
+        ]
+      },
+
+      { num: 11, title: 'Resumen de reserva', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Te confirmo tu inscripción al workshop 💙
+
+📋 Tu reserva:
+• Evento: Workshop Feriado Acroflex
+• Fecha: Miércoles 8 de octubre
+• Workshop(s): [WORKSHOP/S ELEGIDOS]
+• Total a pagar: S/[PRECIO]
+`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
+    ]
+  },
+
+  'feriado-oct-papa': {
+    title: '🎉 Workshop Feriado 8 de Octubre',
+    badge: 'Papá o Mamá escribe',
+    steps: [
+      { num: 1, title: 'Pedir nombre del hijo/a y workshop que le interesa', type: 'message',
+        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+
+Para orientarte mejor, ¿me puedes decir el nombre de tu hijo/a, su edad y qué workshop les llamó la atención? 🔥` },
+
+      { num: 2, title: 'Presentar el evento', type: 'message',
+        msg: `¡Genial! 🔥 Este miércoles 8 de octubre organizamos 3 workshops especiales en Acroflex — un día para aprender, practicar y vivir la acrobacia en feriado.
+
+📍 Acroflex – Jesús María
+📅 Miércoles 8 de octubre (feriado)` },
+
+      { num: 3, title: 'Describir los 3 workshops', type: 'message',
+        msg: `Los workshops del día son:
+
+🤸 Parada de Manos I — 9:00 a 10:30 am | S/60
+Para quienes quieren aprender o perfeccionar la parada de manos: técnica, balance y progresiones desde cero.
+
+🦵 Split Sagital — 10:30 a 11:30 am | S/50
+El método de Camila Garay para abrir el split sagital (pierna adelante / pierna atrás). Multinivel, para todos los niveles.
+
+✨ Full Aspas — 11:30 am a 1:00 pm | S/60
+Dominar el aspa de molino, aspa de 1 mano y aspa sin manos. Requiere base acrobática previa.
+
+💥 FULL DAY (los 3 workshops): S/130 — ¡ahorran S/40!` },
+
+      { num: 4, title: 'Descripción individual por workshop', type: 'objections',
+        options: [
+          { label: '🤸 ¿Qué es Parada de Manos I?',
+            msg: `🤸 Parada de Manos I — 9:00 a 10:30 am | S/60
+
+Este workshop es para quienes quieren aprender la parada de manos desde cero o mejorar su técnica y balance 💙
+
+En 1.5 horas trabajarán:
+🏋️ Preparación física específica para parada de manos
+🤲 Posición correcta de manos y hombros
+⚖️ Balance y control en pared
+🌟 Progresiones para llegar a parada de manos libre
+
+Apto para todos los niveles. Los coaches acompañan a cada alumno/a paso a paso. 🧡` },
+          { label: '🦵 ¿Qué es Split Sagital?',
+            msg: `🦵 Split Sagital — 10:30 a 11:30 am | S/50
+
+El split sagital es el split con una pierna adelante y la otra atrás 💙
+
+Este workshop usa el método de Camila Garay para que tu hijo/a avance en su split de forma segura y progresiva:
+🔥 Calentamiento específico de caderas y piernas
+📐 Técnica correcta para no lastimarse
+📈 Progresiones adaptadas a su nivel actual
+💪 Ejercicios de fuerza activa para sostener el split
+
+Multinivel — ya sea que estén empezando o que ya estén cerca del suelo. 🧡` },
+          { label: '✨ ¿Qué es Full Aspas?',
+            msg: `✨ Full Aspas — 11:30 am a 1:00 pm | S/60
+
+Este workshop está dirigido a personas con base acrobática previa 💙
+
+En 1.5 horas trabajarán las 3 variantes del aspa:
+🌀 Aspa de molino (dos manos)
+💫 Aspa de 1 mano
+🙌 Aspa sin manos
+
+No es para principiantes — se requiere tener base acrobática y experiencia en acrobacias de piso. 🧡` },
+        ]
+      },
+
+      { num: 5, title: 'Rutas según nivel e interés', type: 'message',
+        msg: `Pueden elegir según el nivel y lo que más quieran trabajar 🗺️
+
+⭐ Para empezar o consolidar bases:
+→ Parada de Manos I + Split Sagital
+
+⭐ Si ya tiene base y quiere avanzar:
+→ Split Sagital + Full Aspas
+
+👑 Para aprovechar el día al máximo:
+→ Full Day — los 3 workshops por S/130 (ahorran S/40)
+
+También pueden tomar solo 1 workshop. Cupos limitados 🔥` },
+
+      { num: 6, title: 'Enviar imágenes del evento', type: 'images',
+        note: '📲 Envía la imagen del evento. Si tienes flyers individuales, envía los que le interesen.',
+        images: [
+          { src: 'workshop-oct8-portada.jpg', label: 'Imagen — Workshop Feriado 8 de Octubre' },
+        ]},
+
+      { num: 7, title: 'Precios', type: 'message',
+        msg: `🎟️ Precios del evento:
+
+• Parada de Manos I (1.5h): S/60
+• Split Sagital (1h): S/50
+• Full Aspas (1.5h): S/60
+• 💥 FULL DAY (los 3): S/130 — ¡ahorran S/40!
+
+⚠️ Cupos limitados — reserven su lugar con anticipación.` },
+
+      { num: 8, title: 'Invitar a reservar', type: 'message',
+        msg: `¿Qué workshop les interesa o prefieren el Full Day? Así les confirmo disponibilidad y les cuento cómo reservar 😊💙` },
+
+      { num: 9, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '🤔 "No sé si tiene el nivel"',
+            msg: `¡No se preocupen! 😊 Parada de Manos I y Split Sagital son aptos para todos los niveles 💙 Full Aspas sí requiere base acrobática. ¿Me cuentan qué ha practicado su hijo/a? Así les recomiendo la mejor opción 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `Gracias por comentarnos eso 😊 Para poder orientarles mejor — ¿por qué les parece elevado? ¿Es el momento o el monto en sí? 🧡`,
+            internal: `🔍 Espera su respuesta. Si dicen "el monto": son clases intensivas de 1 a 1.5h con coaches. Si dicen "el momento": ofrece un solo workshop (S/50 el Split Sagital es el más accesible).` },
+          { label: '🤔 "Lo vamos a pensar"',
+            msg: `¡Claro! 😊 Solo les cuento que los cupos son limitados y se llenan rápido 💙 Si tienen alguna duda que les ayude a decidirse, con gusto la resuelvo ahora 🧡` },
+          { label: '⏰ "No sabemos si puede ese día"',
+            msg: `¡Entendido! 😊 Los workshops son seguidos pero independientes: Parada de Manos I 9-10:30am, Split Sagital 10:30-11:30am, Full Aspas 11:30am-1pm. Pueden venir solo al que les quede bien 💙 ¿Cuál les cuadraría? 🧡` },
+        ]
+      },
+
+      { num: 10, title: 'Implementos por workshop', type: 'objections',
+        options: [
+          { label: '🤸 Implementos — Parada de Manos I',
+            msg: `¡Una cosita antes del evento! 🧡
+
+Para el workshop de Parada de Manos I su hijo/a necesita traer:
+🧤 Muñequeras (obligatorias para proteger las muñecas)
+
+Si no tienen, pueden comprarlas en Acroflex el mismo día 💙` },
+          { label: '🦵 Implementos — Split Sagital',
+            msg: `¡Una cosita antes del evento! 🧡
+
+Para el workshop de Split Sagital su hijo/a necesita traer:
+🟫 2 bloques de yoga
+🔗 1 liga cerrada o liga de números
+
+Si no tienen alguno, pueden comprarlos en Acroflex el mismo día 💙` },
+          { label: '✨ Implementos — Full Aspas',
+            msg: `¡Una cosita antes del evento! 🧡
+
+Para el workshop de Full Aspas su hijo/a necesita traer:
+🧤 Muñequeras (obligatorias para proteger las muñecas)
+
+Si no tienen, pueden comprarlas en Acroflex el mismo día 💙` },
+        ]
+      },
+
+      { num: 11, title: 'Resumen de reserva', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Confirmamos la inscripción al workshop 💙
+
+📋 Reserva de [NOMBRE DEL ALUMNO/A]:
+• Evento: Workshop Feriado Acroflex
+• Fecha: Miércoles 8 de octubre
+• Workshop(s): [WORKSHOP/S ELEGIDOS]
+• Total a pagar: S/[PRECIO]
+`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
+    ]
+  },
+
 
 };
 
