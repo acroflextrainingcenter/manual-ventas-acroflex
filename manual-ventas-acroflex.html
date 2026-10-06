@@ -1031,7 +1031,15 @@ Y lo mejor: tienes entre 1 y 3 coaches corrigiéndote en persona cada clase 💙
     </div>
     <div class="step-card">
       <div class="step-header"><span class="step-num">4</span><span class="step-title-text">Ancla de valor + horarios de su turno + mensualidades</span></div>
-      <div class="note-box" style="margin-top:10px">Envía el mensaje del turno que eligió en el formulario y, justo después, la imagen de mensualidades (sin preguntar si la quiere ver).</div>
+      <div class="note-box" style="margin-top:10px">Toca el horario que eligió en el formulario para ver su mensaje. Envíalo y, justo después, la imagen de mensualidades (sin preguntar si la quiere ver).</div>
+      <div class="section-subtitle" style="margin-top:12px">¿Qué horario eligió en el formulario?</div>
+      <div class="btn-choice-grid" id="web-turno-btns">
+        <button class="btn-choice" onclick="webTurno('msg-web-noche',this)"><span class="ch-emoji">🌙</span>Noche</button>
+        <button class="btn-choice" onclick="webTurno('msg-web-manana',this)"><span class="ch-emoji">🌅</span>Mañana</button>
+        <button class="btn-choice" onclick="webTurno('msg-web-mediodia',this)"><span class="ch-emoji">☀️</span>Mediodía</button>
+        <button class="btn-choice" onclick="webTurno('msg-web-finde',this)"><span class="ch-emoji">🗓️</span>Fin de semana</button>
+      </div>
+      <div class="web-turno" data-turno="msg-web-noche" style="display:none">
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label" style="font-size:15px;letter-spacing:.5px;padding:6px 0 4px">🌙 Si eligió NOCHE</div>
         <div class="msg-text" id="msg-web-noche">La mayoría de nuestros alumnos empieza con el paquete de 8 clases: notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y ver cambios reales 💙
@@ -1043,6 +1051,8 @@ Para la noche tenemos (clases de 1h25):
 Te mando también las mensualidades 👇</div>
         <button class="copy-btn" onclick="copyMsg('msg-web-noche',this)">📋 Copiar mensaje</button>
       </div>
+      </div>
+      <div class="web-turno" data-turno="msg-web-manana" style="display:none">
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label" style="font-size:15px;letter-spacing:.5px;padding:6px 0 4px">🌅 Si eligió MAÑANA</div>
         <div class="msg-text" id="msg-web-manana">La mayoría de nuestros alumnos empieza con el paquete de 8 clases: notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y ver cambios reales 💙
@@ -1054,6 +1064,8 @@ Para la mañana tenemos (clases de 1h25):
 Te mando también las mensualidades 👇</div>
         <button class="copy-btn" onclick="copyMsg('msg-web-manana',this)">📋 Copiar mensaje</button>
       </div>
+      </div>
+      <div class="web-turno" data-turno="msg-web-mediodia" style="display:none">
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label" style="font-size:15px;letter-spacing:.5px;padding:6px 0 4px">☀️ Si eligió MEDIODÍA</div>
         <div class="msg-text" id="msg-web-mediodia">La mayoría de nuestros alumnos empieza con el paquete de 8 clases: notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y ver cambios reales 💙
@@ -1066,6 +1078,8 @@ A las 11:30 am tenemos clase (1h25):
 Te mando también las mensualidades 👇</div>
         <button class="copy-btn" onclick="copyMsg('msg-web-mediodia',this)">📋 Copiar mensaje</button>
       </div>
+      </div>
+      <div class="web-turno" data-turno="msg-web-finde" style="display:none">
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label" style="font-size:15px;letter-spacing:.5px;padding:6px 0 4px">🗓️ Si eligió FIN DE SEMANA</div>
         <div class="msg-text" id="msg-web-finde">La mayoría de nuestros alumnos empieza con el paquete de 8 clases: notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y ver cambios reales 💙
@@ -1076,6 +1090,7 @@ Para el fin de semana tenemos:
 
 Te mando también las mensualidades 👇</div>
         <button class="copy-btn" onclick="copyMsg('msg-web-finde',this)">📋 Copiar mensaje</button>
+      </div>
       </div>
       <div class="img-send-box">
         <div class="img-send-label">📲 Enviar esta imagen por WhatsApp</div>
@@ -1556,6 +1571,10 @@ function go(screenId) {
 }
 
 // ─── COPIAR MENSAJE ───────────────────────────
+function webTurno(id, btn) {
+  document.querySelectorAll('.web-turno').forEach(el => el.style.display = el.dataset.turno === id ? '' : 'none');
+  document.querySelectorAll('#web-turno-btns .btn-choice').forEach(b => b.classList.toggle('orange', b === btn));
+}
 function copyMsg(id, btn) {
   const text = document.getElementById(id).innerText;
   navigator.clipboard.writeText(text).then(() => {
