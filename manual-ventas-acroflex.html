@@ -270,6 +270,10 @@
         <span class="emoji">📩</span>
         <div><div>Seguimiento</div><div class="btn-desc">El prospecto dijo "lo pienso" y no ha respondido en 24–48h</div></div>
       </button>
+      <button class="btn-situation btn-cat-green" onclick="go('s-web-leads')">
+        <span class="emoji">🌐</span>
+        <div><div>Interesados de la web</div><div class="btn-desc">Dejó sus datos en el formulario de la página — aparece en el panel → Interesados</div></div>
+      </button>
     </div>
 
     <div class="home-category-label" style="background:#eff6ff;border-left:3px solid #3b82f6;color:#1d4ed8;margin-top:8px">🔵 ALUMNOS ACTIVOS</div>
@@ -974,6 +978,102 @@ Cuando quieras retomar, aquí te esperamos con los brazos abiertos 🧡 ¡Mucho 
         <button class="copy-btn" onclick="copyMsg('msg-seg-3',this)">📋 Copiar mensaje</button>
       </div>
       <div class="note-box" style="margin-top:10px">🎯 <strong>Por qué funciona:</strong> La pregunta cerrada ("¿decidiste que no?") provoca una respuesta — muchas personas que estaban indecisos responden para aclarar que sí quieren. Si confirma que no es el momento, cierra con amabilidad. No insistir más después de esto.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     INTERESADOS DE LA WEB (formulario de la landing)
+══════════════════════════════ -->
+<div class="screen" id="s-web-leads">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">🌐 Interesados de la web</div>
+    <div class="divider"></div>
+    <div class="note-box">💡 <strong>¿Cuándo usar esto?</strong> Cuando alguien deja sus datos en el formulario de la página web. Aparece en el panel de reservas → <strong>Interesados</strong>, con su nombre, WhatsApp, el horario que le acomoda y el plan que le interesa. Escríbele <strong>el mismo día</strong>.</div>
+    <div class="step-internal" style="margin:12px 0">✏️ Completa el [NOMBRE] antes de enviar. Después de escribirle, en el panel cambia su estado a <strong>"Contactado"</strong>; si se inscribe, a <strong>"Inscrito"</strong>.</div>
+
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">1</span><span class="step-title-text">Primer mensaje — según el horario que eligió en el formulario</span></div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">🌙 Si eligió NOCHE</div>
+        <div class="msg-text" id="msg-web-noche">Hola <span class="template-fill">[NOMBRE]</span> 😊 Te escribe el equipo de Acroflex. Vimos que dejaste tus datos en nuestra web para empezar en Acroflex Jóvenes y Adultos 🤸‍♀️
+
+Para la noche tenemos estos horarios (clases de 1h25, desde cero y con técnica):
+• Lunes y miércoles 6:30 pm
+• Martes y jueves 7:00 pm u 8:30 pm
+
+¿Cuál te queda mejor? 💙</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-noche',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">🌅 Si eligió MAÑANA</div>
+        <div class="msg-text" id="msg-web-manana">Hola <span class="template-fill">[NOMBRE]</span> 😊 Te escribe el equipo de Acroflex. Vimos que dejaste tus datos en nuestra web para empezar en Acroflex Jóvenes y Adultos 🤸‍♀️
+
+Para la mañana tenemos estos horarios (clases de 1h25, desde cero y con técnica):
+• Martes y jueves 6:30 am o 10:00 am
+• También a las 11:30 am (martes, miércoles, jueves y viernes)
+
+¿Cuál te queda mejor? 💙</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-manana',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">☀️ Si eligió MEDIODÍA</div>
+        <div class="msg-text" id="msg-web-mediodia">Hola <span class="template-fill">[NOMBRE]</span> 😊 Te escribe el equipo de Acroflex. Vimos que dejaste tus datos en nuestra web para empezar en Acroflex Jóvenes y Adultos 🤸‍♀️
+
+A las 11:30 am tenemos clase (1h25, desde cero y con técnica):
+• Martes y jueves
+• Miércoles
+• Viernes
+
+¿Qué días te quedan mejor? 💙</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-mediodia',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">🗓️ Si eligió FIN DE SEMANA</div>
+        <div class="msg-text" id="msg-web-finde">Hola <span class="template-fill">[NOMBRE]</span> 😊 Te escribe el equipo de Acroflex. Vimos que dejaste tus datos en nuestra web para empezar en Acroflex Jóvenes y Adultos 🤸‍♀️
+
+Para el fin de semana tenemos:
+• Sábados 7:30 am, 10:30 am o 3:00 pm (1h25)
+• Domingos intensivos de 2 horas: 9:30 am u 11:30 am
+
+¿Cuál te queda mejor? 💙</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-finde',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">🎯 <strong>Por qué funciona:</strong> le das solo los horarios del turno que pidió (no la lista completa) y terminas con una pregunta cerrada: "¿cuál te queda mejor?".</div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">2</span><span class="step-title-text">Si responde con un horario — recomienda el plan</span></div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-web-plan">¡Perfecto! 🙌 Si vienes 2 veces por semana, el plan que más se elige es el de 8 clases (S/330), porque avanzas más rápido en tu parada de manos y flexibilidad. También tenemos 4 clases (S/190) si prefieres 1 vez por semana.
+La matrícula es un pago único de S/50 al ingresar.
+
+¿Te reservo el cupo con 8 clases o con 4? 😊</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-plan',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">🎯 Si eligió <strong>domingos intensivos</strong>, el plan es 4 clases de 2 horas a S/260. Si quiere 3 veces por semana, ofrece 12 clases (S/470) con muñequeras de regalo.</div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">3</span><span class="step-title-text">Si duda o dice "lo pienso" — clase suelta</span></div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
+        <div class="msg-text" id="msg-web-suelta">¡Claro! 😊 Para que conozcas la clase, al entrenador y al grupo antes de decidir, puedes tomar una clase suelta (S/55). ¿Te la agendo para este <span class="template-fill">[DÍA]</span> a las <span class="template-fill">[HORA]</span>?</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-suelta',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">🎯 No bajes el precio: la clase suelta es la forma de bajar la barrera de entrada.</div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">4</span><span class="step-title-text">Si no responde en 24 horas</span></div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
+        <div class="msg-text" id="msg-web-seg">Hola <span class="template-fill">[NOMBRE]</span> 😊 ¿Pudiste ver los horarios? Esta semana todavía quedan cupos en el turno que elegiste. ¿Prefieres <span class="template-fill">[OPCIÓN 1]</span> o <span class="template-fill">[OPCIÓN 2]</span>? 💙</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-seg',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">🎯 Si después de esto tampoco responde, usa el último mensaje de <strong>Seguimiento</strong> (paso 3) y cambia su estado en el panel a "No le interesó" si confirma que no.</div>
     </div>
   </div>
 </div>
