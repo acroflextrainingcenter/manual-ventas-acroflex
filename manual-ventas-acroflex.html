@@ -991,100 +991,140 @@ Cuando quieras retomar, aquí te esperamos con los brazos abiertos 🧡 ¡Mucho 
     <div class="section-title">🌐 Interesados de la web</div>
     <div class="divider"></div>
     <div class="note-box">💡 <strong>¿Cuándo usar esto?</strong> Cuando alguien deja sus datos en el formulario de la página web. Aparece en el panel de reservas → <strong>Interesados</strong>, con su nombre, WhatsApp, el horario que le acomoda y el plan que le interesa. Escríbele <strong>el mismo día</strong>.</div>
-    <div class="step-internal" style="margin:12px 0">✏️ Completa el [NOMBRE] antes de enviar. Después de escribirle, en el panel cambia su estado a <strong>"Contactado"</strong>; si se inscribe, a <strong>"Inscrito"</strong>.</div>
+    <div class="step-internal" style="margin:12px 0">✏️ Completa los [ ] antes de enviar. Después del primer mensaje, en el panel cambia su estado a <strong>"Contactado"</strong>; si se inscribe, a <strong>"Inscrito"</strong>.</div>
 
     <div class="step-card">
-      <div class="step-header"><span class="step-num">1</span><span class="step-title-text">Primer mensaje — según el horario que eligió en el formulario</span></div>
-      <div class="note-box" style="margin-top:10px">🧭 <strong>Si en "Plan" eligió "Aún no sé, quiero asesoría":</strong> envía primero este mensaje (presenta el curso). Cuando responda, mándale los horarios de su turno (abajo) y sigue con el paso 2.</div>
+      <div class="step-header"><span class="step-num">1</span><span class="step-title-text">Saludo + diagnóstico (edad, motivación y experiencia)</span></div>
       <div class="msg-box" style="margin-top:12px">
-        <div class="msg-label">🧭 Si pidió ASESORÍA</div>
-        <div class="msg-text" id="msg-web-asesoria">Hola <span class="template-fill">[NOMBRE]</span> 😊 Te escribe el equipo de Acroflex. Vimos que dejaste tus datos en nuestra web y quieres asesoría para empezar en Acroflex Jóvenes y Adultos 🤸‍♀️
+        <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
+        <div class="msg-text" id="msg-web-1">Hola <span class="template-fill">[NOMBRE]</span> 😊 Te escribe el equipo de Acroflex. Vimos que dejaste tus datos en nuestra web para empezar en Acroflex Jóvenes y Adultos 🤸‍♀️
 
-Te cuento rápido: son clases presenciales de acrobacia, flexibilidad y fuerza de 1h25, multinivel y desde cero. Aprendes parada de manos, aspas, arcos y más, siguiendo un cronograma mes a mes, con entrenadores que te corrigen y te cuidan en cada paso. No necesitas experiencia ni ser flexible 💪
+Antes de enviarte toda la info, cuéntame:
+• ¿Cuántos años tienes?
+• ¿Qué te motivó a querer empezar?
+• ¿Tienes alguna experiencia en gimnasia, danza o deporte?
 
-Para recomendarte el mejor horario y plan: ¿tienes experiencia en gimnasia, danza o algún deporte, o empezarías desde cero? 💙</div>
-        <button class="copy-btn" onclick="copyMsg('msg-web-asesoria',this)">📋 Copiar mensaje</button>
+Así te recomiendo el mejor horario y plan 💙</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-1',this)">📋 Copiar mensaje</button>
       </div>
-      <div class="note-box" style="margin-top:10px">👇 <strong>Si ya eligió un plan</strong> (o después de que responda la asesoría), usa el mensaje de su turno:</div>
+      <div class="note-box" style="margin-top:10px">🔍 <strong>Espera su respuesta antes de presentar el curso.</strong> La edad confirma que es para este curso (desde 14 años; si es menor de 14, ofrece <strong>Acroflex Teens</strong>). La motivación y la experiencia te dicen cómo presentarlo.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">2</span><span class="step-title-text">Presentar el curso (2 mensajes)</span></div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
+        <div class="msg-text" id="msg-web-2a">¡Gracias <span class="template-fill">[NOMBRE]</span>! 😊 Según lo que nos cuentas, Acroflex Jóvenes y Adultos es ideal para ti 🤸‍♀️💙
+
+Es el curso para desarrollar acrobacia, fuerza, flexibilidad y control corporal, ya sea que empieces desde cero o que ya tengas experiencia. Las clases son multinivel: adaptamos cada ejercicio a tu nivel y respetamos tu proceso. No necesitas experiencia previa.</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-2a',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-web-2b">En cada clase trabajamos:
+✨ Acrobacias de piso (rodamientos, ruedas, parada de manos y progresiones de mortales)
+✨ Fuerza y preparación física
+✨ Flexibilidad y movilidad
+✨ Equilibrio, coordinación y control corporal
+
+Y lo mejor: tienes entre 1 y 3 coaches corrigiéndote en persona cada clase 💙 Eso hace que el progreso sea real, seguro y sostenido.</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-2b',this)">📋 Copiar mensaje</button>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">3</span><span class="step-title-text">Enviar video del curso</span></div>
+      <div class="note-box" style="margin-top:10px">📹 <strong>Envía el video del curso Acroflex</strong> (el mismo de "Pedido de informes"). Dale un momento para que lo vea antes de continuar.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">4</span><span class="step-title-text">Ancla de valor + horarios de su turno + mensualidades</span></div>
+      <div class="note-box" style="margin-top:10px">Envía el mensaje del turno que eligió en el formulario y, justo después, la imagen de mensualidades (sin preguntar si la quiere ver).</div>
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label">🌙 Si eligió NOCHE</div>
-        <div class="msg-text" id="msg-web-noche">Hola <span class="template-fill">[NOMBRE]</span> 😊 Te escribe el equipo de Acroflex. Vimos que dejaste tus datos en nuestra web para empezar en Acroflex Jóvenes y Adultos 🤸‍♀️
+        <div class="msg-text" id="msg-web-noche">La mayoría de nuestros alumnos empieza con el paquete de 8 clases: notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y ver cambios reales 💙
 
-Para la noche tenemos estos horarios (clases de 1h25, desde cero y con técnica):
+Para la noche tenemos (clases de 1h25):
 • Lunes y miércoles 6:30 pm
 • Martes y jueves 7:00 pm u 8:30 pm
 
-¿Cuál te queda mejor? 💙</div>
+Te mando también las mensualidades 👇</div>
         <button class="copy-btn" onclick="copyMsg('msg-web-noche',this)">📋 Copiar mensaje</button>
       </div>
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label">🌅 Si eligió MAÑANA</div>
-        <div class="msg-text" id="msg-web-manana">Hola <span class="template-fill">[NOMBRE]</span> 😊 Te escribe el equipo de Acroflex. Vimos que dejaste tus datos en nuestra web para empezar en Acroflex Jóvenes y Adultos 🤸‍♀️
+        <div class="msg-text" id="msg-web-manana">La mayoría de nuestros alumnos empieza con el paquete de 8 clases: notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y ver cambios reales 💙
 
-Para la mañana tenemos estos horarios (clases de 1h25, desde cero y con técnica):
+Para la mañana tenemos (clases de 1h25):
 • Martes y jueves 6:30 am o 10:00 am
-• También a las 11:30 am (martes, miércoles, jueves y viernes)
+• 11:30 am: martes, miércoles, jueves y viernes
 
-¿Cuál te queda mejor? 💙</div>
+Te mando también las mensualidades 👇</div>
         <button class="copy-btn" onclick="copyMsg('msg-web-manana',this)">📋 Copiar mensaje</button>
       </div>
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label">☀️ Si eligió MEDIODÍA</div>
-        <div class="msg-text" id="msg-web-mediodia">Hola <span class="template-fill">[NOMBRE]</span> 😊 Te escribe el equipo de Acroflex. Vimos que dejaste tus datos en nuestra web para empezar en Acroflex Jóvenes y Adultos 🤸‍♀️
+        <div class="msg-text" id="msg-web-mediodia">La mayoría de nuestros alumnos empieza con el paquete de 8 clases: notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y ver cambios reales 💙
 
-A las 11:30 am tenemos clase (1h25, desde cero y con técnica):
+A las 11:30 am tenemos clase (1h25):
 • Martes y jueves
 • Miércoles
 • Viernes
 
-¿Qué días te quedan mejor? 💙</div>
+Te mando también las mensualidades 👇</div>
         <button class="copy-btn" onclick="copyMsg('msg-web-mediodia',this)">📋 Copiar mensaje</button>
       </div>
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label">🗓️ Si eligió FIN DE SEMANA</div>
-        <div class="msg-text" id="msg-web-finde">Hola <span class="template-fill">[NOMBRE]</span> 😊 Te escribe el equipo de Acroflex. Vimos que dejaste tus datos en nuestra web para empezar en Acroflex Jóvenes y Adultos 🤸‍♀️
+        <div class="msg-text" id="msg-web-finde">La mayoría de nuestros alumnos empieza con el paquete de 8 clases: notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y ver cambios reales 💙
 
 Para el fin de semana tenemos:
 • Sábados 7:30 am, 10:30 am o 3:00 pm (1h25)
 • Domingos intensivos de 2 horas: 9:30 am u 11:30 am
 
-¿Cuál te queda mejor? 💙</div>
+Te mando también las mensualidades 👇</div>
         <button class="copy-btn" onclick="copyMsg('msg-web-finde',this)">📋 Copiar mensaje</button>
       </div>
-      <div class="note-box" style="margin-top:10px">🎯 <strong>Por qué funciona:</strong> le das solo los horarios del turno que pidió (no la lista completa) y terminas con una pregunta cerrada: "¿cuál te queda mejor?".</div>
-    </div>
-
-    <div class="step-card">
-      <div class="step-header"><span class="step-num">2</span><span class="step-title-text">Si responde con un horario — recomienda el plan</span></div>
-      <div class="msg-box" style="margin-top:12px">
-        <div class="msg-label">💬 Mensaje a enviar</div>
-        <div class="msg-text" id="msg-web-plan">¡Perfecto! 🙌 Si vienes 2 veces por semana, el plan que más se elige es el de 8 clases (S/330), porque avanzas más rápido en tu parada de manos y flexibilidad. También tenemos 4 clases (S/190) si prefieres 1 vez por semana.
-La matrícula es un pago único de S/50 al ingresar.
-
-¿Te reservo el cupo con 8 clases o con 4? 😊</div>
-        <button class="copy-btn" onclick="copyMsg('msg-web-plan',this)">📋 Copiar mensaje</button>
+      <div class="img-send-box">
+        <div class="img-send-label">📲 Enviar esta imagen por WhatsApp</div>
+        <img src="mensualidades-acroflex.png" alt="Mensualidades Acroflex">
+        <div class="img-send-note">Mensualidades Acroflex</div>
       </div>
-      <div class="note-box" style="margin-top:10px">🎯 Si eligió <strong>domingos intensivos</strong>, el plan es 4 clases de 2 horas a S/260. Si quiere 3 veces por semana, ofrece 12 clases (S/470) con muñequeras de regalo.</div>
     </div>
-
     <div class="step-card">
-      <div class="step-header"><span class="step-num">3</span><span class="step-title-text">Si duda o dice "lo pienso" — clase suelta</span></div>
+      <div class="step-header"><span class="step-num">5</span><span class="step-title-text">Cierre con pregunta de horario y plan</span></div>
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
-        <div class="msg-text" id="msg-web-suelta">¡Claro! 😊 Para que conozcas la clase, al entrenador y al grupo antes de decidir, puedes tomar una clase suelta (S/55). ¿Te la agendo para este <span class="template-fill">[DÍA]</span> a las <span class="template-fill">[HORA]</span>?</div>
-        <button class="copy-btn" onclick="copyMsg('msg-web-suelta',this)">📋 Copiar mensaje</button>
+        <div class="msg-text" id="msg-web-cierre">¿Te reservo el cupo de <span class="template-fill">[DÍA Y HORA]</span> con 8 clases o prefieres empezar con 4? 😊
+La matrícula es un pago único de S/50 al ingresar, aparte de la mensualidad 💙</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-cierre',this)">📋 Copiar mensaje</button>
       </div>
-      <div class="note-box" style="margin-top:10px">🎯 No bajes el precio: la clase suelta es la forma de bajar la barrera de entrada.</div>
+      <div class="note-box" style="margin-top:10px">🎯 Pregunta cerrada entre dos opciones. Si eligió domingos intensivos, el plan es 4 clases de 2 horas a S/260. Si quiere 3 veces por semana, ofrece 12 clases (S/470) con muñequeras de regalo.</div>
     </div>
-
     <div class="step-card">
-      <div class="step-header"><span class="step-num">4</span><span class="step-title-text">Si no responde en 24 horas</span></div>
+      <div class="step-header"><span class="step-num">6</span><span class="step-title-text">Si duda — respuestas a objeciones</span></div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">😅 "No tengo experiencia / estoy muy rígido"</div>
+        <div class="msg-text" id="msg-web-obj-exp">¡No te preocupes para nada! 😊 Acroflex es multinivel, lo que significa que empezamos exactamente donde tú estás 💙 No necesitas experiencia previa ni ser flexible: los coaches te guían desde el inicio con técnica y mucha seguridad 💪 ¡La mayoría de nuestros alumnos empezaron igual que tú!</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-obj-exp',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">🤔 "Lo voy a pensar"</div>
+        <div class="msg-text" id="msg-web-obj-pensar">¡Claro, sin presión! 😊 Para que conozcas la clase, al entrenador y al grupo antes de decidir, puedes tomar una clase suelta (S/55). ¿Te la agendo para este <span class="template-fill">[DÍA]</span> a las <span class="template-fill">[HORA]</span>? 💙</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-obj-pensar',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="msg-box" style="margin-top:12px">
+        <div class="msg-label">💸 "Está un poco caro"</div>
+        <div class="msg-text" id="msg-web-obj-caro">Gracias por comentarme eso 😊 Para poder orientarte mejor, ¿por qué te parece elevado? ¿Es el momento o el monto en sí? 🧡</div>
+        <button class="copy-btn" onclick="copyMsg('msg-web-obj-caro',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">🔍 Espera su respuesta antes de ofrecer alternativas. Si es "el monto": refuerza el valor (coaches que corrigen en persona, progreso real, matrícula única). Si es "el momento": ofrece el paquete de 4 clases. Bajar el precio es siempre la última opción.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">7</span><span class="step-title-text">Si no responde en 24 horas</span></div>
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
-        <div class="msg-text" id="msg-web-seg">Hola <span class="template-fill">[NOMBRE]</span> 😊 ¿Pudiste ver los horarios? Esta semana todavía quedan cupos en el turno que elegiste. ¿Prefieres <span class="template-fill">[OPCIÓN 1]</span> o <span class="template-fill">[OPCIÓN 2]</span>? 💙</div>
+        <div class="msg-text" id="msg-web-seg">Hola <span class="template-fill">[NOMBRE]</span> 😊 ¿Pudiste ver la info y los horarios? Esta semana todavía quedan cupos en el turno que elegiste. ¿Prefieres <span class="template-fill">[OPCIÓN 1]</span> o <span class="template-fill">[OPCIÓN 2]</span>? 💙</div>
         <button class="copy-btn" onclick="copyMsg('msg-web-seg',this)">📋 Copiar mensaje</button>
       </div>
-      <div class="note-box" style="margin-top:10px">🎯 Si después de esto tampoco responde, usa el último mensaje de <strong>Seguimiento</strong> (paso 3) y cambia su estado en el panel a "No le interesó" si confirma que no.</div>
+      <div class="note-box" style="margin-top:10px">🎯 Si tampoco responde, usa el último mensaje de <strong>Seguimiento</strong> (paso 3). Si confirma que no, en el panel cambia su estado a "No le interesó".</div>
     </div>
   </div>
 </div>
