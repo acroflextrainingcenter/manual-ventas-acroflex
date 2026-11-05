@@ -1542,12 +1542,12 @@ const FLOWS = {
     badge: 'Alumno/a escribe directamente',
     steps: [
       { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+        msg: `¡Hola! 😊 Te damos la bienvenida a Acroflex 💙
 
-Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
+Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡`, note: `⚖️ Si quien escribe es menor de 18 años, por temas legales necesitamos conversar con su papá, mamá o apoderado: pídele con cariño que nos escriban por aquí o que nos deje su nombre y WhatsApp. No le des precios ni le pidas pagos.<br><br>🧭 <strong>Qué curso recomendar</strong><br>• Flexibilidad, split, movilidad, mejores patadas → FlexiPower<br>• Acrobacia, mortales, flips, parada de manos → Acroflex (Teens 7–13, Jóvenes y Adultos 14+)<br>• Objetivo muy específico o con fecha (competencia, audición) → clases 1 a 1 con el equipo<br><br>👋 Usa lenguaje neutro hasta saber su nombre.` },
 
-      { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
-        msg: `¡Gracias [NOMBRE]! 😊 Una pregunta rápida antes de enviarte todo: ¿qué te motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta del cliente. Te dirá si hay urgencia, evento próximo, frustración acumulada o simple curiosidad. Eso cambia cómo presentas el curso.` },
+      { num: 2, title: 'Preguntar experiencia (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias [NOMBRE]! 😊 Una pregunta rápida: ¿has practicado antes gimnasia, danza, acrobacia o algún deporte, o empezarías desde cero? (¡las dos opciones están perfectas!) 🧡`, note: `🔍 Espera la respuesta ANTES de presentar el curso.<br>• Con experiencia → retomar y avanzar más rápido<br>• Desde cero → multinivel, empezamos donde está, la mayoría empezó igual<br>• Si no dio un objetivo claro → pregunta qué lo motivó a escribirnos<br><br>🧘 <strong>Nunca hizo deporte o es sedentario y quiere acrobacia (14+):</strong> recomienda EMPEZAR con FlexiPower al menos 1 mes para que su cuerpo se adapte al ritmo de entrenamiento (desarrolla flexibilidad, fuerza, movilidad y control), y después pasar a Acroflex o combinar ambos. Preséntalo como un plan para lograr su meta, no como un «todavía no puedes».` },
 
       { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
         msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos Acroflex Jóvenes y Adultos 🤸‍♀️💙
@@ -1624,12 +1624,12 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
     badge: 'Papá / Mamá escribe',
     steps: [
       { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, qué bueno que se comunicaron con nosotros 💙
+        msg: `¡Hola! 😊 Te damos la bienvenida a Acroflex, qué bueno que se comunicaron con nosotros 💙
 
-Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
+Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡`, note: `🧭 <strong>Qué curso recomendar</strong><br>• Flexibilidad, split, movilidad, mejores patadas → FlexiPower<br>• Acrobacia, mortales, flips, parada de manos → Acroflex (Teens 7–13, Jóvenes y Adultos 14+)<br>• Objetivo muy específico o con fecha (competencia, audición) → clases 1 a 1 con el equipo<br><br>👋 Usa lenguaje neutro hasta saber su nombre.` },
 
-            { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
-        msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarles todo: ¿qué los motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
+            { num: 2, title: 'Preguntar experiencia (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias por la info! 😊 Una pregunta rápida: ¿su hijo/a ha practicado antes gimnasia, danza, acrobacia o algún deporte, o empezaría desde cero? (¡las dos opciones están perfectas!) 🧡`, note: `🔍 Espera la respuesta ANTES de presentar el curso.<br>• Con experiencia → retomar y avanzar más rápido<br>• Desde cero → multinivel, empezamos donde está, la mayoría empezó igual<br>• Si no dio un objetivo claro → pregunta qué lo motivó a escribirnos<br><br>🧘 <strong>Nunca hizo deporte o es sedentario y quiere acrobacia (14+):</strong> recomienda EMPEZAR con FlexiPower al menos 1 mes para que su cuerpo se adapte al ritmo de entrenamiento (desarrolla flexibilidad, fuerza, movilidad y control), y después pasar a Acroflex o combinar ambos. Preséntalo como un plan para lograr su meta, no como un «todavía no puedes».` },
 
       { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
         msg: `Perfecto, según lo que nos dicen, les recomendamos Acroflex Jóvenes y Adultos 🤸‍♀️💙
@@ -1706,12 +1706,12 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
     badge: 'Papá / Mamá escribe',
     steps: [
       { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, qué gusto que se comunicaron con nosotros 💙
+        msg: `¡Hola! 😊 Te damos la bienvenida a Acroflex, qué gusto que se comunicaron con nosotros 💙
 
-Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
+Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡`, note: `🧭 <strong>Qué curso recomendar</strong><br>• Flexibilidad, split, movilidad, mejores patadas → FlexiPower<br>• Acrobacia, mortales, flips, parada de manos → Acroflex (Teens 7–13, Jóvenes y Adultos 14+)<br>• Objetivo muy específico o con fecha (competencia, audición) → clases 1 a 1 con el equipo<br><br>👋 Usa lenguaje neutro hasta saber su nombre.` },
 
-            { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
-        msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarles todo: ¿qué los motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
+            { num: 2, title: 'Preguntar experiencia (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias por la info! 😊 Una pregunta rápida: ¿su hijo/a ha practicado antes gimnasia, danza, acrobacia o algún deporte, o empezaría desde cero? (¡las dos opciones están perfectas!) 🧡`, note: `🔍 Espera la respuesta ANTES de presentar el curso.<br>• Con experiencia → retomar y avanzar más rápido<br>• Desde cero → multinivel, empezamos donde está, la mayoría empezó igual<br>• Si no dio un objetivo claro → pregunta qué lo motivó a escribirnos` },
 
       { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
         msg: `Perfecto, según lo que nos dicen, les recomendamos Acroflex Teens 🧒🤸‍♀️💙
@@ -1789,12 +1789,12 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
     badge: 'El alumno/a escribe directamente',
     steps: [
       { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, qué gusto que te comunicaste con nosotros 💙
+        msg: `¡Hola! 😊 Te damos la bienvenida a Acroflex, qué gusto que te comunicaste con nosotros 💙
 
-Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
+Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡`, note: `⚖️ Si quien escribe es menor de 18 años, por temas legales necesitamos conversar con su papá, mamá o apoderado: pídele con cariño que nos escriban por aquí o que nos deje su nombre y WhatsApp. No le des precios ni le pidas pagos.<br><br>🧭 <strong>Qué curso recomendar</strong><br>• Flexibilidad, split, movilidad, mejores patadas → FlexiPower<br>• Acrobacia, mortales, flips, parada de manos → Acroflex (Teens 7–13, Jóvenes y Adultos 14+)<br>• Objetivo muy específico o con fecha (competencia, audición) → clases 1 a 1 con el equipo<br><br>👋 Usa lenguaje neutro hasta saber su nombre.` },
 
-            { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
-        msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarte todo: ¿qué te motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
+            { num: 2, title: 'Preguntar experiencia (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias [NOMBRE]! 😊 Una pregunta rápida: ¿has practicado antes gimnasia, danza, acrobacia o algún deporte, o empezarías desde cero? (¡las dos opciones están perfectas!) 🧡`, note: `🔍 Espera la respuesta ANTES de presentar el curso.<br>• Con experiencia → retomar y avanzar más rápido<br>• Desde cero → multinivel, empezamos donde está, la mayoría empezó igual<br>• Si no dio un objetivo claro → pregunta qué lo motivó a escribirnos` },
 
       { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
         msg: `Perfecto, según lo que nos dices, te recomendamos Acroflex Teens 🧒🤸‍♀️💙
@@ -1870,12 +1870,12 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
     badge: 'Alumno/a escribe directamente',
     steps: [
       { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+        msg: `¡Hola! 😊 Te damos la bienvenida a Acroflex 💙
 
-Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡` },
+Para poder recomendarte el curso ideal, ¿me puedes decir tu nombre, tu edad y qué es lo que quieres lograr? 🧡`, note: `⚖️ Si quien escribe es menor de 18 años, por temas legales necesitamos conversar con su papá, mamá o apoderado: pídele con cariño que nos escriban por aquí o que nos deje su nombre y WhatsApp. No le des precios ni le pidas pagos.<br><br>🧭 <strong>Qué curso recomendar</strong><br>• Flexibilidad, split, movilidad, mejores patadas → FlexiPower<br>• Acrobacia, mortales, flips, parada de manos → Acroflex (Teens 7–13, Jóvenes y Adultos 14+)<br>• Objetivo muy específico o con fecha (competencia, audición) → clases 1 a 1 con el equipo<br><br>👋 Usa lenguaje neutro hasta saber su nombre.` },
 
-            { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
-        msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarte todo: ¿qué te motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
+            { num: 2, title: 'Preguntar experiencia (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias [NOMBRE]! 😊 Una pregunta rápida: ¿has practicado antes gimnasia, danza, acrobacia o algún deporte, o empezarías desde cero? (¡las dos opciones están perfectas!) 🧡`, note: `🔍 Espera la respuesta ANTES de presentar el curso.<br>• Con experiencia → retomar y avanzar más rápido<br>• Desde cero → multinivel, empezamos donde está, la mayoría empezó igual<br>• Si no dio un objetivo claro → pregunta qué lo motivó a escribirnos` },
 
       { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
         msg: `Perfecto [NOMBRE], según lo que nos dices, te recomendamos FlexiPower 💪🧡
@@ -1952,12 +1952,12 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
     badge: 'Papá / Mamá escribe',
     steps: [
       { num: 1, title: 'Pedir nombre, edad y objetivo', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex, con gusto les contamos 💙
+        msg: `¡Hola! 😊 Te damos la bienvenida a Acroflex, con gusto les contamos 💙
 
-Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡` },
+Para poder recomendarles el curso ideal, ¿me pueden decir el nombre de su hijo/a, su edad y qué es lo que quieren lograr? 🧡`, note: `🧭 <strong>Qué curso recomendar</strong><br>• Flexibilidad, split, movilidad, mejores patadas → FlexiPower<br>• Acrobacia, mortales, flips, parada de manos → Acroflex (Teens 7–13, Jóvenes y Adultos 14+)<br>• Objetivo muy específico o con fecha (competencia, audición) → clases 1 a 1 con el equipo<br><br>👋 Usa lenguaje neutro hasta saber su nombre.` },
 
-            { num: 2, title: 'Pregunta diagnóstico (ANTES de dar info)', type: 'message',
-        msg: `¡Gracias por la info! 😊 Una pregunta rápida antes de enviarles todo: ¿qué los motivó a escribirnos justo ahora? 🧡`, internal: `🔍 Esta pregunta es clave — NO saltes directo a presentar el curso. Espera la respuesta. Te dirá si hay urgencia, evento próximo o simple curiosidad. Eso cambia cómo presentas el curso.` },
+            { num: 2, title: 'Preguntar experiencia (ANTES de dar info)', type: 'message',
+        msg: `¡Gracias por la info! 😊 Una pregunta rápida: ¿su hijo/a ha practicado antes gimnasia, danza, acrobacia o algún deporte, o empezaría desde cero? (¡las dos opciones están perfectas!) 🧡`, note: `🔍 Espera la respuesta ANTES de presentar el curso.<br>• Con experiencia → retomar y avanzar más rápido<br>• Desde cero → multinivel, empezamos donde está, la mayoría empezó igual<br>• Si no dio un objetivo claro → pregunta qué lo motivó a escribirnos` },
 
       { num: 3, title: 'Presentar el curso (msg 1 — qué es y para quién)', type: 'message',
         msg: `Perfecto, según lo que nos dicen, les recomendamos FlexiPower 💪🧡
@@ -2035,7 +2035,7 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
     badge: 'Alumno/a escribe directamente',
     steps: [
       { num: 1, title: 'Pedir nombre y qué workshop le interesa', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+        msg: `¡Hola! 😊 Te damos la bienvenida a Acroflex 💙
 
 Para orientarte mejor con el Full Day, ¿me puedes decir tu nombre y qué workshops te llamaron la atención? 🔥` },
 
@@ -2203,7 +2203,7 @@ Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 
     badge: 'Papá o Mamá escribe',
     steps: [
       { num: 1, title: 'Pedir nombre del hijo/a y qué workshop le interesa', type: 'message',
-        msg: `¡Hola! 😊 Bienvenido/a a Acroflex 💙
+        msg: `¡Hola! 😊 Te damos la bienvenida a Acroflex 💙
 
 Para orientarte mejor con el Full Day, ¿me puedes decir el nombre de tu hijo/a, su edad y qué workshops les llamaron la atención? 🔥` },
 
