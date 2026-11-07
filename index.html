@@ -1037,18 +1037,13 @@ Te mando también las mensualidades 👇</div>
         <img src="mensualidades-acroflex.png" alt="Mensualidades Acroflex">
         <div class="img-send-note">Mensualidades Acroflex</div>
       </div>
-      <div class="img-send-box">
-        <div class="img-send-label">🔥 Cyber Wow (solo hasta el viernes 6): envía también esta</div>
-        <img src="mensualidades-acroflex-cyber.png" alt="Mensualidades Acroflex Cyber Wow">
-        <div class="img-send-note">Precios Cyber Wow · nuevos matrícula S/ 0 · estudiantes −S/ 15 o −S/ 25</div>
-      </div>
     </div>
     <div class="step-card">
       <div class="step-header"><span class="step-num">5</span><span class="step-title-text">Cierre con pregunta de horario y plan</span></div>
       <div class="msg-box" style="margin-top:12px">
         <div class="msg-label">✏️ Plantilla — completa los [ ] antes de enviar</div>
         <div class="msg-text" id="msg-web-cierre">¿Te reservo el cupo de <span class="template-fill">[DÍA Y HORA]</span> con 8 clases o prefieres empezar con 4? 😊
-La matrícula es un pago único de S/50 al ingresar, aparte de la mensualidad 💙</div>
+Y si te inscribes hoy, pagas solo el 50% de la matrícula: S/25 en vez de S/50 🎉</div>
         <button class="copy-btn" onclick="copyMsg('msg-web-cierre',this)">📋 Copiar mensaje</button>
       </div>
       <div class="note-box" style="margin-top:10px">🎯 Pregunta cerrada entre dos opciones. Si eligió domingos intensivos, el plan es 4 clases de 2 horas a S/260. Si quiere 3 veces por semana, ofrece 12 clases (S/470) con muñequeras de regalo.</div>
@@ -1122,6 +1117,7 @@ La matrícula es un pago único de S/50 al ingresar, aparte de la mensualidad �
     <div class="info-card">
       <div class="info-card-title">🎓 Matrícula única</div>
       <p><span class="highlight">S/50</span> — Se paga una sola vez en la vida.</p>
+      <p>🎉 <strong>Promo permanente:</strong> si se inscribe y paga HOY (el mismo día que escribe), paga el 50%: <span class="highlight">S/25</span>. Solo estudiantes nuevos.</p>
     </div>
     <div class="msg-box" style="margin-top:16px">
       <div class="msg-label">💬 Mensaje a enviar</div>
@@ -1137,6 +1133,7 @@ La matrícula es un pago único de S/50 al ingresar, aparte de la mensualidad �
 • Pack 4 clases → S/10 de descuento
 • Pack 8 o más → S/20 de descuento
 🎓 Matrícula única: S/50 (se paga una sola vez en la vida).
+🎉 Si te inscribes hoy, pagas solo el 50% de la matrícula: S/25.
 
 ¿Tienes alguna pregunta o quieres conocer los horarios disponibles? 😊</div>
       <button class="copy-btn" onclick="copyMsg('msg-precios-acroflex',this)">📋 Copiar mensaje</button>
@@ -1181,6 +1178,7 @@ La matrícula es un pago único de S/50 al ingresar, aparte de la mensualidad �
 • Pack 4 clases → S/10 de descuento
 • Pack 8 o más → S/20 de descuento
 🎓 Matrícula única: S/50 (una sola vez en la vida).
+🎉 Si te inscribes hoy, pagas solo el 50% de la matrícula: S/25.
 
 ¿Quieres saber los horarios disponibles? 😊</div>
       <button class="copy-btn" onclick="copyMsg('msg-precios-flexi',this)">📋 Copiar mensaje</button>
@@ -1574,11 +1572,10 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach te asiste e
         msg: `La mayoría de nuestros estudiantes empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Te mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que el cliente vea los precios. No preguntes si quieren verlos — mándalos directo después de este mensaje.` },
 
       { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver (la 3 solo durante el Cyber Wow, hasta el viernes 6).',
+        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver.',
         images: [
           { src: 'horarios-acroflex.jpg', label: 'Imagen 1 — Horarios Acroflex Jóvenes y Adultos' },
           { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
-          { src: 'mensualidades-acroflex-cyber.png', label: 'Imagen 3 — 🔥 Cyber Wow (solo hasta el viernes 6)' },
         ]},
 
       { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
@@ -1605,8 +1602,8 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach te asiste e
 • Curso: Acroflex Jóvenes y Adultos
 • Horario: [ej. Lunes y Miércoles, 8:00 pm – 9:25 pm]
 • Paquete: [X clases] → S/[precio]
-• Matrícula única: S/50 ✅ (solo se paga una vez)
-• Total a pagar: S/[precio + 50 si es su primera vez]
+• Matrícula única: S/25 ✅ (50% por inscribirte hoy)
+• Total a pagar: S/[precio + 25 si paga hoy; + 50 si paga otro día]
 
 `,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
@@ -1658,11 +1655,10 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach le asiste e
         msg: `La mayoría de nuestros estudiantes empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Les mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que vean los precios. No preguntes si quieren verlos — mándalos directo después de este mensaje.` },
 
       { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver (la 3 solo durante el Cyber Wow, hasta el viernes 6).',
+        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver.',
         images: [
           { src: 'horarios-acroflex.jpg', label: 'Imagen 1 — Horarios Acroflex Jóvenes y Adultos' },
           { src: 'mensualidades-acroflex.png', label: 'Imagen 2 — Mensualidades Acroflex' },
-          { src: 'mensualidades-acroflex-cyber.png', label: 'Imagen 3 — 🔥 Cyber Wow (solo hasta el viernes 6)' },
         ]},
 
       { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
@@ -1689,8 +1685,8 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach le asiste e
 • Curso: Acroflex Jóvenes y Adultos
 • Horario: [ej. Martes y Jueves, 7:00 pm – 8:25 pm]
 • Paquete: [X clases] → S/[precio]
-• Matrícula única: S/50 ✅ (solo se paga una vez)
-• Total a pagar: S/[precio + 50 si es primera vez]
+• Matrícula única: S/25 ✅ (50% por inscribirte hoy)
+• Total a pagar: S/[precio + 25 si paga hoy; + 50 si paga otro día]
 
 `,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
@@ -1743,11 +1739,10 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach le asiste e
         msg: `La mayoría de nuestros estudiantes empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Les mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que vean los precios. No preguntes si quieren verlos — mándalos directo después de este mensaje.` },
 
       { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver (la 3 solo durante el Cyber Wow, hasta el viernes 6).',
+        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver.',
         images: [
           { src: 'horarios-teens.png', label: 'Imagen 1 — Horarios Acroflex Teens' },
           { src: 'mensualidades-teens.png', label: 'Imagen 2 — Mensualidades Acroflex Teens' },
-          { src: 'mensualidades-teens-cyber.png', label: 'Imagen 3 — 🔥 Cyber Wow (solo hasta el viernes 6)' },
         ]},
 
       { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
@@ -1774,8 +1769,8 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach le asiste e
 • Curso: Acroflex Teens
 • Horario: [ej. Sábados, 9:00 am – 10:25 am]
 • Paquete: [X clases] → S/[precio]
-• Matrícula única: S/50 ✅ (solo se paga una vez)
-• Total a pagar: S/[precio + 50 si es primera vez]
+• Matrícula única: S/25 ✅ (50% por inscribirte hoy)
+• Total a pagar: S/[precio + 25 si paga hoy; + 50 si paga otro día]
 
 `,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
@@ -1828,11 +1823,10 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach te asiste e
         msg: `La mayoría de nuestros estudiantes empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Te mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que vean los precios. Manda las imágenes directo sin preguntar.` },
 
       { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver (la 3 solo durante el Cyber Wow, hasta el viernes 6).',
+        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver.',
         images: [
           { src: 'horarios-teens.png', label: 'Imagen 1 — Horarios Acroflex Teens' },
           { src: 'mensualidades-teens.png', label: 'Imagen 2 — Mensualidades Acroflex Teens' },
-          { src: 'mensualidades-teens-cyber.png', label: 'Imagen 3 — 🔥 Cyber Wow (solo hasta el viernes 6)' },
         ]},
 
       { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
@@ -1859,8 +1853,8 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach te asiste e
 • Curso: Acroflex Teens
 • Horario: [ej. Sábados, 9:00 am – 10:25 am]
 • Paquete: [X clases] → S/[precio]
-• Matrícula única: S/50 ✅ (solo se paga una vez)
-• Total a pagar: S/[precio + 50 si es primera vez]
+• Matrícula única: S/25 ✅ (50% por inscribirte hoy)
+• Total a pagar: S/[precio + 25 si paga hoy; + 50 si paga otro día]
 
 `,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
@@ -1914,11 +1908,10 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach te asiste e
         msg: `La mayoría de nuestros estudiantes empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Te mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que vean los precios. Manda las imágenes directo sin preguntar.` },
 
       { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver (la 3 solo durante el Cyber Wow, hasta el viernes 6).',
+        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver.',
         images: [
           { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios FlexiPower' },
           { src: 'mensualidades-flexipower.png', label: 'Imagen 2 — Mensualidades FlexiPower' },
-          { src: 'mensualidades-flexipower-cyber.png', label: 'Imagen 3 — 🔥 Cyber Wow (solo hasta el viernes 6)' },
         ]},
 
       { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
@@ -1945,8 +1938,8 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach te asiste e
 • Curso: FlexiPower
 • Horario: [ej. Martes y Jueves, 6:00 pm – 6:55 pm]
 • Paquete: [X clases] → S/[precio]
-• Matrícula única: S/50 ✅ (solo se paga una vez)
-• Total a pagar: S/[precio + 50 si es primera vez]
+• Matrícula única: S/25 ✅ (50% por inscribirte hoy)
+• Total a pagar: S/[precio + 25 si paga hoy; + 50 si paga otro día]
 
 `,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
@@ -2000,11 +1993,10 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach le asiste e
         msg: `La mayoría de nuestros estudiantes empieza con el paquete de 8 clases — notan más progreso porque el cuerpo necesita al menos un mes para adaptarse y empezar a ver cambios reales 💙 Les mando los horarios y opciones disponibles 👇`, internal: `🎯 Esta frase ancla en el paquete de 8 ANTES de que vean los precios. Manda las imágenes directo sin preguntar.` },
 
       { num: 7, title: 'Enviar horarios y mensualidades', type: 'images',
-        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver (la 3 solo durante el Cyber Wow, hasta el viernes 6).',
+        note: '📲 Envía estas imágenes seguidas sin preguntar si las quieren ver.',
         images: [
           { src: 'horarios-flexipower.png', label: 'Imagen 1 — Horarios FlexiPower' },
           { src: 'mensualidades-flexipower.png', label: 'Imagen 2 — Mensualidades FlexiPower' },
-          { src: 'mensualidades-flexipower-cyber.png', label: 'Imagen 3 — 🔥 Cyber Wow (solo hasta el viernes 6)' },
         ]},
 
       { num: 8, title: 'Cerrar con pregunta de horario', type: 'message',
@@ -2031,8 +2023,8 @@ Siempre empezamos con calentamiento, avanzamos por etapas y el coach le asiste e
 • Curso: FlexiPower
 • Horario: [ej. Sábados intensivo, 9:00 am – 10:25 am]
 • Paquete: [X clases] → S/[precio]
-• Matrícula única: S/50 ✅ (solo se paga una vez)
-• Total a pagar: S/[precio + 50 si es primera vez]
+• Matrícula única: S/25 ✅ (50% por inscribirte hoy)
+• Total a pagar: S/[precio + 25 si paga hoy; + 50 si paga otro día]
 
 `,
         msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
