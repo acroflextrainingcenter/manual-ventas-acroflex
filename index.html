@@ -254,6 +254,10 @@
 
     <div class="home-category-label" style="background:#f0fdf4;border-left:3px solid #22c55e;color:#15803d">🟢 PROSPECTOS NUEVOS</div>
     <div class="btn-grid">
+      <button class="btn-situation btn-cat-green" onclick="go('s-guion-nuevo')" style="border:2px solid #22c55e">
+        <span class="emoji">🧭</span>
+        <div><div>Guion nuevo de venta ⭐</div><div class="btn-desc">Así responde el agente desde el 21-nov: apertura, necesidad, cierre y objeciones</div></div>
+      </button>
       <button class="btn-situation btn-cat-green" onclick="go('s-informes-quien')">
         <span class="emoji">👋</span>
         <div><div>Pedido de informes</div><div class="btn-desc">Alguien escribe por primera vez preguntando por clases</div></div>
@@ -268,7 +272,7 @@
       </button>
       <button class="btn-situation btn-cat-green" onclick="go('s-seguimiento')">
         <span class="emoji">📩</span>
-        <div><div>Seguimiento</div><div class="btn-desc">El prospecto dijo "lo pienso" y no ha respondido en 24–48h</div></div>
+        <div><div>Seguimiento</div><div class="btn-desc">24 h, 72 h y día 6: cada uno trae algo nuevo</div></div>
       </button>
       <button class="btn-situation btn-cat-green" onclick="go('s-web-leads')">
         <span class="emoji">🌐</span>
@@ -336,6 +340,144 @@
 
 
 <!-- ══════════════════════════════
+     GUION NUEVO (21-nov-2026): el mismo que usa el agente
+══════════════════════════════ -->
+<div class="screen" id="s-guion-nuevo">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">🧭 Guion nuevo de venta</div>
+    <div class="divider"></div>
+    <div class="note-box">💡 <strong>Desde el 21-nov el agente responde así.</strong> Úsalo también cuando escribas tú, para que la persona sienta una sola voz. Reglas: primero lo que pidió · <strong>una sola pregunta</strong> por mensaje · globos cortos (2 líneas, 1 emoji) · nunca preguntes "¿Es para ti o para tu hijo/a?" ni por lesiones · si ignora una pregunta, no la repitas.</div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">1</span><span class="step-title-text">Apertura: pide precio u horarios</span></div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-gn-1">¡Hola! 😊 Te cuento: los paquetes van desde S/190 al mes, y el más elegido es el de 8 clases por S/330</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-1',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-gn-2">Y si te inscribes hoy, la matrícula te sale solo S/25 (en vez de S/50) 🎉</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-2',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-gn-3">Cuéntame, ¿qué te gustaría lograr? ¿Aprender alguna acrobacia, como la parada de manos, o ganar más flexibilidad? 🤸</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-3',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">📷 Entre el segundo y el tercer mensaje manda la foto de <strong>mensualidades</strong> (y la de horarios si los pidió). Si habló de flexibilidad: FlexiPower desde S/170, el más elegido 8 clases por S/290.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">2</span><span class="step-title-text">Apertura: solo un emoji, "hola" o "info"</span></div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-gn-4">¡Hola! Qué bueno tenerte por aquí 💙 Somos Acroflex, una academia de acrobacia y flexibilidad en Jesús María</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-4',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-gn-5">No necesitas experiencia: nuestros coaches te acompañan en cada clase y te enseñan paso a paso, a tu ritmo 🤸</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-5',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-gn-6">Cuéntame, ¿qué te gustaría lograr? ¿Aprender alguna acrobacia o ganar más flexibilidad? 😊</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-6',this)">📋 Copiar mensaje</button>
+      </div>
+
+    </div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">3</span><span class="step-title-text">Su necesidad primero (según lo que quiere lograr)</span></div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">🤸 Acrobacias, empieza de cero</div>
+        <div class="msg-text" id="msg-gn-7">¡La parada de manos se aprende por partes! 🤸 Primero fuerza de hombros y core, después la subida, siempre con apoyo. El coach te sostiene y te corrige hasta que te sale</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-7',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">🦵 Flexibilidad o split</div>
+        <div class="msg-text" id="msg-gn-8">Ser rígido es el punto de partida de casi todos 💙 El split se logra fortaleciendo y estirando las piernas por partes, sin forzar. En FlexiPower trabajas fuerza y flexibilidad al mismo tiempo</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-8',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">👵 50 años o más</div>
+        <div class="msg-text" id="msg-gn-9">¡Claro! 💙 No hay límite de edad: cada ejercicio se adapta a ti y nadie se compara con nadie. Siempre calentamos y avanzamos por etapas, con el coach a tu lado</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-9',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">👨‍👧 Papá o mamá (7 a 13 años)</div>
+        <div class="msg-text" id="msg-gn-10">¡Qué buena edad para empezar! 🤸 En Acroflex Teens aprende paso a paso, siempre con colchonetas y el coach al lado. Además trabaja disciplina y confianza, a su ritmo</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-10',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💃 Ya entrena algo</div>
+        <div class="msg-text" id="msg-gn-11">¡Tu base te va a ayudar mucho! 💙 [Conecta el curso con su disciplina: pole → aperturas y arcos; artes marciales → patadas más altas; danza → saltos y extensiones]</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-11',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">❓ Después, la única pregunta de diagnóstico</div>
+        <div class="msg-text" id="msg-gn-12">¿Lo has intentado antes o sería tu primera vez? 😊</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-12',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">🎯 Orden: sus palabras → por qué le cuesta o qué teme → cómo lo trabajamos → el curso → una pregunta. Si nunca hizo deporte y quiere acrobacia: primero 1 mes de FlexiPower como base.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">4</span><span class="step-title-text">Horarios y cierre directo</span></div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">📅 Con las fotos de horarios y mensualidades</div>
+        <div class="msg-text" id="msg-gn-13">La mayoría empieza con 8 clases, porque el cuerpo necesita al menos un mes para ver cambios 👇</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-13',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-gn-14">¿Qué días te quedan mejor para entrenar? 😊</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-14',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">✅ Apenas dice qué días puede (sin más preguntas)</div>
+        <div class="msg-text" id="msg-gn-15">¡Perfecto, [NOMBRE]! Te separo el cupo del [DÍA FECHA], [HORA] 🤸
+
+🤸 [CURSO]
+🗓️ [DÍAS], [HORA]
+📦 Paquete de [N] clases: S/[PRECIO]
+🎓 Matrícula: S/25 por inscribirte hoy
+💰 Total: S/[TOTAL]</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-15',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-gn-16">Puedes pagar a nombre de Milagritos Robles: 💜 Yape o Plin 923 043 284 · 🏦 BCP Soles 191-045529-4-0028 · 💳 Tarjeta con link (5% de recargo)
+
+Apenas nos mandes el comprobante, tu cupo queda confirmado 📲</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-16',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">💳 Si eligió y no pagó en 2 horas, aparece arriba en tu tablero: escríbele "¿Te ayudo con el pago? Si prefieres tarjeta, te mando el link ahora 💳".</div>
+    </div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">5</span><span class="step-title-text">Objeciones</span></div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💸 "Está caro" / "no me alcanza"</div>
+        <div class="msg-text" id="msg-gn-17">Te entiendo 💙 Puedes empezar con 4 clases (1 vez por semana) por S/190 y la matrícula a S/25 hoy. ¿Te separo un cupo así?</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-17',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💸 Si repite que no le alcanza (no insistas más)</div>
+        <div class="msg-text" id="msg-gn-18">¡Te entiendo totalmente! 🧡 Cuando sea tu momento, aquí vamos a estar para acompañarte</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-18',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">🤔 "Lo voy a pensar" / "cuadro mis horarios"</div>
+        <div class="msg-text" id="msg-gn-19">¡Claro! 😊 Si quieres conocer el ambiente antes, puedes venir a una clase suelta (S/55; FlexiPower S/45). ¿Te guardo la del [DÍA HORA]?</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-19',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">👥 "Lo consulto con mi pareja / mis papás"</div>
+        <div class="msg-text" id="msg-gn-20">¡Perfecto! Te mando un resumen para que se lo muestres 👇
+🤸 [CURSO] · 8 clases S/330 · [DÍAS HORA] · matrícula S/25 hoy</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-20',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">📅 "El próximo mes" / "cuando cobre"</div>
+        <div class="msg-text" id="msg-gn-21">¡Perfecto! Puedes separar tu cupo hoy con la matrícula a S/25 y empezar en [MES] 💙</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-21',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">📅 Si prefiere esperar</div>
+        <div class="msg-text" id="msg-gn-22">¡Listo! ¿Me dejas tu WhatsApp y te escribo el [DÍA FECHA] para separar tu lugar? 🤸</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-22',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">😟 "Me da miedo lastimarme"</div>
+        <div class="msg-text" id="msg-gn-23">Es normal 💙 Por eso siempre calentamos, avanzamos por etapas y el coach te asiste en cada intento. Nadie hace algo para lo que su cuerpo no está listo</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-23',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">🏷️ Si dice que no le alcanza dos veces, ponle la etiqueta <strong>sin-presupuesto</strong>. Si queda para otra fecha, <strong>proximo-mes</strong>: las dos pausan los seguimientos automáticos.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
      WORKSHOP OCT 8 — ¿QUIÉN ESCRIBE?
 ══════════════════════════════ -->
 <div class="screen" id="s-workshop-oct-quien">
@@ -360,6 +502,7 @@
 ══════════════════════════════ -->
 <div class="screen" id="s-informes-quien">
   <div class="content">
+    <div class="note-box" style="border:2px solid #22c55e;background:#f0fdf4">🧭 <strong>Hay un guion nuevo (21-nov).</strong> Para la primera respuesta usa el <a href="#" onclick="go('s-guion-nuevo');return false">Guion nuevo de venta</a>: nunca preguntes "¿Es para ti o para tu hijo/a?".</div>
     <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
     <div class="section-title">👋 Pedido de informes</div>
     <div class="divider"></div>
@@ -884,38 +1027,60 @@ Cuando quieras retomar, aquí te esperamos con los brazos abiertos 🧡 ¡Mucho 
 <div class="screen" id="s-seguimiento">
   <div class="content">
     <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
-    <div class="section-title">📩 Seguimiento — "Lo voy a pensar"</div>
+    <div class="section-title">📩 Seguimientos (guion nuevo)</div>
     <div class="divider"></div>
-    <div class="note-box">💡 <strong>¿Cuándo usar esto?</strong> El prospecto mostró interés pero dijo "lo pienso" y no ha respondido en 24–48 horas. Estos mensajes reabren la conversación sin presionar.</div>
-
+    <div class="note-box">💡 <strong>Cada seguimiento trae algo nuevo:</strong> una fecha, una prueba de que funciona o una puerta abierta. Nunca repitas el precio ni la pregunta que no contestó. El de 24 h lo manda el agente solo; el de 72 h y el del día 6 te aparecen en tu tablero de la Oficina.</div>
     <div class="step-card">
-      <div class="step-header"><span class="step-num">1</span><span class="step-title-text">Seguimiento a las 24–48h — pregunta cerrada de avance</span></div>
-      <div class="msg-box" style="margin-top:12px">
+      <div class="step-header"><span class="step-num">24 h</span><span class="step-title-text">Lo manda el agente — retoma su objetivo con una fecha</span></div>
+      <div class="msg-box" style="margin-top:10px">
         <div class="msg-label">💬 Mensaje a enviar</div>
-        <div class="msg-text" id="msg-seg-1">¡Hola! 😊 ¿Te quedó alguna duda sobre el horario o el precio de Acroflex? Con gusto la resuelvo ahora 💙🧡</div>
-        <button class="copy-btn" onclick="copyMsg('msg-seg-1',this)">📋 Copiar mensaje</button>
+        <div class="msg-text" id="msg-gn-24">[NOMBRE], el [DÍA HORA] hay cupo para empezar [SU OBJETIVO] 🤸 ¿Te lo separo?</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-24',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Si todavía no dijo qué quiere lograr</div>
+        <div class="msg-text" id="msg-gn-25">Así se ve una clase en Acroflex 👇 [video] ¿Te animas a aprender alguna acrobacia o prefieres ganar más flexibilidad? 😊</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-25',this)">📋 Copiar mensaje</button>
       </div>
-      <div class="note-box" style="margin-top:10px">🎯 <strong>Por qué funciona:</strong> "¿alguna duda?" es abierto y da excusa de no responder. Esta versión enfoca la respuesta en horario o precio — dos objeciones concretas que puedes resolver de inmediato.</div>
+
     </div>
-
     <div class="step-card">
-      <div class="step-header"><span class="step-num">2</span><span class="step-title-text">Si mencionó un motivo económico — explora antes de ofrecer</span></div>
-      <div class="msg-box" style="margin-top:12px">
-        <div class="msg-label">💬 Mensaje a enviar</div>
-        <div class="msg-text" id="msg-seg-2">¡Hola! 😊 Quería preguntarte algo — ¿el precio te parece elevado por el monto o porque el momento no es el mejor? 🧡</div>
-        <button class="copy-btn" onclick="copyMsg('msg-seg-2',this)">📋 Copiar mensaje</button>
+      <div class="step-header"><span class="step-num">72 h</span><span class="step-title-text">Prueba de que funciona, según su objetivo</span></div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">🤸 Acrobacias</div>
+        <div class="msg-text" id="msg-gn-26">¡[NOMBRE], la acrobacia se aprende por partes, con el coach a tu lado hasta que te sale! 🤸
+¿Empiezas esta semana o la próxima?</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-26',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">🦵 FlexiPower</div>
+        <div class="msg-text" id="msg-gn-27">[NOMBRE], en FlexiPower ganas flexibilidad sin forzar, paso a paso y con el coach corrigiéndote 💙
+¿Empiezas esta semana o la próxima?</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-27',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">👨‍👧 Teens</div>
+        <div class="msg-text" id="msg-gn-28">En Teens los chicos aprenden paso a paso, siempre con colchonetas y el coach al lado 🤸
+¿Lo empezamos esta semana o la próxima?</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-28',this)">📋 Copiar mensaje</button>
       </div>
-      <div class="note-box" style="margin-top:10px">🎯 <strong>Espera la respuesta antes de ofrecer alternativas.</strong> Si dice "el monto": refuerza el valor (coaches personales, matrícula única). Si dice "el momento": ofrece el paquete de 4 clases como entrada. Bajar el precio es siempre la última opción.</div>
+
     </div>
-
     <div class="step-card">
-      <div class="step-header"><span class="step-num">3</span><span class="step-title-text">Si no respondió al seguimiento 1 — último intento con cierre de puerta</span></div>
-      <div class="msg-box" style="margin-top:12px">
+      <div class="step-header"><span class="step-num">Día 6</span><span class="step-title-text">Último día que Meta deja escribir — puerta abierta</span></div>
+      <div class="msg-box" style="margin-top:10px">
         <div class="msg-label">💬 Mensaje a enviar</div>
-        <div class="msg-text" id="msg-seg-3">¡Hola! 😊 Solo para cerrar el tema: ¿decidiste que no es el momento para Acroflex? No hay problema si es así — solo quería saberlo para no dejarte sin respuesta 💙🧡</div>
-        <button class="copy-btn" onclick="copyMsg('msg-seg-3',this)">📋 Copiar mensaje</button>
+        <div class="msg-text" id="msg-gn-29">[NOMBRE], si ahora no es el momento, no pasa nada 🧡
+¿Te escribo a inicios del próximo mes para separar tu lugar?</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-29',this)">📋 Copiar mensaje</button>
       </div>
-      <div class="note-box" style="margin-top:10px">🎯 <strong>Por qué funciona:</strong> La pregunta cerrada ("¿decidiste que no?") provoca una respuesta — muchas personas que estaban indecisos responden para aclarar que sí quieren. Si confirma que no es el momento, cierra con amabilidad. No insistir más después de esto.</div>
+      <div class="note-box" style="margin-top:10px">📅 Si dice que sí, ponle la etiqueta <strong>proximo-mes</strong>. Ese día te aparece en el tablero como "Quedamos en escribirle hoy".</div>
+    </div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">📅</span><span class="step-title-text">El día acordado</span></div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-gn-30">¡Hola, [NOMBRE]! Quedamos en escribirte hoy para separar tu lugar en Acroflex 🤸 ¿Te lo dejo listo?</div>
+        <button class="copy-btn" onclick="copyMsg('msg-gn-30',this)">📋 Copiar mensaje</button>
+      </div>
+
     </div>
   </div>
 </div>
@@ -1084,6 +1249,7 @@ Y si te inscribes hoy, pagas solo el 50% de la matrícula: S/25 en vez de S/50 �
 ══════════════════════════════ -->
 <div class="screen" id="s-precios-curso">
   <div class="content">
+    <div class="note-box" style="border:2px solid #22c55e;background:#f0fdf4">🧭 <strong>Hay un guion nuevo (21-nov).</strong> Para la primera respuesta usa el <a href="#" onclick="go('s-guion-nuevo');return false">Guion nuevo de venta</a>: nunca preguntes "¿Es para ti o para tu hijo/a?".</div>
     <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
     <div class="section-title">💰 Preguntas sobre precios</div>
     <div class="divider"></div>
