@@ -319,6 +319,10 @@
 
     <div class="home-category-label" style="background:#fffbeb;border-left:3px solid #f59e0b;color:#92400e;margin-top:8px">🟡 EVENTOS ESPECIALES</div>
     <div class="btn-grid">
+      <button class="btn-situation btn-cat-green" style="border-left-color:#f59e0b" onclick="go('s-cgc-eventos')">
+        <span class="emoji">💜</span>
+        <div><div>Workshops, verano y 1 a 1 con Camila</div><div class="btn-desc">Eventos de CGC Method en nuestro local: informa y deriva a CGC</div></div>
+      </button>
       <button class="btn-situation btn-cat-green" style="border-left-color:#f59e0b" onclick="go('s-workshop-oct-quien')">
         <span class="emoji">🎉</span>
         <div><div>Workshop 8 de Octubre</div><div class="btn-desc">Feriado: Parada de Manos I, Split Sagital y Full Aspas</div></div>
@@ -347,6 +351,7 @@
     <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
     <div class="section-title">🧭 Guion nuevo de venta</div>
     <div class="divider"></div>
+    <div class="note-box" style="border:2px solid #a855f7;background:#faf5ff">💜 <strong>¿Preguntan por el workshop, los cursos de verano o clases 1 a 1 con Camila?</strong> Eso es de CGC Method: usa <a href="#" onclick="go('s-cgc-eventos');return false">Workshops, verano y 1 a 1 con Camila</a> y deriva.</div>
     <div class="note-box">💡 <strong>Desde el 21-nov el agente responde así.</strong> Úsalo también cuando escribas tú, para que la persona sienta una sola voz. Reglas: primero lo que pidió · <strong>una sola pregunta</strong> por mensaje · globos cortos (2 líneas, 1 emoji) · nunca preguntes "¿Es para ti o para tu hijo/a?" ni por lesiones · si ignora una pregunta, no la repitas.</div>
     <div class="step-card">
       <div class="step-header"><span class="step-num">1</span><span class="step-title-text">Apertura: pide precio u horarios</span></div>
@@ -473,6 +478,67 @@ Apenas nos mandes el comprobante, tu cupo queda confirmado 📲</div>
         <button class="copy-btn" onclick="copyMsg('msg-gn-23',this)">📋 Copiar mensaje</button>
       </div>
       <div class="note-box" style="margin-top:10px">🏷️ Si dice que no le alcanza dos veces, ponle la etiqueta <strong>sin-presupuesto</strong>. Si queda para otra fecha, <strong>proximo-mes</strong>: las dos pausan los seguimientos automáticos.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     EVENTOS DE CGC METHOD EN NUESTRO LOCAL (22-nov-2026): se derivan
+══════════════════════════════ -->
+<div class="screen" id="s-cgc-eventos">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">💜 Workshops, verano y 1 a 1 con Camila</div>
+    <div class="divider"></div>
+    <div class="note-box">💡 <strong>Estos los vende CGC Method, no Acroflex.</strong> Se dan en nuestro local, pero la inscripción y el pago son de CGC. Responde lo que preguntaron en 2 o 3 mensajes y <strong>deriva</strong> a su página o a su WhatsApp <strong>+51 954 655 122</strong>. No mandes el Yape ni la cuenta de Acroflex. Ponle la etiqueta <strong>derivado-cgc</strong> para que no le lleguen seguimientos. Solo si lo preguntan: a quien busca clases de Acroflex, guion normal.</div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">1</span><span class="step-title-text">Workshops "Desbloquea tu split" (27-nov y 4-dic)</span></div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-cgcev-1">Son presenciales y duran 1 h 30, de 7:00 a 8:30 pm 💙
+Viernes 27 de noviembre: split sagital (pierna adelante y atrás)
+Viernes 4 de diciembre: split frontal (piernas abiertas a los lados)</div>
+        <button class="copy-btn" onclick="copyMsg('msg-cgcev-1',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-cgcev-2">Cada uno cuesta S/69, o los dos por S/109. Son 15 cupos por fecha y se llevan 2 bloques de yoga y una liga (se compran aquí ese día)</div>
+        <button class="copy-btn" onclick="copyMsg('msg-cgcev-2',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-cgcev-3">Este lo dicta Camila Garay (CGC Method) aquí en nuestro local 💙 Te inscribes aquí 👉 https://cursos.camilagaraycoach.com/desbloquea-tu-split o por WhatsApp al +51 954 655 122</div>
+        <button class="copy-btn" onclick="copyMsg('msg-cgcev-3',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">📅 Después del 4 de diciembre ya pasaron: deriva al WhatsApp de CGC para próximas fechas.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">2</span><span class="step-title-text">Verano con Cami 2027 (enero y febrero)</span></div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-cgcev-4">Son 3 cursos presenciales con Camila, 1 vez por semana (4 clases al mes), desde 9 años y también para adultos:
+
+🩰 Preparación física para bailarines: viernes 3:45 a 4:45 pm
+🤸 Flex Elite (flexibilidad avanzada, con base): viernes 5:00 a 6:25 pm
+🥋 Power Kicks (patadas para artes marciales): sábado 3:30 a 4:25 pm</div>
+        <button class="copy-btn" onclick="copyMsg('msg-cgcev-4',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-cgcev-5">En preventa hasta el 10 de diciembre: Flex Elite S/220 al mes (después S/250); Preparación física y Power Kicks S/195 cada uno (después S/220). Sin matrícula</div>
+        <button class="copy-btn" onclick="copyMsg('msg-cgcev-5',this)">📋 Copiar mensaje</button>
+      </div>      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-cgcev-6">Este lo dicta Camila Garay (CGC Method) aquí en nuestro local 💙 Te inscribes aquí 👉 https://cursos.camilagaraycoach.com/verano o por WhatsApp al +51 954 655 122</div>
+        <button class="copy-btn" onclick="copyMsg('msg-cgcev-6',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">🌱 Si es principiante y quiere flexibilidad en general, recomiéndale FlexiPower de Acroflex (guion normal).</div>
+    </div>
+    <div class="step-card">
+      <div class="step-header"><span class="step-num">3</span><span class="step-title-text">Clases 1 a 1 con Camila Garay</span></div>
+      <div class="msg-box" style="margin-top:10px">
+        <div class="msg-label">💬 Mensaje a enviar</div>
+        <div class="msg-text" id="msg-cgcev-7">Las clases 1 a 1 con Camila se coordinan directo con CGC Method 💙 Escríbeles al WhatsApp +51 954 655 122 y te pasan sus horarios disponibles</div>
+        <button class="copy-btn" onclick="copyMsg('msg-cgcev-7',this)">📋 Copiar mensaje</button>
+      </div>
+      <div class="note-box" style="margin-top:10px">🎯 No des precios ni horarios de Camila. Si piden 1 a 1 <strong>sin nombrar a Camila</strong> (por ejemplo, para una competencia), es una clase 1 a 1 de Acroflex: sigue el flujo de Clases particulares con el equipo.</div>
     </div>
   </div>
 </div>
@@ -819,16 +885,12 @@ Dime qué días y horarios te quedan mejor y te cuento qué tenemos disponible �
     <div class="divider"></div>
     <div class="msg-box">
       <div class="msg-label">💬 Mensaje a enviar</div>
-      <div class="msg-text" id="msg-part-camila">¡Hola! 😊 Qué bueno que estás interesado/a en clases particulares con Camila Garay 💙
+      <div class="msg-text" id="msg-part-camila">¡Hola! 😊 Qué bueno que nos escribes.
 
-Las clases 1 a 1 con Camila se gestionan directamente a través de su equipo en CGC Method. Te paso el contacto para que puedan asesorarte con toda la info 🧡
-
-📲 WhatsApp CGC Method: +51 954 655 122
-
-¡Escríbeles y con gusto te orientan! 😊</div>
+Las clases 1 a 1 con Camila se coordinan directo con CGC Method 💙 Escríbeles al WhatsApp +51 954 655 122 y te pasan sus horarios disponibles</div>
       <button class="copy-btn" onclick="copyMsg('msg-part-camila',this)">📋 Copiar mensaje</button>
     </div>
-    <div class="note-box"><strong>📌 Recuerda:</strong> Las clases particulares con Camila se coordinan exclusivamente por el canal de CGC Method.</div>
+    <div class="note-box"><strong>📌 Recuerda:</strong> Las clases particulares con Camila se coordinan solo por CGC Method. No des precios ni horarios de Camila y ponle la etiqueta <strong>derivado-cgc</strong>.</div>
   </div>
 </div>
 
