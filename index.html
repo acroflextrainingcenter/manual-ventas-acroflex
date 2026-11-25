@@ -317,6 +317,14 @@
     </div>
 
 
+
+    <div class="home-category-label" style="background:#fef3c7;border-left:3px solid #f59e0b;color:#78350f;margin-top:8px">🌞 VERANO 2027 — CURSOS NUEVOS</div>
+    <div class="btn-grid">
+      <button class="btn-situation btn-cat-green" style="border-left-color:#f59e0b" onclick="go('s-verano-quien')">
+        <span class="emoji">🌞</span>
+        <div><div>Informes de verano</div><div class="btn-desc">Kids, Acrodance, Base Atleta y cursos regulares desde enero 2027</div></div>
+      </button>
+    </div>
     <div class="home-category-label" style="background:#fffbeb;border-left:3px solid #f59e0b;color:#92400e;margin-top:8px">🟡 EVENTOS ESPECIALES</div>
     <div class="btn-grid">
       <button class="btn-situation btn-cat-green" style="border-left-color:#f59e0b" onclick="go('s-cgc-eventos')">
@@ -539,6 +547,29 @@ Viernes 4 de diciembre: split frontal (piernas abiertas a los lados)</div>
         <button class="copy-btn" onclick="copyMsg('msg-cgcev-7',this)">📋 Copiar mensaje</button>
       </div>
       <div class="note-box" style="margin-top:10px">🎯 No des precios ni horarios de Camila. Si piden 1 a 1 <strong>sin nombrar a Camila</strong> (por ejemplo, para una competencia), es una clase 1 a 1 de Acroflex: sigue el flujo de Clases particulares con el equipo.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════
+     VERANO 2027 — ¿QUÉ CURSO?
+══════════════════════════════ -->
+<div class="screen" id="s-verano-quien">
+  <div class="content">
+    <button class="back-btn" onclick="go('s-home')">← Volver al inicio</button>
+    <div class="section-title">🌞 Verano 2027 — Informes</div>
+    <div class="divider"></div>
+    <div style="background:#fef3c7;border:1px solid #fde68a;border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:12px;color:#78350f">
+      📅 <strong>Inicio: lunes 4 de enero 2027</strong><br>
+      🎉 Matrícula S/25 (en vez de S/50) si se inscriben antes del 15 de dic · Cupos limitados
+    </div>
+    <div class="choice-prompt">¿Por qué curso preguntan?</div>
+    <div class="choice-grid">
+      <button class="btn-choice" onclick="startFlow('verano-kids-papa','s-verano-quien')"><span class="ch-emoji">🧒</span>Acroflex Kids<br><small style="font-size:10px;color:#6b7280">4–6 años · 55 min</small></button>
+      <button class="btn-choice" onclick="startFlow('verano-acrodance-alumno','s-verano-quien')"><span class="ch-emoji">💃</span>Acrodance<br><small style="font-size:10px;color:#6b7280">Desde 9 años · 1h25</small></button>
+      <button class="btn-choice" onclick="startFlow('verano-base-atleta-alumno','s-verano-quien')"><span class="ch-emoji">💪</span>Base Atleta<br><small style="font-size:10px;color:#6b7280">Desde 9 años · 55 min</small></button>
+      <button class="btn-choice" onclick="go('s-informes-quien')"><span class="ch-emoji">🤸</span>Cursos regulares<br><small style="font-size:10px;color:#6b7280">J&A, Teens, FlexiPower</small></button>
     </div>
   </div>
 </div>
@@ -2919,6 +2950,274 @@ Si no tienen, pueden comprarlas en Acroflex el mismo día 💙` },
 (Los pagos con tarjeta tienen un 5% de recargo.)
 
 Una vez realizado el pago o abono, por favor envíanos el comprobante por aquí 📲` },
+    ]
+  },
+
+
+  'verano-kids-papa': {
+    title: '🧒 Acroflex Kids — Verano 2027',
+    badge: 'Papá o Mamá escribe',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 ¡Qué bueno que escribes por Acroflex Kids! 🤸💚
+
+Es nuestro nuevo curso de verano para peques de 4 a 6 años: clases de 55 minutos donde aprenden a usar su cuerpo mientras juegan. Desarrollan psicomotricidad, coordinación, sentido del espacio y confianza — siempre acompañados por un coach.
+
+📍 Presencial en Acroflex, Jesús María
+📅 Empieza el lunes 4 de enero 2027` },
+
+      { num: 2, title: 'Qué aprenden', type: 'message',
+        msg: `En cada clase trabajan:
+🌀 Rodamientos y volantines básicos
+🦘 Saltos y caídas seguras
+🤸 Estiramientos y movilidad
+🎯 Direcciones (adelante, atrás, derecha, izquierda) mientras se ejercitan
+⚡ Descargan energía y desarrollan su confianza corporal
+
+Todo con juego, ritmo y mucha alegría 💚 Nunca están solos — hay coaches corrigiéndolos en persona todo el tiempo.` },
+
+      { num: 3, title: 'Horarios', type: 'message',
+        msg: `Los horarios de Kids para verano son:
+
+📅 Lunes y Miércoles
+⏰ 4:00 – 4:55 pm
+
+Son 2 clases por semana, 55 minutos cada una 🕓` },
+
+      { num: 4, title: 'Enviar imagen de horarios', type: 'images',
+        note: '📲 Envía la imagen de horarios de Kids.',
+        images: [
+          { src: 'horarios-verano-kids.png', label: 'Horarios Kids — Verano 2027' },
+        ]},
+
+      { num: 5, title: 'Precios + ancla de valor', type: 'message',
+        msg: `La mayoría empieza con el paquete de 8 clases — es 1 mes de verano completo y el cuerpo del peque empieza a notar los cambios desde la segunda semana 💚
+
+🎟️ Paquetes Kids:
+• 4 clases (2 semanas): S/190
+• 8 clases (1 mes): S/330
+
+📌 Matrícula: S/50 — pago único al inscribirse (solo alumnos nuevos).
+🎉 Si se inscribe antes del 15 de diciembre: matrícula a S/25.
+
+⚠️ Cupos limitados para los más pequeños.` },
+
+      { num: 6, title: 'Packs de verano (opcional)', type: 'message',
+        internal: `🎯 Ofrece los packs de verano si el papá/mamá pregunta por una opción de más meses o quiere aprovechar preventa.`,
+        msg: `Si quieren asegurar todo el verano, también tenemos packs:
+
+📦 Pack enero–febrero (2 meses): pregunta por disponibilidad
+📦 Pack enero–marzo (3 meses): el mejor precio por clase
+
+🔥 Preventa hasta el 15 de diciembre: S/30 menos en el pack de 2 meses y S/50 menos en el de 3 meses.` },
+
+      { num: 7, title: 'Cerrar con pregunta de horario', type: 'message',
+        msg: `¿Qué días les quedarían mejor para traer al peque? Así los ayudo a confirmar su lugar 😊💚` },
+
+      { num: 8, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '🤔 "¿No es muy pequeño/a para esto?"',
+            msg: `¡Para nada! 😊 Kids está diseñado justo para esta edad — 4 a 6 años es el momento ideal para desarrollar la psicomotricidad y el sentido del cuerpo. No es acrobacia avanzada; es aprender a moverse con confianza jugando. Los coaches están con ellos todo el tiempo 💚` },
+          { label: '💸 "Está un poco caro"',
+            msg: `Gracias por comentarme eso 😊 Para poder orientarte mejor — ¿por qué te parece elevado? ¿Es el momento o el monto en sí? 🧡`,
+            internal: `🔍 Espera su respuesta. Si dice "el monto": son clases personalizadas en grupos pequeños, con coaches que corrigen en persona. Si dice "el momento": recuerda la matrícula a S/25 si se inscriben antes del 15 de dic.` },
+          { label: '🤔 "Lo pensamos"',
+            msg: `¡Claro! 😊 Solo te cuento que los cupos de Kids son muy limitados por ser grupos pequeños 💚 Si tienen alguna duda que les ayude a decidirse, con gusto la resuelvo ahora 🧡` },
+          { label: '📐 "¿Qué necesitan traer?"',
+            msg: `Solo ropa cómoda y zapatillas deportivas 👟 El peque no necesita nada especial para empezar 💚` },
+        ]
+      },
+
+      { num: 9, title: 'Resumen de inscripción', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Confirmamos la inscripción de [NOMBRE DEL PEQUE] 💚
+
+📋 Su reserva:
+• Curso: Acroflex Kids — Verano 2027
+• Horario: Lunes y Miércoles 4:00–4:55 pm
+• Paquete: [4 / 8 clases] — S/[PRECIO]
+• Matrícula: S/[25 o 50]
+`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos su Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago, por favor envíanos el comprobante por aquí 📲` },
+    ]
+  },
+
+  'verano-acrodance-alumno': {
+    title: '💃 Acrodance — Verano 2027',
+    badge: 'Alumno/a escribe directamente',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 ¡Qué bueno que te interesa Acrodance! 💃🤸
+
+Es nuestro nuevo curso de verano: una clase donde combinamos acrobacia y baile. Aprendes técnica acrobática Y la conectas con el movimiento y la expresión corporal — todo en la misma sesión.
+
+📍 Presencial en Acroflex, Jesús María
+📅 Empieza el lunes 4 de enero 2027` },
+
+      { num: 2, title: 'Qué trabajan en clase', type: 'message',
+        msg: `En Acrodance trabajamos:
+🤸 Acrobacias de piso (rodamientos, rueda, parada de manos y progresiones)
+💃 Combinaciones de movimiento y coreografía
+🎵 Ritmo, fluidez y expresión corporal
+💪 Fuerza y flexibilidad aplicadas al baile
+✨ Transiciones entre figuras acrobáticas y pasos de danza
+
+Apto desde 9 años, para todos los niveles 💙` },
+
+      { num: 3, title: 'Horarios', type: 'message',
+        msg: `Los horarios de Acrodance para verano son:
+
+📅 Lunes y Miércoles: 9:00 – 10:25 pm
+📅 Viernes: 6:30 – 7:55 pm
+
+Clases de 1 hora y 25 minutos 🕘` },
+
+      { num: 4, title: 'Enviar imagen de horarios', type: 'images',
+        note: '📲 Envía la imagen de horarios de Acrodance.',
+        images: [
+          { src: 'horarios-verano-acrodance.png', label: 'Horarios Acrodance — Verano 2027' },
+        ]},
+
+      { num: 5, title: 'Precios + ancla de valor', type: 'message',
+        msg: `La mayoría empieza con el paquete de 8 clases — es 1 mes de entrenamientos y el cuerpo necesita ese tiempo para empezar a conectar la acrobacia con el movimiento 💙
+
+🎟️ Paquetes Acrodance:
+• 4 clases: S/190
+• 8 clases: S/330
+• 12 clases: S/470
+
+📌 Matrícula: S/50 — pago único al inscribirse (solo alumnos nuevos).
+🎉 Si te inscribes antes del 15 de diciembre: matrícula a S/25.` },
+
+      { num: 6, title: 'Cerrar con pregunta de horario', type: 'message',
+        msg: `¿Qué días te quedarían mejor? Así te ayudo a elegir el horario ideal 😊💙` },
+
+      { num: 7, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '🤔 "¿Necesito saber bailar o hacer acrobacia?"',
+            msg: `¡No! 😊 Acrodance es para todos los niveles — no necesitas saber bailar ni tener experiencia en acrobacia 💙 Los coaches te guían desde cero y adaptan cada ejercicio a tu nivel. Lo único que necesitas es ganas 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `Gracias por comentarme eso 😊 Para poder orientarte mejor — ¿por qué te parece elevado? ¿Es el momento o el monto en sí? 🧡`,
+            internal: `🔍 Espera su respuesta. Si dice "el monto": son clases con coaches que corrigen en vivo, acrobacia + baile en una sola sesión. Si dice "el momento": recuerda la matrícula a S/25 antes del 15 de dic.` },
+          { label: '🤔 "Lo voy a pensar"',
+            msg: `¡Claro! 😊 Solo te cuento que los cupos son limitados y este curso es completamente nuevo — así que se llena rápido 💙 Si tienes alguna duda que te ayude a decidirte, con gusto la resuelvo ahora 🧡` },
+        ]
+      },
+
+      { num: 8, title: 'Resumen de inscripción', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Te confirmo tu inscripción a Acrodance 💙
+
+📋 Tu reserva:
+• Curso: Acrodance — Verano 2027
+• Horario: [HORARIO ELEGIDO]
+• Paquete: [4 / 8 / 12 clases] — S/[PRECIO]
+• Matrícula: S/[25 o 50]
+`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago, por favor envíanos el comprobante por aquí 📲` },
+    ]
+  },
+
+  'verano-base-atleta-alumno': {
+    title: '💪 Base Atleta — Verano 2027',
+    badge: 'Alumno/a escribe directamente',
+    steps: [
+      { num: 1, title: 'Presentar el curso', type: 'message',
+        msg: `¡Hola! 😊 ¡Perfecto que preguntes por Base Atleta! 💪🔥
+
+Es nuestro nuevo curso de verano enfocado en la preparación física base para deportistas: fuerza, explosividad y movilidad. Ideal si practicas taekwondo, danza, pole, running, gimnasia o cualquier deporte y quieres una base física más sólida.
+
+📍 Presencial en Acroflex, Jesús María
+📅 Empieza el lunes 4 de enero 2027` },
+
+      { num: 2, title: 'Qué trabajan en clase', type: 'message',
+        msg: `En Base Atleta trabajamos:
+💪 Fuerza funcional y explosividad
+🏃 Coordinación y agilidad deportiva
+🦵 Movilidad articular y flexibilidad activa
+⚡ Acondicionamiento físico específico para deportistas
+🎯 Ejercicios aplicables a tu disciplina principal
+
+Clases de 55 minutos, apto desde 9 años 💙` },
+
+      { num: 3, title: 'Horarios', type: 'message',
+        msg: `Los horarios de Base Atleta para verano son:
+
+📅 Martes y Jueves: 8:00 – 8:55 am
+📅 Domingos: 8:30 – 9:25 am
+
+Clases de 55 minutos 🕗` },
+
+      { num: 4, title: 'Enviar imagen de horarios', type: 'images',
+        note: '📲 Envía la imagen de horarios de Base Atleta.',
+        images: [
+          { src: 'horarios-verano-base-atleta.png', label: 'Horarios Base Atleta — Verano 2027' },
+        ]},
+
+      { num: 5, title: 'Precios + ancla de valor', type: 'message',
+        msg: `La mayoría empieza con el paquete de 8 clases — en un mes el cuerpo empieza a responder con más fuerza, agilidad y control en tu disciplina principal 💪
+
+🎟️ Paquetes Base Atleta:
+• 4 clases: S/170
+• 8 clases: S/290
+• 12 clases: S/420
+
+📌 Matrícula: S/50 — pago único al inscribirse (solo alumnos nuevos).
+🎉 Si te inscribes antes del 15 de diciembre: matrícula a S/25.` },
+
+      { num: 6, title: 'Cerrar con pregunta de horario', type: 'message',
+        msg: `¿Qué días te quedarían mejor según tu rutina de entrenamiento? Así te ayudo a elegir el horario ideal 😊💪` },
+
+      { num: 7, title: 'Manejo de objeciones', type: 'objections',
+        options: [
+          { label: '🤔 "¿Sirve para mi deporte?"',
+            msg: `¡Sí! 😊 Base Atleta está pensado para cualquier deportista que quiera mejorar su base física 💪 Fuerza, explosividad y movilidad son la base de cualquier disciplina — taekwondo, danza, pole, running, gimnasia, natación, fútbol. Los coaches adaptan los ejercicios a tu perfil y tu deporte 🧡` },
+          { label: '💸 "Está un poco caro"',
+            msg: `Gracias por comentarme eso 😊 Para poder orientarte mejor — ¿por qué te parece elevado? ¿Es el momento o el monto en sí? 🧡`,
+            internal: `🔍 Espera su respuesta. Si dice "el monto": son clases con coaches que corrigen en persona, enfocadas en tu progreso como deportista. Si dice "el momento": recuerda la matrícula a S/25 antes del 15 de dic.` },
+          { label: '🤔 "Lo voy a pensar"',
+            msg: `¡Claro! 😊 Solo te cuento que los cupos son limitados y este curso es completamente nuevo para verano 🔥 Si tienes alguna duda, con gusto la resuelvo ahora 🧡` },
+        ]
+      },
+
+      { num: 8, title: 'Resumen de inscripción', type: 'template',
+        note: '✏️ Completa los datos entre [ ] antes de enviar.',
+        msg: `¡Perfecto! 🎉 Te confirmo tu inscripción a Base Atleta 💪
+
+📋 Tu reserva:
+• Curso: Base Atleta — Verano 2027
+• Horario: [HORARIO ELEGIDO]
+• Paquete: [4 / 8 / 12 clases] — S/[PRECIO]
+• Matrícula: S/[25 o 50]
+`,
+        msg2: `💵 Métodos de pago — a nombre de Milagritos Robles
+
+➡️ Yape o Plin: 923 043 284
+💵 Cuenta BCP Soles: 191-045529-4-0028
+💵 CCI: 002-191-10455294002859
+
+💳 Pago con tarjeta: brindanos tu Nombre y Apellido, Celular y Correo Electrónico.
+(Los pagos con tarjeta tienen un 5% de recargo.)
+
+Una vez realizado el pago, por favor envíanos el comprobante por aquí 📲` },
     ]
   },
 
